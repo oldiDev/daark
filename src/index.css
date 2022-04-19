@@ -1,8 +1,23 @@
+@font-face {
+    font-family: 'SFPro';
+    src: url('assets/fonts/SF-Pro-Display-Regular.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+:root{
+    --DarkGray: #828282;
+    --MediumGray: #BDBDBD;
+    --LightGray: #E0E0E0;
+    --VeryLightGray: #F2F2F2;
+    --Blue: #2F80ED;
+    --LightBlue: #8CB9F6;
+}
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'SFPro', 'Inter' sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +25,39 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+h1{
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 40px;
+}
+
+h2{
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 32px;
+}
+
+h3{
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 24px;
+}
+
+h4{
+    font-family: "Inter";
+    font-size: 20px;
+}
+
+.primaryButtonText {
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.tertiaryButtonText{
+    font-family: 'Inter';
+    font-size: 16px;
 }
