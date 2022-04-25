@@ -1,16 +1,21 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import IphoneContact from "./iPhoneContact";
+import IphoneMain from "./iPhoneMain";
 
 const IPhone = () => {
+
+    let location = useLocation();
+    console.log(location);
 
     const [time, setTime] = React.useState(new Date());
 
     React.useEffect(() => {
         setInterval(() => {
             setTime(new Date());
-        }, 1000);
+        }, 10000);
     }, []);
 
     return (
@@ -25,19 +30,42 @@ const IPhone = () => {
                             <img src="/iPhoneImage/TopNavigation/Battery.svg" alt="battery"></img>
                         </RightSide>
                     </StatusBar>
-                    <IphoneContact />
+                    {
+                        (location.pathname == '/contacts') ?
+                            <IphoneContact /> : <IphoneMain />
+                    }
                     <IosTabBar>
                         <Tabs>
                             <Link to="/">
                                 <IosTab>
-                                    <img src="/iPhoneImage/TabBar/projects.svg" alt="projects"></img>
-                                    <span className="labelSmall">Наши проекты</span>
+                                    {
+                                        (location.pathname == '/') ?
+                                            <>
+                                                <img src="/iPhoneImage/TabBar/projects-blue.svg" alt="projects"></img>
+                                                <span className="labelSmall blue">Наши проекты</span>
+                                            </>
+                                            :
+                                            <>
+                                                <img src="/iPhoneImage/TabBar/projects.svg" alt="projects"></img>
+                                                <span className="labelSmall">Наши проекты</span>
+                                            </>
+                                    }
                                 </IosTab>
                             </Link>
                             <Link to="/contacts">
                                 <IosTab>
-                                    <img src="/iPhoneImage/TabBar/contacts.svg" alt="projects"></img>
-                                    <span className="labelSmall">Контакты</span>
+                                    {
+                                        (location.pathname == '/contacts') ?
+                                            <>
+                                                <img src="/iPhoneImage/TabBar/contacts-blue.svg" alt="projects"></img>
+                                                <span className="labelSmall blue">Контакты</span>
+                                            </>
+
+                                            : <>
+                                                <img src="/iPhoneImage/TabBar/contacts.svg" alt="projects"></img>
+                                                <span className="labelSmall">Контакты</span>
+                                            </>
+                                    }
                                 </IosTab>
                             </Link>
                             <Link to="/calculation">
@@ -64,9 +92,6 @@ const IPhone = () => {
 }
 
 const ContactsContainer = styled.div`
-    width: 70%;
-    height: 110vh;
-    margin: 90px auto;
     align-items: center;
     display: flexbox;
 `
@@ -120,11 +145,15 @@ const IosTabBar = styled.div`
     background-color: #F9F9F9;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
+    border-top: 1px solid var(--DarkGrey);
+    box-shadow: 0px -0.5px 0px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
 `
 
 const Tabs = styled.div`
     width: 100%;
     height: 50px;
+    padding-top: .5em;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -147,7 +176,7 @@ const HomeIndicator = styled.div`
 const HomeLine = styled.div`
     width: 134px;
     height: 5px;
-    margin: 1.5em auto;
+    margin: 1em auto;
     border-radius: 100px;
     background-color: black;
     align-self: center;

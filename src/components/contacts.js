@@ -5,8 +5,16 @@ import IPhone from "./iPhone/iPhone";
 const Contacts = () => {
 
     return (
-        <IPhone />
+        <ContactsContainer>
+            <IPhone />
+        </ContactsContainer>
     )
 }
+
+const ContactsContainer = styled.div`
+    width: 70%;
+    height: 110vh;
+    margin: 90px auto;
+`
 
 export default Contacts;

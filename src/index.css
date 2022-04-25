@@ -35,6 +35,10 @@ code {
     monospace;
 }
 
+.blue{
+    color: var(--Blue);
+}
+
 
 h1{
     font-family: 'Inter';
@@ -80,7 +84,7 @@ h4{
 
 .SF_h2 {
     font-family: 'SFProTextSemibol';
-    font-weight: 400;
+    font-weight: 600;
     font-size: 17px;
     letter-spacing: -0.41px;
 }
