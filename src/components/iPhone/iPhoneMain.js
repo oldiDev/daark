@@ -4,7 +4,43 @@ import styled from "styled-components";
 const IphoneMain = () => {
     return (
         <IphoneMainContainer>
-            <IphoneMainTitle className="SF_h2">Main</IphoneMainTitle>
+            <IphoneMainTitle className="SF_h2">Наши проекты</IphoneMainTitle>
+            <AppContainer>
+                <AppInfo>
+                    <img src="iPhoneImage/AppIcon/Pims.svg" alt="pims"></img>
+                    <AppName>
+                        <div className="SF_h3">PIMS</div>
+                        <div className="SF_Body dark-grey">Доставка еды</div>
+                    </AppName>
+                </AppInfo>
+                <OpenBtn>
+                    <span className="buttonText">Открыть</span>
+                </OpenBtn>
+            </AppContainer>
+            <AppContainer>
+                <AppInfo>
+                    <img src="iPhoneImage/AppIcon/Woodkoin.svg" alt="woodkoin"></img>
+                    <AppName>
+                        <div className="SF_h3">Woodkoin Wallet</div>
+                        <div className="SF_Body dark-grey">Крипто-кошелёк</div>
+                    </AppName>
+                </AppInfo>
+                <OpenBtn>
+                    <span className="buttonText">Открыть</span>
+                </OpenBtn>
+            </AppContainer>
+            <AppContainer>
+                <AppInfo>
+                    <img src="iPhoneImage/AppIcon/VpnWorld.svg" alt="VpnWorld"></img>
+                    <AppName>
+                        <div className="SF_h3">VPN World</div>
+                        <div className="SF_Body dark-grey">Безопасное подключение</div>
+                    </AppName>
+                </AppInfo>
+                <OpenBtn>
+                    <span className="buttonText">Открыть</span>
+                </OpenBtn>
+            </AppContainer>
         </IphoneMainContainer>
     )
 }
@@ -24,7 +60,38 @@ const IphoneMainTitle = styled.div`
     width: 100%;
     padding: 11px 0px;
     text-align: center;
-    border-bottom: 1px solid var(--DarkGrey);
+    box-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.3);
+`
+
+const AppContainer = styled.div`
+    width: 90%;
+    padding: 8px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--LightGrey);
+`
+
+const AppInfo = styled.div`
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+`
+
+const AppName = styled.div`
+    margin: 0px .5em;
+`
+
+const OpenBtn = styled.button`
+    width: 97px;
+    height: 24px;
+    color: var(--Blue);
+    background-color: var(--LightGrey);
+    border-radius: 24px;
+    border: unset;
 `
 
 export default IphoneMain

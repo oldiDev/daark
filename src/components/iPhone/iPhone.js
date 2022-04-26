@@ -8,7 +8,6 @@ import IphoneMain from "./iPhoneMain";
 const IPhone = ({ bgcolor }) => {
 
     let location = useLocation();
-    console.log(location);
 
     const [time, setTime] = React.useState(new Date());
 
@@ -145,9 +144,7 @@ const IosTabBar = styled.div`
     background-color: #F9F9F9;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    border-top: 1px solid var(--DarkGrey);
     box-shadow: 0px -0.5px 0px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(20px);
 `
 
 const Tabs = styled.div`
