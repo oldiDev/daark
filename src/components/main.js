@@ -9,7 +9,7 @@ const Main = () => {
                 <h1>Some info</h1>
             </div>
             <MainRightSide>
-                <IPhone />
+                <IPhone bgcolor={'white'}/>
             </MainRightSide>
         </MainContainer>
     )

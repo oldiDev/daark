@@ -6,7 +6,7 @@ const Contacts = () => {
 
     return (
         <ContactsContainer>
-            <IPhone />
+            <IPhone bgcolor={'#F2F2F7'}/>
         </ContactsContainer>
     )
 }

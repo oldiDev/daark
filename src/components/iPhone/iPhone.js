@@ -5,7 +5,7 @@ import styled from "styled-components";
 import IphoneContact from "./iPhoneContact";
 import IphoneMain from "./iPhoneMain";
 
-const IPhone = () => {
+const IPhone = ({ bgcolor }) => {
 
     let location = useLocation();
     console.log(location);
@@ -20,7 +20,7 @@ const IPhone = () => {
 
     return (
         <ContactsContainer>
-            <Iphone>
+            <Iphone style={{ backgroundColor: `${bgcolor}` }}>
                 <Screen>
                     <StatusBar>
                         <LeftSide className="primaryButtonText">{time.getHours()}:{time.getMinutes()}</LeftSide>
@@ -101,13 +101,13 @@ const Iphone = styled.div`
     width: 437px;
     height: 882px;
     margin: 0px auto;
+    border-radius: 70px;
     background-image: url(/iPhoneImage/iPhoneImage.svg);
 `
 
 const Screen = styled.div`
     width: 390px;
     height: 844px;
-    background-color: #F2F2F7;
     border-radius: 50px;
     margin: 20px auto;
     display: flex;
