@@ -147,7 +147,7 @@ h4{
 
 .SF_h2 {
     font-family: 'SFProTextSemibold';
-    font-weight: 600;
+    font-weight: 500;
     font-size: 17px;
     letter-spacing: -0.41px;
 }
@@ -172,7 +172,7 @@ h4{
 
 .buttonText{
     font-family: 'SFProTextSemibold';
-    font-weight: bold;
+    font-weight: 500;
     font-size: 13px;
     letter-spacing: -0.08px;
 }

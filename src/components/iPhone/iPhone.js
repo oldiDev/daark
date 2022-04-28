@@ -16,13 +16,17 @@ const IPhone = ({ bgcolor }) => {
             setTime(new Date());
         }, 10000);
     }, []);
-
+    // console.log(time.getMinutes())
     return (
         <ContactsContainer>
             <Iphone style={{ backgroundColor: `${bgcolor}` }}>
                 <Screen>
                     <StatusBar>
-                        <LeftSide className="primaryButtonText">{time.getHours()}:{time.getMinutes()}</LeftSide>
+                        <LeftSide className="primaryButtonText">
+                            {(time.getHours().length < 10) ? '0' + time.getHours() : time.getHours()}
+                            :
+                            {(time.getMinutes() < 10) ? '0' + time.getMinutes() : time.getMinutes()}
+                        </LeftSide>
                         <RightSide>
                             <img src="/iPhoneImage/TopNavigation/mobile-signal.svg" alt="mobile-signal"></img>
                             <img src="/iPhoneImage/TopNavigation/Wifi.svg" alt="wi-fi"></img>
@@ -73,7 +77,7 @@ const IPhone = ({ bgcolor }) => {
                                     <span className="labelSmall">Калькулятор</span>
                                 </IosTab>
                             </Link>
-                            <Link to="about">
+                            <Link to="/about">
                                 <IosTab>
                                     <img src="/iPhoneImage/TabBar/about.svg" alt="projects"></img>
                                     <span className="labelSmall">О нас</span>
