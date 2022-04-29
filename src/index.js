@@ -8,7 +8,7 @@ import RootStore from './store'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const store = RootStore.create();
+const store = RootStore.create({});
 
 export const StoreContext = createContext(store);
 

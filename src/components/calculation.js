@@ -22,6 +22,7 @@ export default Calculation
 
 const CalculationContainer = styled.div`
     width: 70%;
+    /* max-width: 1000px; */
     margin: 90px auto;
     text-align: center;
 `

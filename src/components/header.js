@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 
 const Header = () => {
     return (
-        <div>
+        <div className="header">
             <HeaderContainer>
                 <Link to="/" style={{height:"20px"}}>
                     <img src="/Logo/logo.svg" alt="logo"></img>
@@ -27,10 +27,8 @@ const Header = () => {
 }
 
 const HeaderContainer = styled.div`
-    position: fixed;
-    top: 0px;
-    left: 15%;
     width: 70%;
+    max-width: 1000px;
     height: 40px;
     margin: 0px auto;
     padding: 0px;

@@ -13,6 +13,7 @@ const Contacts = () => {
 
 const ContactsContainer = styled.div`
     width: 70%;
+    /* max-width: 1000px; */
     height: 80vh;
     margin: 90px auto;
 `

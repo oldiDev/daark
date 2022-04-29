@@ -26,7 +26,8 @@ const Main = () => {
 }
 
 const MainContainer = styled.div`
-    width: 70%;
+    width: 100%;
+    max-width: 1000px;
     min-height: 80vh;
     margin: 90px auto;
     display: flex;
@@ -37,12 +38,12 @@ const MainContainer = styled.div`
 
 const MainLeftSide = styled.div`
     width: 45%;
-
+    left: 0%;
 `
 
 const LeftSideSwap = styled.div`
     position: fixed;
-    width: 40%;
+    width: 25%;
     animation: positionTop 0.8s ease-in-out 3.58s 1 normal both;
 `
 
@@ -67,7 +68,7 @@ const OurProjects = styled.h1`
 const MainRightSide = styled.div`
     position: fixed;
     top: 90px;
-    right: 15%;
+    right: 23%;
 `
 
 export default Main
