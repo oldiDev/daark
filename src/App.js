@@ -8,7 +8,7 @@ import {
     useLocation,
 } from 'react-router-dom';
 import Contacts from './components/contacts.js';
-import Calculation from './components/calculation.js';
+import Calculation from './components/calculation/calculation.js';
 import About from './components/about.js';
 import Main from './components/main.js';
 
