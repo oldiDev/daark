@@ -5,37 +5,27 @@ const AppType = types
         //  id: types.identifier,
         AppTypeIcon: types.string,
         AppTypeName: types.string,
-        isChoosen: types.boolean,
+        isSelected: types.boolean,
     })
     .actions((self) => ({
         togle() {
-            self.isChoosen = !self.isChoosen;
+            self.isSelected = !self.isSelected;
         }
     }))
 
 
 
-const AppTypeStore = types.model('AppTypeStore', {
+export const AppTypeStore = types.model('AppTypeStore', {
     app: types.array(AppType)
 })
 
-export const AppStore = AppTypeStore.create({
-    app: [
-        {
-            AppTypeIcon: '/Calculation/AppType/Apple.svg',
-            AppTypeName: 'Apple',
-            isChoosen: false,
-        },
-        {
-            AppTypeIcon: '/Calculation/AppType/Android.svg',
-            AppTypeName: 'Android',
-            isChoosen: false,
-        }
-    ]
-})
-
-const CalculationStore = types.model('CalculationStore', {
+export const CalculationStore = types.model('CalculationStore', {
     appType: types.maybe(types.array(AppType)),
 })
+    .actions((self) => ({
+        setAppType(array) {
+            
+        }
+    }))
 
 export default CalculationStore;

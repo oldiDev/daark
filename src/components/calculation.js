@@ -1,53 +1,37 @@
+import { observer } from "mobx-react-lite";
+import { getSnapshot } from "mobx-state-tree";
 import React, { useState } from "react";
 import styled from "styled-components";
-import AppStore from "../store/calculationStore";
-import useStore from '../hooks/useStore'
+import { AppData } from "../data/calculationData";
+import { useStore } from "../store";
+import CalculationStore, { AppTypeStore } from "../store/calculationStore";
 
 const Calculation = () => {
+    const store = useStore()
 
-    const { apps } = useStore();
-
-    let platform = [
-        {
-            "image": "/Calculation/AppType/Apple.svg",
-            "AppName": "Apple",
-            "isChoosen": false,
-        },
-        {
-            "image": "/Calculation/AppType/Android.svg",
-            "AppName": "Android",
-            "isChoosen": false,
-        },
-        {
-            "image": "/Calculation/AppType/Web.svg",
-            "AppName": "Web",
-            "isChoosen": false
-        }
-    ]
-
-    // console.log(JSON.stringify(platform))
+    console.log(store)
 
     return (
         <CalculationContainer>
             <CalculationLabel>Рассчитайте стоимость разработки вашего приложения*</CalculationLabel>
             <CalculationSelection>
                 <CalculationSelectionTitle>Для каких платформ вы хотите разработать продукт?</CalculationSelectionTitle>
-                <CalculationSelectionContent>
+                {/* <CalculationSelectionContent>
                     {
-                        platform.map((e, i) =>
-                            <CalculationInput key={i} style={e.isChoosen ? { borderColor: "#007AFF" } : { borderColor: "white" }}>
-                                <CalculationImage src={e.image} alt="logo" />
-                                <CalculationInputTitle className="primaryButtonText">{e.AppName}</CalculationInputTitle>
+                        store.calculation.appType.map((e, i) =>
+                            <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={e.togle}>
+                                <CalculationImage src={e.isSelected ? e.AppTypeIcon.split('.')[0] + '-blue.svg' : e.AppTypeIcon} alt="logo" />
+                                <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{e.AppTypeName}</CalculationInputTitle>
                             </CalculationInput>
                         )
                     }
-                </CalculationSelectionContent>
+                </CalculationSelectionContent> */}
             </CalculationSelection>
         </CalculationContainer>
     )
 }
 
-export default Calculation
+export default observer(Calculation);
 
 
 const CalculationContainer = styled.div`
@@ -76,7 +60,7 @@ const CalculationSelection = styled.div`
 
 const CalculationSelectionTitle = styled.h3`
     text-align: center;
-    letter-spacing: -0.24px;
+    letter-spacing: -0.2px;
 `
 
 const CalculationSelectionContent = styled.div`
@@ -86,10 +70,11 @@ const CalculationSelectionContent = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 `
 
 const CalculationInputTitle = styled.div`
-    color: var(--DarkGrey);
+    /* color: var(--DarkGrey); */
     margin-top: 16px;
 `
 
@@ -98,7 +83,7 @@ const CalculationImage = styled.img`
     height: 32px;
 `
 
-const CalculationInput = styled.button`
+const CalculationInput = styled.div`
     width: 216px;
     height: 133px;
     display: flex;
