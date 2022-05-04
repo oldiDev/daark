@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import { BrowserRouter } from 'react-router-dom';
-import { useStore, RootStore, StoreContext } from "./store"
+import { PersistentStoreProvider } from './store';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,9 +13,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <StoreContext.Provider value={RootStore}>
+        <PersistentStoreProvider>
             <App />
-        </StoreContext.Provider>
+        </PersistentStoreProvider>
     </React.StrictMode>
 );
 
