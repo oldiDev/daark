@@ -11,12 +11,13 @@ import {
     ServicesData
 } from "../../data/calculationData";
 import { usePersistentStore } from "../../store";
-import CalculationStore, { AppTypeStore } from "../../store/calculationStore";
 import CalculationFooter from "./calculationFooter";
 
 const Calculation = () => {
 
     const { calculation, setCalculation } = usePersistentStore();
+
+    let fullPrice = 0;
 
     useEffect(() => {
         setCalculation(AppData,
@@ -26,6 +27,26 @@ const Calculation = () => {
             FunctionsData,
             ServicesData);
     }, [])
+    calculation.appType?.map((e) => {
+        fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
+    })
+    calculation.projectType?.map((e) => {
+        fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
+    })
+    calculation.uniqueScreen?.map((e) => {
+        fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
+    })
+    calculation.degreeDevelopment?.map((e) => {
+        fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
+    })
+    calculation.functions?.map((e) => {
+        fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
+    })
+    calculation.services?.map((e) => {
+        fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
+    })
+
+    // console.log(fullPrice);
 
     return (
         <>
@@ -111,7 +132,7 @@ const Calculation = () => {
                 </CalculationSelection>
                 <CalculationDisclaimer>*Окончательная стоимость разработки приложения может отличаться от стоимости, указанной в калькуляторе</CalculationDisclaimer>
             </CalculationContainer>
-            <CalculationFooter />
+            <CalculationFooter price={fullPrice} />
         </>
     )
 }

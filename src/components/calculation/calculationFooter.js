@@ -1,32 +1,45 @@
-import React, { useState } from "react";
+import { observer } from "mobx-react-lite";
+import { getSnapshot } from "mobx-state-tree";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { usePersistentStore } from "../../store";
 import CalculationPopUp from "./calculationPopUp";
 
-const CalculationFooter = () => {
+const CalculationFooter = ({price}) => {
 
     const [show, setShow] = useState(false);
+    const { calculation, removeAnySelection } = usePersistentStore();
+    console.log(show);
+
+    let  handleDelete = () => {
+        removeAnySelection();
+    }
+
+    let handleSubmit = () => {
+        setShow(true)
+    }
 
     return (
         <>
-        <CalculationFooterWrapper>
-            <CalculationFooterContainer>
-                <CalculationFooterLeft>
-                    <FooterTitle>Стоимость разработки вашего приложения</FooterTitle>
-                    <Price> ₽</Price>
-                </CalculationFooterLeft>
-                <CalculationFooterRight>
-                    <FooterBtn className="primaryButtonText" onClick={() => setShow(true)}>Получить рассчёт стоимости</FooterBtn>
-                    <FooterBtnDelete className="tertiaryButtonText">Удалить</FooterBtnDelete>
-                </CalculationFooterRight>
-            </CalculationFooterContainer>
-        </CalculationFooterWrapper>
-        <CalculationPopUp show={show} />
+            <CalculationFooterWrapper>
+                <CalculationFooterContainer>
+                    <CalculationFooterLeft>
+                        <FooterTitle>Стоимость разработки вашего приложения</FooterTitle>
+                        <Price>{price} ₽</Price>
+                    </CalculationFooterLeft>
+                    <CalculationFooterRight>
+                        <FooterBtn className="primaryButtonText" onClick={handleSubmit}>Получить рассчёт стоимости</FooterBtn>
+                        <FooterBtnDelete className="tertiaryButtonText" onClick={handleDelete}>Удалить</FooterBtnDelete>
+                    </CalculationFooterRight>
+                </CalculationFooterContainer>
+            </CalculationFooterWrapper>
+            <CalculationPopUp show={show} />
         </>
-        
+
     )
 }
 
-export default CalculationFooter
+export default observer(CalculationFooter)
 
 const CalculationFooterWrapper = styled.div`
     position: fixed;
@@ -92,6 +105,7 @@ const FooterBtnDelete = styled.button`
     max-width: 169px;
     height: 27px;
     border-radius: 8px;
+    background-color: white;
     color: var(--Blue);
     letter-spacing: -0.24px;
     cursor: pointer;

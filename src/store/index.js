@@ -1,7 +1,5 @@
 import { types } from "mobx-state-tree";
 import CalculationStore from "./calculationStore";
-import { useContext, createContext } from "react";
-import { AppData } from "../data/calculationData";
 import createPersistentStore from "mst-persistent-store";
 
 export const RootStore = types.model('RootStore', {
@@ -15,6 +13,14 @@ export const RootStore = types.model('RootStore', {
             self.calculation.degreeDevelopment = degreeDevelopment;
             self.calculation.functions = functions;
             self.calculation.services = services;
+        },
+        removeAnySelection: () => {
+            self.calculation.appType?.forEach((e) => e.removeSelection());
+            self.calculation.projectType?.forEach((e) => e.removeSelection());
+            self.calculation.uniqueScreen?.forEach((e) => e.removeSelection());
+            self.calculation.degreeDevelopment?.forEach((e) => e.removeSelection());
+            self.calculation.functions?.forEach((e) => e.removeSelection());
+            self.calculation.services?.forEach((e) => e.removeSelection());
         }
     }));
 

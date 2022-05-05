@@ -5,7 +5,6 @@ import {
     BrowserRouter,
     Routes,
     Route,
-    useLocation,
 } from 'react-router-dom';
 import Contacts from './components/contacts.js';
 import Calculation from './components/calculation/calculation.js';
