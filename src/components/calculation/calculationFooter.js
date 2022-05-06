@@ -9,7 +9,6 @@ const CalculationFooter = ({price}) => {
 
     const [show, setShow] = useState(false);
     const { calculation, removeAnySelection } = usePersistentStore();
-    console.log(show);
 
     let  handleDelete = () => {
         removeAnySelection();

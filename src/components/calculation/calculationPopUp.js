@@ -11,8 +11,8 @@ const CalculationPopUp = ({ show }) => {
                         <PopUpImg src="/Logo/logo-big.svg" alt="logo" />
                         <PopUpInfo className="tertiaryButtonText">Пожалуйста, введите адрес электронной почты.
                             На него мы вышлем расчет стоимости приложения.</PopUpInfo>
-                            <PopUpInput placeholder="Имя*"></PopUpInput>
-                            <PopUpInput placeholder="Email*"></PopUpInput>
+                            <PopUpInput placeholder="Имя*" required></PopUpInput>
+                            <PopUpInput placeholder="Email*" type="email" required></PopUpInput>
                             <PopUpInput placeholder="Телефон (необязательно)"></PopUpInput>
                             <PopUpBtn className="primaryButtonText">Отправить</PopUpBtn>
                     </PopUpContainer>
@@ -31,11 +31,10 @@ const PopUpWrapper = styled.div`
     position: fixed;
     z-index: 9998;
     width: 100%;
-    min-height: 140vh;
+    min-height: 100vh;
     height: auto;
-    top: -140px;
+    top: 0;
     left: 0;
-    margin: 100px auto;
     background-color: rgba(0,0,0,.8);
     display: flex;
     justify-content: center;
@@ -80,6 +79,11 @@ const PopUpInput = styled.input`
     font-size: 16px;
     line-height: 19px;
     color: var(--DarkGrey);
+
+    &:focus{
+        border-color: var(--Blue);
+    }
+
 `
 const PopUpBtn = styled.button`
     width: 40%;
