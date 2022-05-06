@@ -31,14 +31,14 @@ const PopUpWrapper = styled.div`
     position: fixed;
     z-index: 9998;
     width: 100%;
-    min-height: 134vh;
+    min-height: 100vh;
     height: auto;
-    top: -100px;
+    top: 0;
     left: 0;
     background-color: rgba(0,0,0,.8);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
 `
 
 const PopUpContainer = styled.form`
@@ -46,7 +46,7 @@ const PopUpContainer = styled.form`
     width: 50%;
     max-width: 800px;
     height: 70%;
-    /* margin: 100px 20%; */
+    margin-top: 5%;
     background-color: white;
     border-radius: 24px;
     display: flex;

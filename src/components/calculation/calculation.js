@@ -19,7 +19,9 @@ const Calculation = () => {
 
     let fullPrice = 0;
     let activeProjectType = false;
-    let activeUniqueScreen = false
+    let activeUniqueScreen = false;
+    let activeDegreeDevelopment = false;
+    let activeFunctions = false;
 
     useEffect(() => {
         setCalculation(AppData,
@@ -29,24 +31,26 @@ const Calculation = () => {
             FunctionsData,
             ServicesData);
     }, [])
-    calculation.appType?.map((e) => {
+    calculation.appType?.forEach((e) => {
         fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
         activeProjectType = (e.isSelected) ? true : activeProjectType;
     })
-    calculation.projectType?.map((e) => {
+    calculation.projectType?.forEach((e) => {
         fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
-        activeUniqueScreen = (e.isSelected) ? true : activeUniqueScreen;
+        activeUniqueScreen = (e.isSelected && activeProjectType) ? true : activeUniqueScreen;
     })
-    calculation.uniqueScreen?.map((e) => {
+    calculation.uniqueScreen?.forEach((e) => {
+        fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
+        activeDegreeDevelopment = (e.isSelected && activeProjectType && activeUniqueScreen) ? true : activeDegreeDevelopment;
+    })
+    calculation.degreeDevelopment?.forEach((e) => {
+        fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
+        activeFunctions = (e.isSelected && activeProjectType && activeUniqueScreen && activeDegreeDevelopment) ? true : activeFunctions;
+    })
+    calculation.functions?.forEach((e) => {
         fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
     })
-    calculation.degreeDevelopment?.map((e) => {
-        fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
-    })
-    calculation.functions?.map((e) => {
-        fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
-    })
-    calculation.services?.map((e) => {
+    calculation.services?.forEach((e) => {
         fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
     })
 
@@ -69,7 +73,7 @@ const Calculation = () => {
                         }
                     </CalculationSelectionContent>
                 </CalculationSelection>
-                <CalculationSelection style={activeProjectType ? { opacity: "100%" } : { opacity: "40%" }}>
+                <CalculationSelection style={activeProjectType ? { opacity: "100%" } : { opacity: "30%" }}>
                     <CalculationSelectionTitle>Что вы хотите получить?</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
@@ -82,7 +86,7 @@ const Calculation = () => {
                         }
                     </CalculationSelectionContent>
                 </CalculationSelection>
-                <CalculationSelection style={activeUniqueScreen ? { opacity: "100%" } : { opacity: "40%" }}>
+                <CalculationSelection style={activeUniqueScreen ? { opacity: "100%" } : { opacity: "30%" }}>
                     <CalculationSelectionTitle>Какое количество уникальных экранов будет в приложении?</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
@@ -95,12 +99,12 @@ const Calculation = () => {
                         }
                     </CalculationSelectionContent>
                 </CalculationSelection>
-                <CalculationSelection>
+                <CalculationSelection style={activeDegreeDevelopment ? { opacity: "100%" } : { opacity: "30%" }}>
                     <CalculationSelectionTitle>Какая степень проработки интерфейса приложения?</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
                             calculation.degreeDevelopment?.map((e, i) =>
-                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={e.togle}>
+                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeDegreeDevelopment?  e.togle : removePojectTypeSelection }>
                                     <CalculationImage src={e.isSelected ? e.DegreeDevelopmentIcon.split('.')[0] + '-blue.svg' : e.DegreeDevelopmentIcon} alt="logo" />
                                     <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{e.DegreeDevelopmentName}</CalculationInputTitle>
                                 </CalculationInput>
@@ -108,12 +112,12 @@ const Calculation = () => {
                         }
                     </CalculationSelectionContent>
                 </CalculationSelection>
-                <CalculationSelection>
+                <CalculationSelection style={activeFunctions ? { opacity: "100%" } : { opacity: "30%" }}>
                     <CalculationSelectionTitle>Какие функции вы хотите включить в приложение?</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
                             calculation.functions?.map((e, i) =>
-                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={e.togle}>
+                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeFunctions? e.togle : removePojectTypeSelection}>
                                     <CalculationImage src={e.isSelected ? e.FunctionsIcon.split('.')[0] + '-blue.svg' : e.FunctionsIcon} alt="logo" />
                                     <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{e.FunctionsName}</CalculationInputTitle>
                                 </CalculationInput>
@@ -121,12 +125,12 @@ const Calculation = () => {
                         }
                     </CalculationSelectionContent>
                 </CalculationSelection>
-                <CalculationSelection>
+                <CalculationSelection style={activeFunctions ? { opacity: "100%" } : { opacity: "30%" }}>
                     <CalculationSelectionTitle>С какими сторонними сервисами нужно взаимодействие?</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
                             calculation.services?.map((e, i) =>
-                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={e.togle}>
+                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeFunctions? e.togle : removePojectTypeSelection}>
                                     <CalculationImage src={e.isSelected ? e.ServicesIcon.split('.')[0] + '-blue.svg' : e.ServicesIcon} alt="logo" />
                                     <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{e.ServicesName}</CalculationInputTitle>
                                 </CalculationInput>
