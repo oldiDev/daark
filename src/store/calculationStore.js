@@ -109,7 +109,8 @@ const CalculationStore = types.model('CalculationStore', {
     .actions((self) => ({
         setAppType(array) {
             self.appType = array;
-        }
+        },
+
     }))
 
 export default CalculationStore;

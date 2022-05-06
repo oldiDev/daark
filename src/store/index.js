@@ -25,6 +25,9 @@ export const RootStore = types.model('RootStore', {
             self.calculation.degreeDevelopment?.forEach((e) => e.removeSelection());
             self.calculation.functions?.forEach((e) => e.removeSelection());
             self.calculation.services?.forEach((e) => e.removeSelection());
+        },
+        removePojectTypeSelection: () => {
+            self.calculation.projectType?.forEach((e) => e.removeSelection());
         }
     }))
 

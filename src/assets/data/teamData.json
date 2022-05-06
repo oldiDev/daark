@@ -12,10 +12,34 @@
           "img": "/About/java.svg"
         },
         {
+          "img": "/About/docker.svg"
+        },
+        {
           "img": "/About/graphql.svg"
         },
         {
           "img": "/About/npm.svg"
+        },
+        {
+          "img": "/About/python.svg"
+        },
+        {
+          "img": "/About/figma.svg"
+        },
+        {
+          "img": "/About/angular.svg"
+        },
+        {
+          "img": "/About/rust.svg"
+        },
+        {
+          "img": "/About/ts.svg"
+        },
+        {
+          "img": "/About/react.svg"
+        },
+        {
+          "img": "/About/redux.svg"
         }
       ]
     },

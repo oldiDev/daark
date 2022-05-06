@@ -15,9 +15,11 @@ import CalculationFooter from "./calculationFooter";
 
 const Calculation = () => {
 
-    const { calculation, setCalculation } = usePersistentStore();
+    const { calculation, setCalculation, removePojectTypeSelection } = usePersistentStore();
 
     let fullPrice = 0;
+    let activeProjectType = false;
+    let activeUniqueScreen = false
 
     useEffect(() => {
         setCalculation(AppData,
@@ -29,9 +31,11 @@ const Calculation = () => {
     }, [])
     calculation.appType?.map((e) => {
         fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
+        activeProjectType = (e.isSelected) ? true : activeProjectType;
     })
     calculation.projectType?.map((e) => {
         fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
+        activeUniqueScreen = (e.isSelected) ? true : activeUniqueScreen;
     })
     calculation.uniqueScreen?.map((e) => {
         fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
@@ -46,7 +50,7 @@ const Calculation = () => {
         fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
     })
 
-    // console.log(fullPrice);
+    // console.log(active);
 
     return (
         <>
@@ -57,7 +61,7 @@ const Calculation = () => {
                     <CalculationSelectionContent>
                         {
                             calculation.appType?.map((e, i) =>
-                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={e.togle}>
+                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={e.togle} >
                                     <CalculationImage src={e.isSelected ? e.AppTypeIcon.split('.')[0] + '-blue.svg' : e.AppTypeIcon} alt="logo" />
                                     <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{e.AppTypeName}</CalculationInputTitle>
                                 </CalculationInput>
@@ -65,12 +69,12 @@ const Calculation = () => {
                         }
                     </CalculationSelectionContent>
                 </CalculationSelection>
-                <CalculationSelection>
-                    <CalculationSelectionTitle>Для каких платформ вы хотите разработать продукт?</CalculationSelectionTitle>
+                <CalculationSelection style={activeProjectType ? { opacity: "100%" } : { opacity: "40%" }}>
+                    <CalculationSelectionTitle>Что вы хотите получить?</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
                             calculation.projectType?.map((e, i) =>
-                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={e.togle}>
+                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeProjectType ? e.togle : removePojectTypeSelection}>
                                     <CalculationImage src={e.isSelected ? e.ProjectTypeIcon.split('.')[0] + '-blue.svg' : e.ProjectTypeIcon} alt="logo" />
                                     <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{e.ProjectTypeName}</CalculationInputTitle>
                                 </CalculationInput>
@@ -78,12 +82,12 @@ const Calculation = () => {
                         }
                     </CalculationSelectionContent>
                 </CalculationSelection>
-                <CalculationSelection>
+                <CalculationSelection style={activeUniqueScreen ? { opacity: "100%" } : { opacity: "40%" }}>
                     <CalculationSelectionTitle>Какое количество уникальных экранов будет в приложении?</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
                             calculation.uniqueScreen?.map((e, i) =>
-                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={e.togle}>
+                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeUniqueScreen ? e.togle : removePojectTypeSelection}>
                                     <CalculationImage src={e.isSelected ? e.UniqueScreenIcon.split('.')[0] + '-blue.svg' : e.UniqueScreenIcon} alt="logo" />
                                     <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{e.UniqueScreenName}</CalculationInputTitle>
                                 </CalculationInput>

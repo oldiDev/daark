@@ -31,9 +31,9 @@ const PopUpWrapper = styled.div`
     position: fixed;
     z-index: 9998;
     width: 100%;
-    min-height: 100vh;
+    min-height: 134vh;
     height: auto;
-    top: 0;
+    top: -100px;
     left: 0;
     background-color: rgba(0,0,0,.8);
     display: flex;

@@ -54,14 +54,14 @@ const AboutTeam = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 `
 
 const TeamContainer = styled.div`
     width: 200px;
-    height: 300px;
-    margin: .5em .5em;
+    height: fit-content;
+    margin: 1em 2em;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
