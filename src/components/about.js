@@ -56,6 +56,10 @@ const AboutTeam = styled.div`
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 767px){
+        flex-direction: column;
+    }
 `
 
 const TeamContainer = styled.div`

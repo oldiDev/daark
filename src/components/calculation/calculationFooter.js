@@ -28,7 +28,7 @@ const CalculationFooter = ({price}) => {
                     </CalculationFooterLeft>
                     <CalculationFooterRight>
                         <FooterBtn className="primaryButtonText" onClick={handleSubmit}>Получить рассчёт стоимости</FooterBtn>
-                        <FooterBtnDelete className="tertiaryButtonText" onClick={handleDelete}>Удалить</FooterBtnDelete>
+                        <FooterBtnDelete className="tertiaryButtonText" onClick={handleDelete}>Очистить</FooterBtnDelete>
                     </CalculationFooterRight>
                 </CalculationFooterContainer>
             </CalculationFooterWrapper>

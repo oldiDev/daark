@@ -155,6 +155,10 @@ const CalculationContainer = styled.div`
     max-width: 1000px;
     margin: 90px auto;
     text-align: center;
+
+    @media screen and (max-width: 767px){
+        width: 90%;
+    }
 `
 
 const CalculationLabel = styled.div`
@@ -165,6 +169,10 @@ const CalculationLabel = styled.div`
     letter-spacing: -0.24px;
     width: 70%;
     margin: 90px auto;
+
+    @media screen and (max-width: 767px){
+        width: 100%;
+    }
 `
 
 const CalculationSelection = styled.div`
@@ -187,6 +195,15 @@ const CalculationSelectionContent = styled.div`
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 992px){
+        justify-content: space-evenly;
+    }
+
+    @media screen and (max-width: 576px){
+        width: 100%;
+    }
+
 `
 
 const CalculationInputTitle = styled.div`
@@ -212,6 +229,10 @@ const CalculationInput = styled.div`
     border-radius: 24px;
     border: 3px solid white;
     cursor: pointer;
+
+    @media screen  and (max-width: 576px){
+        width: 100%;
+    }
 `
 
 const CalculationDisclaimer = styled.div`
