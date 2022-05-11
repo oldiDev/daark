@@ -11,7 +11,7 @@ const Header = () => {
         <div className="header">
             <HeaderContainer>
                 <HeaderItem />
-                <Link to="/" style={{ height: "20px" }} onClick={() => setIsChecked(!isChecked)}>
+                <Link to="/" style={{ height: "20px" }} onClick={() => setIsChecked(false)}>
                     <img src="/Logo/logo.svg" alt="logo"></img>
                 </Link>
                 <MenuToggle type="checkbox" id="menu-togle" checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
@@ -57,7 +57,7 @@ const HeaderContent = styled.ul`
     align-items: center;
     list-style: none;
 
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 576px){
         position: absolute;
         top: 0;
         height: 0;
@@ -67,7 +67,6 @@ const HeaderContent = styled.ul`
         justify-content: flex-start;
         z-index: 4;
         box-sizing: border-box;
-        /* opacity: 0; */
         visibility: hidden;
         background-color: white;
         transition: height 0.4s cubic-bezier(0.32, 0.08, 0.24, 1), padding 0.2s cubic-bezier(0.32, 0.08, 0.24, 1), visibility 0.2s cubic-bezier(0.32, 0.08, 0.24, 1);
@@ -171,7 +170,7 @@ const MenuToggle = styled.input`
         height: 150vh;
         margin: 40px 0;
         padding: 30em 0;
-        transition: height 0.4s cubic-bezier(0.32, 0.08, 0.24, 1), padding 0.4s cubic-bezier(0.32, 0.08, 0.24, 1);
+        /* transition: height 0.4s cubic-bezier(0.32, 0.08, 0.24, 1), padding 0.4s cubic-bezier(0.32, 0.08, 0.24, 1); */
         visibility: visible;
     }
 

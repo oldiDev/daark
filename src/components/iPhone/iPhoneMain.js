@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
 
 const IphoneMain = () => {
@@ -13,9 +14,11 @@ const IphoneMain = () => {
                         <div className="SF_Body dark-grey">Доставка еды</div>
                     </AppName>
                 </AppInfo>
-                <OpenBtn>
-                    <span className="buttonText">Открыть</span>
-                </OpenBtn>
+                <Link to="pims">
+                    <OpenBtn>
+                        <span className="buttonText">Открыть</span>
+                    </OpenBtn>
+                </Link>
             </AppContainer>
             <AppContainer>
                 <AppInfo>
@@ -41,6 +44,7 @@ const IphoneMain = () => {
                     <span className="buttonText">Открыть</span>
                 </OpenBtn>
             </AppContainer>
+            <Outlet />
         </IphoneMainContainer>
     )
 }
@@ -92,6 +96,7 @@ const OpenBtn = styled.button`
     background-color: var(--LightGrey);
     border-radius: 24px;
     border: unset;
+    cursor: pointer;
 `
 
 export default IphoneMain

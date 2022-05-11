@@ -10,6 +10,7 @@ import Contacts from './components/contacts.js';
 import Calculation from './components/calculation/calculation.js';
 import About from './components/about.js';
 import Main from './components/main.js';
+import Pims from './components/projects/pims.js';
 
 
 const App = () => {
@@ -19,7 +20,9 @@ const App = () => {
             <BrowserRouter>
                 <Header />
                 <Routes>
-                    <Route path='/' element={<Main />} exact />
+                    <Route path='/' element={<Main />} exact>
+                        <Route path="pims" element={<Pims />} />
+                    </Route>
                     <Route path="/contacts" element={<Contacts />} />
                     <Route path='/calculation' element={<Calculation />} />
                     <Route path='/about' element={<About />} />
