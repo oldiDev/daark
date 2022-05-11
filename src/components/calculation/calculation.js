@@ -23,6 +23,8 @@ const Calculation = () => {
     let activeDegreeDevelopment = false;
     let activeFunctions = false;
 
+    const enableStyle = { animation: "enable 0.15s ease-in-out"}
+
     useEffect(() => {
         setCalculation(AppData,
             ProjectData,
@@ -73,7 +75,7 @@ const Calculation = () => {
                         }
                     </CalculationSelectionContent>
                 </CalculationSelection>
-                <CalculationSelection style={activeProjectType ? { opacity: "100%" } : { opacity: "30%" }}>
+                <CalculationSelection style={activeProjectType ? enableStyle : { opacity: "30%"}}>
                     <CalculationSelectionTitle>Что вы хотите получить?</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
@@ -86,7 +88,7 @@ const Calculation = () => {
                         }
                     </CalculationSelectionContent>
                 </CalculationSelection>
-                <CalculationSelection style={activeUniqueScreen ? { opacity: "100%" } : { opacity: "30%" }}>
+                <CalculationSelection style={activeUniqueScreen ? enableStyle : { opacity: "30%" }}>
                     <CalculationSelectionTitle>Какое количество уникальных экранов будет в приложении?</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
@@ -99,7 +101,7 @@ const Calculation = () => {
                         }
                     </CalculationSelectionContent>
                 </CalculationSelection>
-                <CalculationSelection style={activeDegreeDevelopment ? { opacity: "100%" } : { opacity: "30%" }}>
+                <CalculationSelection style={activeDegreeDevelopment ? enableStyle : { opacity: "30%" }}>
                     <CalculationSelectionTitle>Какая степень проработки интерфейса приложения?</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
@@ -112,7 +114,7 @@ const Calculation = () => {
                         }
                     </CalculationSelectionContent>
                 </CalculationSelection>
-                <CalculationSelection style={activeFunctions ? { opacity: "100%" } : { opacity: "30%" }}>
+                <CalculationSelection style={activeFunctions ? enableStyle : { opacity: "30%" }}>
                     <CalculationSelectionTitle>Какие функции вы хотите включить в приложение?</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
@@ -125,7 +127,7 @@ const Calculation = () => {
                         }
                     </CalculationSelectionContent>
                 </CalculationSelection>
-                <CalculationSelection style={activeFunctions ? { opacity: "100%" } : { opacity: "30%" }}>
+                <CalculationSelection style={activeFunctions ? enableStyle : { opacity: "30%" }}>
                     <CalculationSelectionTitle>С какими сторонними сервисами нужно взаимодействие?</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {

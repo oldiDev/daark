@@ -36,8 +36,7 @@ const HeaderContainer = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
-    z-index: 9999;
+    z-index: 1;
 `;
 
 const HeaderContent = styled.ul`
