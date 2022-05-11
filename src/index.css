@@ -60,13 +60,12 @@
     }
 }
 
-@keyframes enable {
-    0% {
-        opacity: 30%;
+@keyframes close {
+    0%{
+        height: 150vh;
     }
-
     100% {
-        opacity: 100%;
+        height: 0;
     }
 }
 

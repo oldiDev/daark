@@ -23,7 +23,8 @@ const Calculation = () => {
     let activeDegreeDevelopment = false;
     let activeFunctions = false;
 
-    const enableStyle = { animation: "enable 0.15s ease-in-out"}
+    const enableStyle = { opacituy: "100%", transition: "opacity .15s ease-in-out" }
+    const disableStyle = { opacity: "30%", transition: "opacity .15s ease-in-out" }
 
     useEffect(() => {
         setCalculation(AppData,
@@ -75,7 +76,7 @@ const Calculation = () => {
                         }
                     </CalculationSelectionContent>
                 </CalculationSelection>
-                <CalculationSelection style={activeProjectType ? enableStyle : { opacity: "30%"}}>
+                <CalculationSelection style={activeProjectType ? enableStyle : disableStyle}>
                     <CalculationSelectionTitle>Что вы хотите получить?</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
@@ -88,7 +89,7 @@ const Calculation = () => {
                         }
                     </CalculationSelectionContent>
                 </CalculationSelection>
-                <CalculationSelection style={activeUniqueScreen ? enableStyle : { opacity: "30%" }}>
+                <CalculationSelection style={activeUniqueScreen ? enableStyle : disableStyle}>
                     <CalculationSelectionTitle>Какое количество уникальных экранов будет в приложении?</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
@@ -101,12 +102,12 @@ const Calculation = () => {
                         }
                     </CalculationSelectionContent>
                 </CalculationSelection>
-                <CalculationSelection style={activeDegreeDevelopment ? enableStyle : { opacity: "30%" }}>
+                <CalculationSelection style={activeDegreeDevelopment ? enableStyle : disableStyle}>
                     <CalculationSelectionTitle>Какая степень проработки интерфейса приложения?</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
                             calculation.degreeDevelopment?.map((e, i) =>
-                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeDegreeDevelopment?  e.togle : removePojectTypeSelection }>
+                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeDegreeDevelopment ? e.togle : removePojectTypeSelection}>
                                     <CalculationImage src={e.isSelected ? e.DegreeDevelopmentIcon.split('.')[0] + '-blue.svg' : e.DegreeDevelopmentIcon} alt="logo" />
                                     <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{e.DegreeDevelopmentName}</CalculationInputTitle>
                                 </CalculationInput>
@@ -114,12 +115,12 @@ const Calculation = () => {
                         }
                     </CalculationSelectionContent>
                 </CalculationSelection>
-                <CalculationSelection style={activeFunctions ? enableStyle : { opacity: "30%" }}>
+                <CalculationSelection style={activeFunctions ? enableStyle : disableStyle}>
                     <CalculationSelectionTitle>Какие функции вы хотите включить в приложение?</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
                             calculation.functions?.map((e, i) =>
-                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeFunctions? e.togle : removePojectTypeSelection}>
+                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeFunctions ? e.togle : removePojectTypeSelection}>
                                     <CalculationImage src={e.isSelected ? e.FunctionsIcon.split('.')[0] + '-blue.svg' : e.FunctionsIcon} alt="logo" />
                                     <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{e.FunctionsName}</CalculationInputTitle>
                                 </CalculationInput>
@@ -127,12 +128,12 @@ const Calculation = () => {
                         }
                     </CalculationSelectionContent>
                 </CalculationSelection>
-                <CalculationSelection style={activeFunctions ? enableStyle : { opacity: "30%" }}>
+                <CalculationSelection style={activeFunctions ? enableStyle : disableStyle}>
                     <CalculationSelectionTitle>С какими сторонними сервисами нужно взаимодействие?</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
                             calculation.services?.map((e, i) =>
-                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeFunctions? e.togle : removePojectTypeSelection}>
+                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeFunctions ? e.togle : removePojectTypeSelection}>
                                     <CalculationImage src={e.isSelected ? e.ServicesIcon.split('.')[0] + '-blue.svg' : e.ServicesIcon} alt="logo" />
                                     <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{e.ServicesName}</CalculationInputTitle>
                                 </CalculationInput>
