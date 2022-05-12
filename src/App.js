@@ -21,8 +21,9 @@ const App = () => {
                 <Header />
                 <Routes>
                     <Route path='/' element={<Main />} exact>
-                        <Route path="pims" element={<Pims />} />
+                        {/* <Route path="pims" element={<Pims />} /> */}
                     </Route>
+                    <Route path="/pims" element={<Pims />} />
                     <Route path="/contacts" element={<Contacts />} />
                     <Route path='/calculation' element={<Calculation />} />
                     <Route path='/about' element={<About />} />

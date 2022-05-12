@@ -8,7 +8,7 @@ import CalculationPopUp from "./calculationPopUp";
 const CalculationFooter = ({price}) => {
 
     const [show, setShow] = useState(false);
-    const { calculation, removeAnySelection } = usePersistentStore();
+    const { removeAnySelection } = usePersistentStore();
 
     let  handleDelete = () => {
         removeAnySelection();

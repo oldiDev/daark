@@ -63,8 +63,8 @@ const IPhone = ({ bgcolor }) => {
                                                 <img src="/iPhoneImage/TabBar/contacts-blue.svg" alt="projects"></img>
                                                 <span className="labelSmall blue">Контакты</span>
                                             </>
-
-                                            : <>
+                                            :
+                                            <>
                                                 <img src="/iPhoneImage/TabBar/contacts.svg" alt="projects"></img>
                                                 <span className="labelSmall">Контакты</span>
                                             </>
