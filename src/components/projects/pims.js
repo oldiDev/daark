@@ -25,7 +25,7 @@ const Pims = () => {
                 // autoHeight={true}
                 >
                     <SwiperSlide className="swiper-slider">
-                        <h1>Мы разработали приложение доставки еды для популярного кафе из Москвы. Это привело к увеличению выручки на 20% за счет прямых продаж клиентам.</h1>
+                        <MainText>Мы разработали приложение доставки еды для популярного кафе из Москвы. <b>Это привело к увеличению выручки на 20% за счет прямых продаж клиентам.</b></MainText>
                     </SwiperSlide>
                     <SwiperSlide className="swiper-slider">
                         <h1>Проблема:</h1>
@@ -42,7 +42,7 @@ const Pims = () => {
                 </Swiper>
             </LeftSide>
             <RightSide>
-                <IPhone></IPhone>
+                <IPhone bgcolor={"#1D2B3C"}></IPhone>
             </RightSide>
         </Container>
     )
@@ -55,11 +55,15 @@ export default Pims;
 const Container = styled.div`
     width: 70%;
     max-width: 1000px;
-    margin: 50px auto;
+    margin: 40px auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+`
+
+const MainText = styled.h1`
+    font-weight: 400;
 `
 
 const LeftSide = styled.div`

@@ -125,6 +125,7 @@ button{
     justify-content: center;
     flex-direction: column;
     height: 100%;
+    z-index: 0;
 }
 
 

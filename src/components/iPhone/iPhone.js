@@ -4,12 +4,24 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import IphoneContact from "./iPhoneContact";
 import IphoneMain from "./iPhoneMain";
+import IphonePims from "./IPhonePims";
 
 const IPhone = ({ bgcolor }) => {
 
     let location = useLocation();
 
     const [time, setTime] = React.useState(new Date());
+
+    let renderMain = (param) => {
+        switch (param) {
+            case '/':
+                return <IphoneMain />;
+            case '/contacts':
+                return <IphoneContact />;
+            case '/pims':
+                return <IphonePims />
+        }
+    }
 
     React.useEffect(() => {
         setInterval(() => {
@@ -34,60 +46,65 @@ const IPhone = ({ bgcolor }) => {
                         </RightSide>
                     </StatusBar>
                     {
-                        (location.pathname == '/contacts') ?
-                            <IphoneContact /> : <IphoneMain />
+                        renderMain(location.pathname)
                     }
-                    <IosTabBar>
-                        <Tabs>
-                            <Link to="/">
-                                <IosTab>
-                                    {
-                                        (location.pathname == '/') ?
-                                            <>
-                                                <img src="/iPhoneImage/TabBar/projects-blue.svg" alt="projects"></img>
-                                                <span className="labelSmall blue">Наши проекты</span>
-                                            </>
-                                            :
-                                            <>
-                                                <img src="/iPhoneImage/TabBar/projects.svg" alt="projects"></img>
-                                                <span className="labelSmall">Наши проекты</span>
-                                            </>
-                                    }
-                                </IosTab>
-                            </Link>
-                            <Link to="/contacts">
-                                <IosTab>
-                                    {
-                                        (location.pathname == '/contacts') ?
-                                            <>
-                                                <img src="/iPhoneImage/TabBar/contacts-blue.svg" alt="projects"></img>
-                                                <span className="labelSmall blue">Контакты</span>
-                                            </>
-                                            :
-                                            <>
-                                                <img src="/iPhoneImage/TabBar/contacts.svg" alt="projects"></img>
-                                                <span className="labelSmall">Контакты</span>
-                                            </>
-                                    }
-                                </IosTab>
-                            </Link>
-                            <Link to="/calculation">
-                                <IosTab>
-                                    <img src="/iPhoneImage/TabBar/calculation.svg" alt="projects"></img>
-                                    <span className="labelSmall">Калькулятор</span>
-                                </IosTab>
-                            </Link>
-                            <Link to="/about">
-                                <IosTab>
-                                    <img src="/iPhoneImage/TabBar/about.svg" alt="projects"></img>
-                                    <span className="labelSmall">О нас</span>
-                                </IosTab>
-                            </Link>
-                        </Tabs>
-                        <HomeIndicator>
-                            <HomeLine />
-                        </HomeIndicator>
-                    </IosTabBar>
+                    {
+                        (location.pathname == '/' || location.pathname == '/contacts') ?
+                            <IosTabBar>
+                                <Tabs>
+                                    <Link to="/">
+                                        <IosTab>
+                                            {
+                                                (location.pathname == '/') ?
+                                                    <>
+                                                        <img src="/iPhoneImage/TabBar/projects-blue.svg" alt="projects"></img>
+                                                        <span className="labelSmall blue">Наши проекты</span>
+                                                    </>
+                                                    :
+                                                    <>
+                                                        <img src="/iPhoneImage/TabBar/projects.svg" alt="projects"></img>
+                                                        <span className="labelSmall">Наши проекты</span>
+                                                    </>
+                                            }
+                                        </IosTab>
+                                    </Link>
+                                    <Link to="/contacts">
+                                        <IosTab>
+                                            {
+                                                (location.pathname == '/contacts') ?
+                                                    <>
+                                                        <img src="/iPhoneImage/TabBar/contacts-blue.svg" alt="projects"></img>
+                                                        <span className="labelSmall blue">Контакты</span>
+                                                    </>
+                                                    :
+                                                    <>
+                                                        <img src="/iPhoneImage/TabBar/contacts.svg" alt="projects"></img>
+                                                        <span className="labelSmall">Контакты</span>
+                                                    </>
+                                            }
+                                        </IosTab>
+                                    </Link>
+                                    <Link to="/calculation">
+                                        <IosTab>
+                                            <img src="/iPhoneImage/TabBar/calculation.svg" alt="projects"></img>
+                                            <span className="labelSmall">Калькулятор</span>
+                                        </IosTab>
+                                    </Link>
+                                    <Link to="/about">
+                                        <IosTab>
+                                            <img src="/iPhoneImage/TabBar/about.svg" alt="projects"></img>
+                                            <span className="labelSmall">О нас</span>
+                                        </IosTab>
+                                    </Link>
+                                </Tabs>
+                                <HomeIndicator>
+                                    <HomeLine />
+                                </HomeIndicator>
+                            </IosTabBar>
+                            : 
+                            <></>
+                    }
+
                 </Screen>
             </Iphone>
         </ContactsContainer>
