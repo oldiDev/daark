@@ -57,7 +57,7 @@ const HeaderContent = styled.ul`
     align-items: center;
     list-style: none;
 
-    @media screen and (max-width: 576px){
+    @media screen and (max-width: 767px){
         position: absolute;
         top: 0;
         height: 0;
@@ -69,7 +69,7 @@ const HeaderContent = styled.ul`
         box-sizing: border-box;
         visibility: hidden;
         background-color: white;
-        transition: height 0.4s cubic-bezier(0.32, 0.08, 0.24, 1), padding 0.2s cubic-bezier(0.32, 0.08, 0.24, 1), visibility 0.2s cubic-bezier(0.32, 0.08, 0.24, 1);
+        transition: height 0.6s cubic-bezier(0.32, 0.08, 0.24, 1), padding 0.6s cubic-bezier(0.32, 0.08, 0.24, 1), visibility 0.3s cubic-bezier(0.32, 0.08, 0.24, 1);
 
 
         li {
@@ -163,6 +163,12 @@ const MenuToggle = styled.input`
         margin: 50px 0;
         padding: 0;
         border: 0;
+        opacity: 0%;
+    }
+
+    ~ ${HeaderContent} li {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out ;
     }
 
     &:checked ~ ${HeaderContent} { 
@@ -175,7 +181,8 @@ const MenuToggle = styled.input`
     }
 
     &:checked ~ ${HeaderContent} li {
-        animation: fadeIn 0.8s ease-in-out;
+        opacity: 1;
+        transition: opacity 0.4s ease-in-out ;
     }
 `
 

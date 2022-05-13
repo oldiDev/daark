@@ -27,7 +27,7 @@ const CalculationFooter = ({price}) => {
                         <Price>{price} ₽</Price>
                     </CalculationFooterLeft>
                     <CalculationFooterRight>
-                        <FooterBtn className="primaryButtonText" onClick={handleSubmit}>Получить рассчёт стоимости</FooterBtn>
+                        <FooterBtn className="primaryButtonText" onClick={handleSubmit}>Получить рассчёт <MobileText>стоимости</MobileText></FooterBtn>
                         <FooterBtnDelete className="tertiaryButtonText" onClick={handleDelete}>Очистить</FooterBtnDelete>
                     </CalculationFooterRight>
                 </CalculationFooterContainer>
@@ -108,4 +108,10 @@ const FooterBtnDelete = styled.button`
     color: var(--Blue);
     letter-spacing: -0.24px;
     cursor: pointer;
+`
+
+const MobileText = styled.span`
+    @media screen and (max-width: 767px){
+        display: none;
+    }
 `

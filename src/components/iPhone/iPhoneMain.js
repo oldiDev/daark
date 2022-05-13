@@ -55,7 +55,7 @@ const IphoneMain = () => {
 }
 
 const IphoneMainContainer = styled.div`
-    width: 100%;
+    width: 99%;
     height: 90%;
     background-color: white;
     display: flex;

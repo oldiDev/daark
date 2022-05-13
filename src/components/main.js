@@ -14,9 +14,17 @@ const Main = () => {
                 </LeftSideSwap>
 
                 <OurProjects>
-                    <div>Наши проекты</div>
-                    <img src="Main/Arrow.svg" alt="arrow"></img>
+                    <BigScreen>
+                        <div>Наши проекты</div>
+                        <img src="Main/Arrow.svg" alt="arrow"></img>
+                    </BigScreen>
+                    {/* <MobileScreen>
+                        <IPhone bgcolor={'white'} />
+                    </MobileScreen> */}
                 </OurProjects>
+                <MobileScreen>
+                    <IPhone bgcolor={'white'} />
+                </MobileScreen>
             </MainLeftSide>
             <MainRightSide>
                 <IPhone bgcolor={'white'} />
@@ -35,17 +43,30 @@ const MainContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     z-index: 2;
+
+    @media screen and (max-width: 767px){
+        width: 95%;
+        /* justify-content: center; */
+    }
 `
 
 const MainLeftSide = styled.div`
     width: 45%;
     left: 0%;
+
+    @media screen and (max-width: 767px){
+        width: 100%;
+    }
 `
 
 const LeftSideSwap = styled.div`
     position: fixed;
     width: 25%;
     animation: positionTop 0.8s ease-in-out 3.58s 1 normal both;
+
+    @media screen and (max-width: 767px){
+        width: 100%;
+    }
 `
 
 const FirstString = styled.h1`
@@ -63,13 +84,44 @@ const ThirdString = styled.h1`
 
 const OurProjects = styled.h1`
     position: fixed;
+    left: 20%;
     animation: positionBottom 0.6s ease-in-out 3.8s 1 normal both;
+
+    @media screen and (max-width: 767px){
+        animation: bottomMobile 0.6s ease-in-out 3.8s 1 normal both;
+
+    }
 `
 
 const MainRightSide = styled.div`
     position: fixed;
     top: 90px;
     right: 23%;
+
+    @media screen and (max-width: 767px){
+        display: none;
+    }
 `
+
+const BigScreen = styled.div`
+    @media screen and (max-width: 767px){
+        display: none;
+    }
+ `
+
+const MobileScreen = styled.div`
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0px auto;
+
+    @media screen and (min-width: 767px){
+        display: none;
+    }
+    @media screen and (max-width: 767px){
+        animation: bottomMobile 0.6s ease-in-out 3.8s 1 normal both;
+        zoom: 1.25;
+    }
+ `
 
 export default Main

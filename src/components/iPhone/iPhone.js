@@ -129,6 +129,7 @@ const Iphone = styled.div`
     margin: 0px auto;
     border-radius: 70px;
     background-image: url(/iPhoneImage/iPhoneImage.svg);
+
 `
 
 const Screen = styled.div`
@@ -140,6 +141,7 @@ const Screen = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
 `
 
 const StatusBar = styled.div`

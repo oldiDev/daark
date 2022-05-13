@@ -34,9 +34,17 @@ const Calculation = () => {
             FunctionsData,
             ServicesData);
     }, [])
+
+    let test = (active) => {
+        activeProjectType = (activeProjectType) ? true : active;
+        removePojectTypeSelection();
+    }
+
+
     calculation.appType?.forEach((e) => {
         fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
-        activeProjectType = (e.isSelected) ? true : activeProjectType;
+        // activeProjectType = (e.isSelected) ? true : activeProjectType;
+        (e.isSelected) ? activeProjectType = true : test(activeProjectType);
     })
     calculation.projectType?.forEach((e) => {
         fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;

@@ -69,6 +69,10 @@ const TeamContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @media screen and (max-width: 767px){
+        width: 300px
+    }
 `
 
 const TeamImg = styled.img`

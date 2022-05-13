@@ -39,6 +39,14 @@ const PopUpWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: baseline;
+
+    @media screen and (max-width: 1490px){
+        min-height: 150vh
+    }
+
+    @media screen and (max-width: 767px){
+        min-height: 150vh;
+    }
 `
 
 const PopUpContainer = styled.form`
@@ -53,6 +61,11 @@ const PopUpContainer = styled.form`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 767px){
+        width: 95%;
+        margin-top: 50%;
+    }
 `
 
 const PopUpImg = styled.img`
