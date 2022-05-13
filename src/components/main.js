@@ -84,7 +84,6 @@ const ThirdString = styled.h1`
 
 const OurProjects = styled.h1`
     position: fixed;
-    left: 20%;
     animation: positionBottom 0.6s ease-in-out 3.8s 1 normal both;
 
     @media screen and (max-width: 767px){

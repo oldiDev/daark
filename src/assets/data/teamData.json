@@ -1,7 +1,7 @@
 {
   "team": [
     {
-      "avatar": "/About/avatar.svg",
+      "avatar": "/About/avatars/Tema.png",
       "name": "Артем Сёменов",
       "position": "Product manager",
       "stack": [
@@ -44,7 +44,7 @@
       ]
     },
     {
-      "avatar": "/About/avatar.svg",
+      "avatar": "/About/avatars/Dan.png",
       "name": "Данила Ворновицкий",
       "position": "UI/UX",
       "stack": [
@@ -64,12 +64,21 @@
           "img": "/About/flutter.svg"
         },
         {
+          "img": "/About/html.svg"
+        },
+        {
+          "img": "/About/css.svg"
+        },
+        {
+          "img": "/About/gitlab.svg"
+        },
+        {
           "img": "/About/swift.svg"
         }
       ]
     },
     {
-      "avatar": "/About/avatar.svg",
+      "avatar": "/About/avatars/Slava.png",
       "name": "Вячеслав Нестерцев",
       "position": "Front-end developer",
       "stack": [
@@ -100,7 +109,7 @@
       ]
     },
     {
-      "avatar": "/About/avatar.svg",
+      "avatar": "/About/avatars/Karim.png",
       "name": "Ouazmir Abdelkarim",
       "position": "Fullstack developer",
       "stack": [
@@ -140,7 +149,7 @@
       ]
     },
     {
-      "avatar": "/About/avatar.svg",
+      "avatar": "/About/avatars/Kirill.png",
       "name": "Кирилл Алекcеев",
       "position": "Fullstack developer",
       "stack": [
@@ -174,7 +183,7 @@
       ]
     },
     {
-      "avatar": "/About/avatar.svg",
+      "avatar": "/About/avatars/Shoma.png",
       "name": "Шамиль Махмудов",
       "position": "Fullstack developer",
       "stack": [

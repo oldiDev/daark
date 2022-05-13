@@ -24,6 +24,10 @@ const Container = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 767px){
+        width: 90%;
+    }
 `
 
 const LeftSide = styled.div`

@@ -24,6 +24,12 @@ const Pims = () => {
                     className="slider-style"
                 // autoHeight={true}
                 >
+                    <SwiperSlide className='swiper-slider first-slide'>
+                        <IphoneContainer>
+                            <IPhone bgcolor={"#1D2B3C"}></IPhone>
+                        </IphoneContainer>
+
+                    </SwiperSlide>
                     <SwiperSlide className="swiper-slider">
                         <MainText>Мы разработали приложение доставки еды для популярного кафе из Москвы. <b>Это привело к увеличению выручки на 20% за счет прямых продаж клиентам.</b></MainText>
                     </SwiperSlide>
@@ -60,6 +66,10 @@ const Container = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 767px){
+        width: 90%;
+    }
 `
 
 const MainText = styled.h1`
@@ -70,6 +80,10 @@ const LeftSide = styled.div`
     width: 50%;
     height: 90%;
     z-index: 0;
+
+    @media screen and (max-width: 767px){
+        width: 100%;
+    }
 `
 
 const RightSide = styled.div`
@@ -77,10 +91,17 @@ const RightSide = styled.div`
     top: 90px;
     right: 23%; */
     width: fit-content;
+    @media screen and (max-width: 767px){
+        display: none;
+    }
 `
 
 const SubText = styled.div`
     margin: 30px 0;
     line-height: 19.36px;
+`
+
+const IphoneContainer = styled.div`
+    zoom: 1.25;
 `
 

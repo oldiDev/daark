@@ -139,6 +139,16 @@ button{
     z-index: 0;
 }
 
+.first-slide{
+    align-items: center;
+}
+
+@media screen and (min-width: 767px) {
+    .first-slide {
+        display: none;
+    }
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

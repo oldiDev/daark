@@ -28,7 +28,7 @@ const IphoneContact = () => {
                     </AddressContent>
                 </AddressLeftSide>
                 <AddressRightSide>
-                    <img src="/iPhoneImage/Contacts/map.svg" alt="map"></img>
+                    <MapImg src="/iPhoneImage/Contacts/map.png" alt="map"></MapImg>
                 </AddressRightSide>
             </Address>
         </IphoneContactsContainer>
@@ -107,6 +107,12 @@ const AddressRightSide = styled.div`
     width: 50%;
     text-align: right;
     padding-right: 1em;
+`
+
+const MapImg = styled.img`
+    width: 91px;
+    height: 91px;
+    border-radius: 5px;
 `
 
 export default IphoneContact;

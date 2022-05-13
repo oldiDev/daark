@@ -124,8 +124,8 @@ const ContactsContainer = styled.div`
 
 const Iphone = styled.div`
     font-family: 'SFProText';
-    width: 437px;
-    height: 882px;
+    width: 430px;
+    height: 880px;
     margin: 0px auto;
     border-radius: 70px;
     background-image: url(/iPhoneImage/iPhoneImage.svg);
@@ -133,7 +133,7 @@ const Iphone = styled.div`
 `
 
 const Screen = styled.div`
-    width: 390px;
+    width: 395px;
     height: 844px;
     border-radius: 50px;
     margin: 20px auto;
@@ -168,8 +168,9 @@ const RightSide = styled.span`
 `
 
 const IosTabBar = styled.div`
-    width: 100%;
+    width: 98%;
     height: 83px;
+    margin-left: 8px;
     background-color: #F9F9F9;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;

@@ -64,7 +64,7 @@ const AboutTeam = styled.div`
 
 const TeamContainer = styled.div`
     width: 200px;
-    height: fit-content;
+    height: 350px;
     margin: 1em 2em;
     display: flex;
     flex-direction: column;
@@ -78,6 +78,11 @@ const TeamContainer = styled.div`
 const TeamImg = styled.img`
     width: 100%;
     height: 200px;
+
+    @media screen and (max-width: 767px){
+        height: 300px;
+        width: 300px;
+    }
 `
 
 const TeamName = styled.div`
