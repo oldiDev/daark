@@ -6,16 +6,25 @@ const Contacts = () => {
 
     return (
         <ContactsContainer>
-            <IPhone bgcolor={'#F2F2F7'}/>
+            <IPhone bgcolor={'#F2F2F7'} />
         </ContactsContainer>
     )
 }
 
 const ContactsContainer = styled.div`
     width: 70%;
-    /* max-width: 1000px; */
-    height: 80vh;
-    margin: 90px auto;
+    max-width: 1000px;
+    height: 100vh;
+    margin: 0px auto;
+    margin-bottom: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 767px){
+        width: 90%;
+        zoom: 1.25;
+    }
 `
 
 export default Contacts;

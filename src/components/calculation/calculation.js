@@ -43,8 +43,8 @@ const Calculation = () => {
 
     calculation.appType?.forEach((e) => {
         fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
-        // activeProjectType = (e.isSelected) ? true : activeProjectType;
-        (e.isSelected) ? activeProjectType = true : test(activeProjectType);
+        activeProjectType = (e.isSelected) ? true : activeProjectType;
+        // (e.isSelected) ? activeProjectType = true : test(activeProjectType);
     })
     calculation.projectType?.forEach((e) => {
         fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;

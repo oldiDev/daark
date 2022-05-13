@@ -78,6 +78,8 @@ const HeaderContent = styled.ul`
             padding-bottom: 16px;
             border-bottom: 1px solid var(--MediumGrey);
             margin: 16px 0px;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
         }
 
         li a{
@@ -166,10 +168,6 @@ const MenuToggle = styled.input`
         opacity: 0%;
     }
 
-    ~ ${HeaderContent} li {
-        opacity: 0;
-        transition: opacity 0.4s ease-in-out ;
-    }
 
     &:checked ~ ${HeaderContent} { 
         width: 100%;
@@ -181,6 +179,7 @@ const MenuToggle = styled.input`
     }
 
     &:checked ~ ${HeaderContent} li {
+        /* animation: fadeIn 0.6s ease-in-out;         */
         opacity: 1;
         transition: opacity 0.4s ease-in-out ;
     }
