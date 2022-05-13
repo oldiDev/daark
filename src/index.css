@@ -1,0 +1,255 @@
+@font-face {
+    font-family: 'SFProText';
+    src: url('assets/fonts/SF-Pro-Text-Regular.otf');
+}
+
+@font-face {
+    font-family: 'SFProTextMedium';
+    src: url('assets/fonts/SF-Pro-Text-Medium.otf');
+}
+
+@font-face {
+    font-family: 'SFProTextSemibold';
+    src: url('assets/fonts/SF-Pro-Text-Semibold.otf');
+}
+
+@keyframes mainPageFirst {
+    0% {
+        color: black;
+    }
+
+    100% {
+        color: var(--DarkGrey);
+    }
+}
+
+@keyframes mainPageSecond {
+    0% {
+        color: var(--DarkGrey);
+    }
+    40% {
+        color: black;
+    }
+    60%{
+        color: black;
+    }
+    100% {
+        color: var(--DarkGrey);
+    }
+}
+
+@keyframes positionTop {
+    0%{
+        top: 40%;
+        opacity: 100%;
+    }
+    100%{
+        top: -100%;
+        opacity: 0%;
+    }
+}
+
+@keyframes positionBottom {
+    0%{
+        top:100%;
+        opacity: 0%;
+    }
+    100%{
+        top: 40%;
+        opacity: 100%;
+    }
+}
+
+@keyframes bottomMobile {
+    0%{
+        top:100%;
+        opacity: 0%;
+    }
+    100%{
+        top: 15%;
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+:root{
+    --DarkGrey: #828282;
+    --MediumGrey: #BDBDBD;
+    --LightGrey: #E0E0E0;
+    --VeryLightGrey: #F2F2F2;
+    --Blue: #2F80ED;
+    --LightBlue: #8CB9F6;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'SFPro', 'Inter' sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button{
+    border: none;
+    padding: unset;
+}
+
+@media screen and (max-width: 1440px) {
+    body{
+        zoom: 0.75;
+    }
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgb(255, 255, 255, 0.8);
+    backdrop-filter: blur(0.5em);
+}
+
+@media screen and (max-width: 767px) {
+    .header{
+        transition: background .36s cubic-bezier(0.32, 0.08, 0.24, 1), height .56s cubic-bezier(0.32, 0.08, 0.24, 1);
+    }
+}
+
+.slider-style{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120vh;
+    z-index: 0;
+}
+
+.swiper-slider{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    z-index: 0;
+}
+
+.first-slide{
+    align-items: center;
+}
+
+@media screen and (min-width: 767px) {
+    .first-slide {
+        display: none;
+    }
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.blue{
+    color: var(--Blue);
+}
+
+.dark-grey{
+    color: var(--DarkGrey);
+}
+
+h1{
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 40px;
+}
+
+h2{
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 32px;
+}
+
+h3{
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+}
+
+h4{
+    font-family: "Inter";
+    font-size: 20px;
+    letter-spacing: -0.24px;
+}
+
+.primaryButtonText {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.tertiaryButtonText{
+    font-family: 'Inter';
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.SF_h1 {
+    font-family: 'SFProTextMedium';
+    font-weight: 400;
+    font-size: 26px;
+    letter-spacing: -1px;
+}
+
+.SF_h2 {
+    font-family: 'SFProTextSemibold';
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: -0.41px;
+}
+
+.SF_h3 {
+    font-family: 'SFProText';
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.SF_body{
+    font-family: 'SFProText';
+    font-size: 12px;
+    letter-spacing: -0.41px;
+}
+
+.SF_bodySmall {
+    font-family: 'SFProText';
+    font-size: 12px;
+    letter-spacing: -0.41px;
+}
+
+.buttonText{
+    font-family: 'SFProTextSemibold';
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: -0.08px;
+}
+
+.labelSmall{
+    font-family: 'SFProTextMedium';
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: -0.24px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--MediumGrey);
+}
