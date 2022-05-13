@@ -5,6 +5,8 @@ import styled from "styled-components";
 import IphoneContact from "./iPhoneContact";
 import IphoneMain from "./iPhoneMain";
 import IphonePims from "./IPhonePims";
+import IphoneVPN from "./iPhoneVPN";
+import IphoneWoodcoin from "./iPhoneWoodcoin";
 
 const IPhone = ({ bgcolor }) => {
 
@@ -19,7 +21,11 @@ const IPhone = ({ bgcolor }) => {
             case '/contacts':
                 return <IphoneContact />;
             case '/pims':
-                return <IphonePims />
+                return <IphonePims />;
+            case '/woodcoin':
+                return <IphoneWoodcoin />;
+            case '/vpn':
+                return <IphoneVPN />;
         }
     }
 

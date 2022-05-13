@@ -24,13 +24,15 @@ const IphoneMain = () => {
                 <AppInfo>
                     <img src="iPhoneImage/AppIcon/Woodkoin.svg" alt="woodkoin"></img>
                     <AppName>
-                        <div className="SF_h3">Woodkoin Wallet</div>
+                        <div className="SF_h3">Woodcoin Wallet</div>
                         <div className="SF_Body dark-grey">Крипто-кошелёк</div>
                     </AppName>
                 </AppInfo>
-                <OpenBtn>
-                    <span className="buttonText">Открыть</span>
-                </OpenBtn>
+                <Link to="woodcoin">
+                    <OpenBtn>
+                        <span className="buttonText">Открыть</span>
+                    </OpenBtn>
+                </Link>
             </AppContainer>
             <AppContainer>
                 <AppInfo>
@@ -40,9 +42,12 @@ const IphoneMain = () => {
                         <div className="SF_Body dark-grey">Безопасное подключение</div>
                     </AppName>
                 </AppInfo>
-                <OpenBtn>
-                    <span className="buttonText">Открыть</span>
-                </OpenBtn>
+                <Link to="vpn">
+                    <OpenBtn>
+                        <span className="buttonText">Открыть</span>
+                    </OpenBtn>
+                </Link>
+
             </AppContainer>
             <Outlet />
         </IphoneMainContainer>

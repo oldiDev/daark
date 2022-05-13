@@ -68,7 +68,8 @@ const MainText = styled.h1`
 
 const LeftSide = styled.div`
     width: 50%;
-    height: 100%;
+    height: 90%;
+    z-index: 0;
 `
 
 const RightSide = styled.div`
@@ -76,7 +77,6 @@ const RightSide = styled.div`
     top: 90px;
     right: 23%; */
     width: fit-content;
-    height: 100%;
 `
 
 const SubText = styled.div`
