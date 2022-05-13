@@ -1,0 +1,217 @@
+{
+  "team": [
+    {
+      "avatar": "/About/avatars/Tema.png",
+      "name": "Артем Сёменов",
+      "position": "Product manager",
+      "stack": [
+        {
+          "img": "/About/gitlab.svg"
+        },
+        {
+          "img": "/About/java.svg"
+        },
+        {
+          "img": "/About/docker.svg"
+        },
+        {
+          "img": "/About/graphql.svg"
+        },
+        {
+          "img": "/About/npm.svg"
+        },
+        {
+          "img": "/About/python.svg"
+        },
+        {
+          "img": "/About/figma.svg"
+        },
+        {
+          "img": "/About/angular.svg"
+        },
+        {
+          "img": "/About/rust.svg"
+        },
+        {
+          "img": "/About/ts.svg"
+        },
+        {
+          "img": "/About/react.svg"
+        },
+        {
+          "img": "/About/redux.svg"
+        }
+      ]
+    },
+    {
+      "avatar": "/About/avatars/Dan.png",
+      "name": "Данила Ворновицкий",
+      "position": "UI/UX",
+      "stack": [
+        {
+          "img": "/About/figma.svg"
+        },
+        {
+          "img": "/About/ai.svg"
+        },
+        {
+          "img": "/About/ps.svg"
+        },
+        {
+          "img": "/About/xd.svg"
+        },
+        {
+          "img": "/About/flutter.svg"
+        },
+        {
+          "img": "/About/html.svg"
+        },
+        {
+          "img": "/About/css.svg"
+        },
+        {
+          "img": "/About/gitlab.svg"
+        },
+        {
+          "img": "/About/swift.svg"
+        }
+      ]
+    },
+    {
+      "avatar": "/About/avatars/Slava.png",
+      "name": "Вячеслав Нестерцев",
+      "position": "Front-end developer",
+      "stack": [
+        {
+          "img": "/About/html.svg"
+        },
+        {
+          "img": "/About/css.svg"
+        },
+        {
+          "img": "/About/js.svg"
+        },
+        {
+          "img": "/About/ts.svg"
+        },
+        {
+          "img": "/About/react.svg"
+        },
+        {
+          "img": "/About/redux.svg"
+        },
+        {
+          "img": "/About/vue.svg"
+        },
+        {
+          "img": "/About/bootstrap.svg"
+        }
+      ]
+    },
+    {
+      "avatar": "/About/avatars/Karim.png",
+      "name": "Ouazmir Abdelkarim",
+      "position": "Fullstack developer",
+      "stack": [
+        {
+          "img": "/About/docker.svg"
+        },
+        {
+          "img": "/About/nodejs.svg"
+        },
+        {
+          "img": "/About/npm.svg"
+        },
+        {
+          "img": "/About/HTML.svg"
+        },
+        {
+          "img": "/About/css.svg"
+        },
+        {
+          "img": "/About/js.svg"
+        },
+        {
+          "img": "/About/ts.svg"
+        },
+        {
+          "img": "/About/react.svg"
+        },
+        {
+          "img": "/About/redux.svg"
+        },
+        {
+          "img": "/About/bootstrap.svg"
+        },
+        {
+          "img": "/About/rust.svg"
+        }
+      ]
+    },
+    {
+      "avatar": "/About/avatars/Kirill.png",
+      "name": "Кирилл Алекcеев",
+      "position": "Fullstack developer",
+      "stack": [
+        {
+          "img": "/About/php.svg"
+        },
+        {
+          "img": "/About/c++.svg"
+        },
+        {
+          "img": "/About/c.svg"
+        },
+        {
+          "img": "/About/html.svg"
+        },
+        {
+          "img": "/About/css.svg"
+        },
+        {
+          "img": "/About/js.svg"
+        },
+        {
+          "img": "/About/ts.svg"
+        },
+        {
+          "img": "/About/react.svg"
+        },
+        {
+          "img": "/About/redux.svg"
+        }
+      ]
+    },
+    {
+      "avatar": "/About/avatars/Shoma.png",
+      "name": "Шамиль Махмудов",
+      "position": "Fullstack developer",
+      "stack": [
+        {
+          "img": "/About/python.svg"
+        },
+        {
+          "img": "/About/html.svg"
+        },
+        {
+          "img": "/About/css.svg"
+        },
+        {
+          "img": "/About/js.svg"
+        },
+        {
+          "img": "/About/ts.svg"
+        },
+        {
+          "img": "/About/react.svg"
+        },
+        {
+          "img": "/About/redux.svg"
+        },
+        {
+          "img": "/About/bootstrap.svg"
+        }
+      ]
+    }
+  ]
+}
