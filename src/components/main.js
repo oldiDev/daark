@@ -20,9 +20,6 @@ const Main = () => {
                             <div>Наши проекты</div>
                             <img src="Main/Arrow.svg" alt="arrow"></img>
                         </BigScreen>
-                        {/* <MobileScreen>
-                        <IPhone bgcolor={'white'} />
-                    </MobileScreen> */}
                     </OurProjects>
                     <MobileScreen>
                         <IPhone bgcolor={'white'} />
@@ -39,10 +36,10 @@ const Main = () => {
 }
 
 const MainContainer = styled.div`
-    width: 100%;
+    width: 75%;
     max-width: 1000px;
-    min-height: 80vh;
-    height: 100vh;
+    min-height: 100vh;
+    /* height: 100vh; */
     margin: 90px auto;
     display: flex;
     flex-direction: row;
@@ -53,30 +50,27 @@ const MainContainer = styled.div`
     @media screen and (max-width: 767px){
         width: 95%;
         /* justify-content: center; */
-        height: 130vh;
+        height: 100vh;
         margin-top: 60px;
+        justify-content: center;
     }
 `
 
 const MainLeftSide = styled.div`
     width: 45%;
-    left: 0%;
-
+    height: fit-content;
     @media screen and (max-width: 767px){
         width: 100%;
     }
 `
 
 const LeftSideSwap = styled.div`
-    position: fixed;
-    width: 25%;
+    /* position: fixed; */
+    width: 100%;
     animation: positionTop 0.8s ease-in-out 3.58s 1 normal both;
 
     @media screen and (max-width: 767px){
-        width: 98%;
-    }
-    @media screen and (min-width: 1490px) and (max-width: 2560px){
-        width: 20%;
+        animation: topMobile 0.8s ease-in-out 3.58s 1 normal both;
     }
 `
 
@@ -94,7 +88,7 @@ const ThirdString = styled.h1`
 `
 
 const OurProjects = styled.h1`
-    position: fixed;
+    /* position: fixed; */
     animation: positionBottom 0.6s ease-in-out 3.8s 1 normal both;
 
     @media screen and (max-width: 767px){
@@ -104,9 +98,9 @@ const OurProjects = styled.h1`
 `
 
 const MainRightSide = styled.div`
-    position: fixed;
+    /* position: fixed;
     top: 90px;
-    right: 23%;
+    right: 23%; */
     @media screen and (max-width: 767px){
         display: none;
     }
@@ -123,9 +117,6 @@ const BigScreen = styled.div`
  `
 
 const MobileScreen = styled.div`
-    position: fixed;
-    left: 0;
-    right: 0;
     margin: 0px auto;
 
     @media screen and (min-width: 767px){

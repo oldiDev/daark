@@ -50,33 +50,53 @@
 
 @keyframes positionTop {
     0%{
-        top: 30%;
+        /* top: 30%; */
+        transform: translateY(0);
         opacity: 100%;
     }
     100%{
-        top: -100%;
+        /* top: -100%; */
+        transform: translateY(-1000px);
+        opacity: 0%;
+    }
+}
+
+@keyframes topMobile {
+    0%{
+        /* top: 30%; */
+        transform: translateY(60px);
+        opacity: 100%;
+    }
+    100%{
+        /* top: -100%; */
+        transform: translateY(-1000px);
         opacity: 0%;
     }
 }
 
 @keyframes positionBottom {
     0%{
-        top:100%;
+        /* top:100%; */
+        transform: translateY(1000px);
         opacity: 0%;
     }
     100%{
-        top: 40%;
+        /* top: 40%; */
+        transform: translateY(-250px);
         opacity: 100%;
     }
 }
 
 @keyframes bottomMobile {
     0%{
-        top:100%;
+        /* top:100%; */
+        transform: translateY(1000px);
+        opacity: 0%;
         opacity: 0%;
     }
     100%{
-        top: 80px;
+        /* top: 80px; */
+        transform: translateY(-20%);
         opacity: 100%;
     }
 }
@@ -104,6 +124,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'SFProText', 'SFProTextMedium', 'SFProTextSemibold' , 'Inter', 'Poppins' sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: white;
 }
 
 button{
@@ -301,6 +322,12 @@ h4{
     font-weight: 400;
     font-size: 10px;
     letter-spacing: -0.24px;
+}
+
+@media screen and (max-width: 767px) {
+    .SF_h1 {
+        font-size: 35px;
+    }
 }
 
 a{
