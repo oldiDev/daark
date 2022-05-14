@@ -24,7 +24,7 @@ const ContactsContainer = styled.div`
     width: 70%;
     max-width: 1000px;
     height: fit-content;
-    margin: 90px auto;
+    margin: 80px auto;
     margin-bottom: unset;
     display: flex;
     justify-content: center;

@@ -75,6 +75,9 @@ const LeftSideSwap = styled.div`
     @media screen and (max-width: 767px){
         width: 98%;
     }
+    @media screen and (min-width: 1490px) and (max-width: 2560px){
+        width: 20%;
+    }
 `
 
 const FirstString = styled.h1`
@@ -102,10 +105,14 @@ const OurProjects = styled.h1`
 
 const MainRightSide = styled.div`
     position: fixed;
-    top: 70px;
+    top: 90px;
     right: 23%;
     @media screen and (max-width: 767px){
         display: none;
+    }
+
+    @media screen and (min-width: 1440px)  and (max-width: 2560px){
+        right: 30%;
     }
 `
 

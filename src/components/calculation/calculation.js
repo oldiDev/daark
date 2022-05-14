@@ -12,6 +12,7 @@ import {
 } from "../../data/calculationData";
 import { usePersistentStore } from "../../store";
 import CalculationFooter from "./calculationFooter";
+import '../../index.css'
 
 const Calculation = () => {
 
