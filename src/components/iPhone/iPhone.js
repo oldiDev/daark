@@ -157,6 +157,7 @@ const StatusBar = styled.div`
 const LeftSide = styled.span`
     width: 54px;
     height: 21px;
+    font-size: 16px;
 `
 
 const RightSide = styled.span`

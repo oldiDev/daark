@@ -80,7 +80,12 @@ const Container = styled.div`
 `
 
 const MainText = styled.h1`
-    font-weight: bold;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 400;
 `
 
 const LeftSide = styled.div`
@@ -95,6 +100,10 @@ const LeftSide = styled.div`
 const SubText = styled.div`
     margin: 30px 0;
     line-height: 19.36px;
+
+    @media screen and (max-width: 767px){
+        line-height: 28px;
+    }
 `
 
 const RightSide = styled.div`

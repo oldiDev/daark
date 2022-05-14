@@ -111,6 +111,10 @@ const RightSide = styled.div`
 const SubText = styled.div`
     margin: 30px 0;
     line-height: 19.36px;
+
+    @media screen and (max-width: 767px){
+        line-height: 28px;
+    }
 `
 
 const IphoneContainer = styled.div`

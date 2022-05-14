@@ -171,7 +171,7 @@ const CalculationContainer = styled.div`
 `
 
 const CalculationLabel = styled.div`
-    font-family: 'Inter';
+    font-family: "Inter";
     font-size: 36px;
     font-weight: bold;
     line-height: 44px;

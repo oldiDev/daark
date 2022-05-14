@@ -237,6 +237,15 @@ h4{
 
     .tertiaryButtonText {
         font-size: 25px;
+        line-height: 28px;
+    }
+
+    .mobile-logo {
+        height: 100%;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 

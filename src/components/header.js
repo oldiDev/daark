@@ -11,8 +11,8 @@ const Header = () => {
         <div className="header">
             <HeaderContainer>
                 <HeaderItem />
-                <Link to="/" style={{ height: "20px" }} onClick={() => setIsChecked(false)}>
-                    <img src="/Logo/logo.svg" alt="logo"></img>
+                <Link to="/" className="mobile-logo" onClick={() => setIsChecked(false)}>
+                    <Logo src="/Logo/logo.svg" alt="logo"></Logo>
                 </Link>
                 <MenuToggle type="checkbox" id="menu-togle" checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
                 <MenuButtonContainer for="menu-togle">
@@ -49,7 +49,7 @@ const HeaderContainer = styled.div`
     z-index: 2;
 
     @media screen and (max-width: 767px){
-        height: 48px;
+        height: 64px;
         width: 100%;
     }
 `;
@@ -67,7 +67,7 @@ const HeaderContent = styled.ul`
         top: 0;
         height: 0;
         width: 100%;
-        margin: 40px 0;
+        margin: 64px 0;
         flex-direction: column;
         justify-content: flex-start;
         z-index: 4;
@@ -93,9 +93,27 @@ const HeaderContent = styled.ul`
     }
 `;
 
+const LogoContainer = styled.div`
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
+const Logo = styled.img`
+    width: 74px;
+    height: 20px;
+
+    @media screen and (max-width: 767px){
+        height: 32px;
+        width: 112px;
+    }
+`
+
 const HeaderItem = styled.div`
     display: none;
-    width: 48px;
+    width: 64px;
     height: 100%;
 
     @media screen and (max-width: 767px){
@@ -106,7 +124,7 @@ const HeaderItem = styled.div`
 const MenuButtonContainer = styled.label`
     display: none;
     height: 100%;
-    width: 48px;
+    width: 64px;
     cursor: pointer;
     flex-direction: column;
     justify-content: center;
@@ -176,7 +194,7 @@ const MenuToggle = styled.input`
     &:checked ~ ${HeaderContent} { 
         width: 100%;
         height: 150vh;
-        margin: 40px 0;
+        margin: 64px 0;
         padding: 30em 0;
         /* transition: height 0.4s cubic-bezier(0.32, 0.08, 0.24, 1), padding 0.4s cubic-bezier(0.32, 0.08, 0.24, 1); */
         visibility: visible;
