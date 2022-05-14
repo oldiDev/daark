@@ -73,7 +73,7 @@ const LeftSideSwap = styled.div`
     animation: positionTop 0.8s ease-in-out 3.58s 1 normal both;
 
     @media screen and (max-width: 767px){
-        width: 100%;
+        width: 98%;
     }
 `
 

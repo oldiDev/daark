@@ -11,10 +11,10 @@ const Footer = () => {
                     <Title>
                         Навигация
                     </Title>
-                    <Link to="/" className="tertiaryButtonText">Главная</Link>
-                    <Link to="/calculation" className="tertiaryButtonText">Калькулятор</Link>
-                    <Link to="/contacts" className="tertiaryButtonText">Контакты</Link>
-                    <Link to="/about" className="tertiaryButtonText">О нас</Link>
+                    <Link to="/" className="tertiaryButtonText footer-link">Главная</Link>
+                    <Link to="/calculation" className="tertiaryButtonText footer-link">Калькулятор</Link>
+                    <Link to="/contacts" className="tertiaryButtonText footer-link">Контакты</Link>
+                    <Link to="/about" className="tertiaryButtonText footer-link">О нас</Link>
                 </Navigation>
                 <Contacts>
                     <Title>
@@ -54,6 +54,11 @@ const Container = styled.div`
 
 const Logo = styled.img`
     margin: 10px 0px;
+
+    @media screen and (max-width: 767px){
+        height: 32px;
+        width: 112px;
+    }
 `
 
 const Navigation = styled.div`
@@ -68,12 +73,20 @@ const Navigation = styled.div`
     a {
         color: white;
         line-height: 19px;
-        margin: 4px;
+        margin: 4px 0px;
 
     }
 
     a:hover{
         color: var(--MediumGrey);
+    }
+
+    @media screen and (max-width: 767px){
+        margin: 24px 0px;
+
+        a{
+             line-height: 28px;
+        }
     }
 `
 
