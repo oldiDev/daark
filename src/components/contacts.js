@@ -14,7 +14,7 @@ const Contacts = () => {
 const ContactsContainer = styled.div`
     width: 70%;
     max-width: 1000px;
-    height: 100vh;
+    height: fit-content;
     margin: 90px auto;
     margin-bottom: unset;
     display: flex;
@@ -23,8 +23,9 @@ const ContactsContainer = styled.div`
 
     @media screen and (max-width: 767px){
         width: 90%;
-        margin-top: 10%;
+        margin-top: 60px;
         zoom: 1.25;
+        align-items: flex-start;
     }
 `
 

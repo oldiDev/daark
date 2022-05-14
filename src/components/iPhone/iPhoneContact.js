@@ -24,7 +24,7 @@ const IphoneContact = () => {
                     <AddressContent className="SF_body">
                         <span>Москва,</span>
                         <span>ул. Малышева 20,</span>
-                        <span>125365</span>
+                        <span>109390</span>
                     </AddressContent>
                 </AddressLeftSide>
                 <AddressRightSide>

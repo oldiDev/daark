@@ -63,7 +63,7 @@ export default Vpn;
 const Container = styled.div`
     width: 70%;
     max-width: 1000px;
-    margin: 40px auto;
+    margin: 60px auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -80,7 +80,6 @@ const MainText = styled.h1`
 
 const LeftSide = styled.div`
     width: 50%;
-    height: 90%;
     z-index: 0;
 
     @media screen and (max-width: 767px){

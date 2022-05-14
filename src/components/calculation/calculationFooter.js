@@ -23,7 +23,7 @@ const CalculationFooter = ({price}) => {
             <CalculationFooterWrapper>
                 <CalculationFooterContainer>
                     <CalculationFooterLeft>
-                        <FooterTitle>Стоимость разработки вашего приложения</FooterTitle>
+                        <FooterTitle>Стоимость разработки <MobileText>вашего приложения</MobileText></FooterTitle>
                         <Price>{price} ₽</Price>
                     </CalculationFooterLeft>
                     <CalculationFooterRight>
@@ -58,6 +58,10 @@ const CalculationFooterContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: 767px){
+        width: 90%;
+    }
 `
 
 const CalculationFooterLeft = styled.div`

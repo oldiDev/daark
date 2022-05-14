@@ -1,35 +1,40 @@
 import React from "react";
 import styled from "styled-components";
+import Footer from "./footer";
 import IPhone from "./iPhone/iPhone";
 
 const Main = () => {
 
     return (
-        <MainContainer>
-            <MainLeftSide>
-                <LeftSideSwap>
-                    <FirstString>Цифровое решение для вашего бизнеса</FirstString>
-                    <SecondString>Полный цикл разработки</SecondString>
-                    <ThirdString>Уникальные решения</ThirdString>
-                </LeftSideSwap>
+        <>
+            <MainContainer>
+                <MainLeftSide>
+                    <LeftSideSwap>
+                        <FirstString>Цифровое решение для вашего бизнеса</FirstString>
+                        <SecondString>Полный цикл разработки</SecondString>
+                        <ThirdString>Уникальные решения</ThirdString>
+                    </LeftSideSwap>
 
-                <OurProjects>
-                    <BigScreen>
-                        <div>Наши проекты</div>
-                        <img src="Main/Arrow.svg" alt="arrow"></img>
-                    </BigScreen>
-                    {/* <MobileScreen>
+                    <OurProjects>
+                        <BigScreen>
+                            <div>Наши проекты</div>
+                            <img src="Main/Arrow.svg" alt="arrow"></img>
+                        </BigScreen>
+                        {/* <MobileScreen>
                         <IPhone bgcolor={'white'} />
                     </MobileScreen> */}
-                </OurProjects>
-                <MobileScreen>
+                    </OurProjects>
+                    <MobileScreen>
+                        <IPhone bgcolor={'white'} />
+                    </MobileScreen>
+                </MainLeftSide>
+                <MainRightSide>
                     <IPhone bgcolor={'white'} />
-                </MobileScreen>
-            </MainLeftSide>
-            <MainRightSide>
-                <IPhone bgcolor={'white'} />
-            </MainRightSide>
-        </MainContainer>
+                </MainRightSide>
+            </MainContainer>
+            <Footer></Footer>
+        </>
+
     )
 }
 
@@ -37,6 +42,7 @@ const MainContainer = styled.div`
     width: 100%;
     max-width: 1000px;
     min-height: 80vh;
+    height: 100vh;
     margin: 90px auto;
     display: flex;
     flex-direction: row;
@@ -47,6 +53,7 @@ const MainContainer = styled.div`
     @media screen and (max-width: 767px){
         width: 95%;
         /* justify-content: center; */
+        height: 130vh;
     }
 `
 
@@ -96,7 +103,6 @@ const MainRightSide = styled.div`
     position: fixed;
     top: 90px;
     right: 23%;
-
     @media screen and (max-width: 767px){
         display: none;
     }

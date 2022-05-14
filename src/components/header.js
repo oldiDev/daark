@@ -90,7 +90,7 @@ const HeaderContent = styled.ul`
 
 const HeaderItem = styled.div`
     display: none;
-    width: 40px;
+    width: 46px;
     height: 100%;
 
     @media screen and (max-width: 767px){

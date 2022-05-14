@@ -66,7 +66,7 @@
         opacity: 0%;
     }
     100%{
-        top: 15%;
+        top: 60px;
         opacity: 100%;
     }
 }
@@ -91,7 +91,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'SFPro', 'Inter' sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'SFProText', 'SFProTextMedium', 'SFProTextSemibold' , 'Inter', 'Poppins' sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -107,6 +107,12 @@ button{
     }
 }
 
+footer {
+    width: 100%;
+    background-color: black;
+    height: 240px;
+}
+
 .header{
     position: fixed;
     top: 0;
@@ -120,13 +126,17 @@ button{
     .header{
         transition: background .36s cubic-bezier(0.32, 0.08, 0.24, 1), height .56s cubic-bezier(0.32, 0.08, 0.24, 1);
     }
+
+    footer {
+        height: fit-content;
+    }
 }
 
 .slider-style{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120vh;
+    height: 110vh;
     z-index: 0;
 }
 
@@ -141,6 +151,7 @@ button{
 
 .first-slide{
     align-items: center;
+    justify-content: flex-start;
 }
 
 @media screen and (min-width: 767px) {
