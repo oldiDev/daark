@@ -10,7 +10,7 @@ const About = () => {
     const { team } = usePersistentStore();
 
 
-    console.log(getSnapshot(team.team));
+    // console.log(getSnapshot(team.team));
 
     return (
         <>
@@ -92,7 +92,7 @@ const TeamImg = styled.img`
 `
 
 const TeamName = styled.div`
-    font-weight: bold;
+    font-weight: normal;
     margin: 4px 0px;
 `
 

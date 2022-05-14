@@ -33,7 +33,7 @@ const CalculationFooter = ({ price }) => {
                         </FooterBtn>
                         <FooterBtnDelete className="tertiaryButtonText" disabled={price == 0} onClick={handleDelete} style={price == 0 ? {color: "var(--MediumGrey)"} : {color: "var(--Blue)"}}>
                             <BigScreen>Очистить</BigScreen>
-                            <MobileImg src="/Calculation/delete.svg" alt="delete-button"></MobileImg>
+                            <MobileImg src={price == 0 ? "/Calculation/delete-disabled.svg" : "/Calculation/delete.svg"} alt="delete-button"></MobileImg>
                         </FooterBtnDelete>
                     </CalculationFooterRight>
                 </CalculationFooterContainer>

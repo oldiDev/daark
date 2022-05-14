@@ -37,7 +37,7 @@ const Header = () => {
 
 
 const HeaderContainer = styled.div`
-    width: 100%;
+    width: 75%;
     max-width: 1000px;
     height: 40px;
     margin: 0px auto;
@@ -49,7 +49,8 @@ const HeaderContainer = styled.div`
     z-index: 2;
 
     @media screen and (max-width: 767px){
-        height: 48px
+        height: 48px;
+        width: 100%;
     }
 `;
 

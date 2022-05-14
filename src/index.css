@@ -13,6 +13,16 @@
     src: url('assets/fonts/SF-Pro-Text-Semibold.otf');
 }
 
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/Inter-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'InterSemibold';
+    src: url('assets/fonts/Inter-SemiBold.ttf');
+}
+
 @keyframes mainPageFirst {
     0% {
         color: black;
@@ -40,7 +50,7 @@
 
 @keyframes positionTop {
     0%{
-        top: 40%;
+        top: 30%;
         opacity: 100%;
     }
     100%{
@@ -142,7 +152,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 110vh;
+    height: 100vh;
     z-index: 0;
 }
 
@@ -181,20 +191,20 @@ code {
 }
 
 h1{
-    font-family: 'Inter';
-    font-weight: 600;
+    font-family: 'InterSemibold';
+    font-weight: 400;
     font-size: 40px;
 }
 
 h2{
-    font-family: 'Inter';
-    font-weight: 600;
+    font-family: 'InterSemibold';
+    font-weight: 400;
     font-size: 32px;
 }
 
 h3{
-    font-family: 'Inter';
-    font-weight: 600;
+    font-family: 'InterSemibold';
+    font-weight: 400;
     font-size: 24px;
 }
 
@@ -205,8 +215,8 @@ h4{
 }
 
 .primaryButtonText {
-    font-family: 'Inter';
-    font-weight: 600;
+    font-family: 'InterSemibold';
+    font-weight: 400;
     font-size: 16px;
 }
 

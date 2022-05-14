@@ -64,49 +64,51 @@ export default Pims;
 
 
 const Container = styled.div`
-                width: 70%;
-                height: 110vh;
-                max-width: 1000px;
-                margin: 60px auto;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
+    width: 70%;
+    /* height: 100vh; */
+    max-width: 1000px;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
-                @media screen and (max-width: 767px){
-                    width: 90%;
+    @media screen and (max-width: 767px){
+        width: 90%;
+        /* height: 100vh; */
     }
-                `
+`
 
 const MainText = styled.h1`
-                font-weight: 400;
-                `
+    font-weight: 400;
+`
 
 const LeftSide = styled.div`
-                width: 50%;
-                z-index: 0;
+    width: 50%;
+    z-index: 0;
 
-                @media screen and (max-width: 767px){
-                    width: 100%;
+    @media screen and (max-width: 767px){
+        width: 100%;
     }
-                `
+`
 
 const RightSide = styled.div`
                 /* position: fixed;
                 top: 90px;
                 right: 23%; */
-                width: fit-content;
-                @media screen and (max-width: 767px){
-                    display: none;
+    width: fit-content;
+
+    @media screen and (max-width: 767px){
+        display: none;
     }
-                `
+`
 
 const SubText = styled.div`
-                margin: 30px 0;
-                line-height: 19.36px;
-                `
+    margin: 30px 0;
+    line-height: 19.36px;
+`
 
 const IphoneContainer = styled.div`
-                zoom: 1.25;
-                `
+    zoom: 1.25;
+`
 

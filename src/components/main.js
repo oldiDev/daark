@@ -54,6 +54,7 @@ const MainContainer = styled.div`
         width: 95%;
         /* justify-content: center; */
         height: 130vh;
+        margin-top: 60px;
     }
 `
 
@@ -101,7 +102,7 @@ const OurProjects = styled.h1`
 
 const MainRightSide = styled.div`
     position: fixed;
-    top: 90px;
+    top: 70px;
     right: 23%;
     @media screen and (max-width: 767px){
         display: none;
