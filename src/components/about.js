@@ -53,6 +53,10 @@ const AboutContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     text-align: center;
+
+    @media screen and (max-width: 767px){
+        width: 90%;
+    }
 `
 
 const AboutTeam = styled.div`
@@ -77,7 +81,10 @@ const TeamContainer = styled.div`
     align-items: flex-start;
 
     @media screen and (max-width: 767px){
-        width: 300px
+        width: 85%;
+        height: 700px;
+        margin-left: auto;
+        margin-right: auto;
     }
 `
 
@@ -86,8 +93,8 @@ const TeamImg = styled.img`
     height: 200px;
 
     @media screen and (max-width: 767px){
-        height: 300px;
-        width: 300px;
+        height: 500px;
+        width: 100%;
     }
 `
 
@@ -109,6 +116,10 @@ const TeamStack = styled.div`
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 767px){
+        margin-top: 15px
+    }
 `
 
 const TeamStackImg = styled.img`
@@ -116,4 +127,10 @@ const TeamStackImg = styled.img`
     height: 20px;
     margin: 5px 10px 5px 0px;
     box-shadow: 0px 4px 20px rgba(9, 9, 12, 0.1);
+    border-radius: 10px;
+
+    @media screen and (max-width: 767px){
+        width: 40px;
+        height: 40px;
+    }
 `

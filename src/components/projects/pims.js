@@ -79,7 +79,12 @@ const Container = styled.div`
     }
 `
 
-const MainText = styled.h1`
+const MainText = styled.div`
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
     font-weight: 400;
 `
 

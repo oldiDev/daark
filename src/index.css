@@ -111,7 +111,7 @@ button{
     padding: unset;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1440px), (min-width: 767px) {
     body{
         zoom: 0.75;
     }
@@ -224,6 +224,20 @@ h4{
     font-family: 'Inter';
     font-size: 16px;
     line-height: 19px;
+}
+
+@media screen and (max-width: 767px){
+    h1{
+        font-size: 55px;
+    }
+
+    .primaryButtonText{
+        font-size: 35px;
+    }
+
+    .tertiaryButtonText {
+        font-size: 25px;
+    }
 }
 
 .SF_h1 {
