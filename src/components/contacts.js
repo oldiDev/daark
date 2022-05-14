@@ -72,11 +72,11 @@ const ContactsLaptop = styled.div`
 
 const IphoneContactsContainer = styled.div`
     width: 100%;
-    height: 80%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 60px auto;
+    margin: 20px auto;
 
     @media screen and (min-width: 767px){
         display: none;

@@ -64,7 +64,7 @@ export default Pims;
 
 
 const Container = styled.div`
-    width: 70%;
+    width: 75%;
     /* height: 100vh; */
     max-width: 1000px;
     margin: 80px auto;

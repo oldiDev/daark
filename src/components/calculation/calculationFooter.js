@@ -53,6 +53,10 @@ const CalculationFooterWrapper = styled.div`
     bottom: 0;
     border-top: 1px solid #F1F1F1;
     background-color: white;
+
+    @media screen and (max-width: 767px){
+        height: 120px;
+    }
 `
 
 const CalculationFooterContainer = styled.div`
@@ -117,7 +121,7 @@ const FooterBtn = styled.button`
     cursor: pointer;
 
     @media screen and (max-width: 767px){
-        height: 48px;
+        height: 65px;
     }
 `
 
