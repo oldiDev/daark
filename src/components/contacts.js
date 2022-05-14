@@ -1,15 +1,24 @@
 import React from "react";
 import styled from "styled-components";
+import Footer from "./footer";
 import IPhone from "./iPhone/iPhone";
 
 const Contacts = () => {
 
     return (
-        <ContactsContainer>
-            <IPhone bgcolor={'#F2F2F7'} />
-        </ContactsContainer>
+        <>
+            <ContactsContainer>
+                <IPhone bgcolor={'#F2F2F7'} />
+            </ContactsContainer>
+            <Footer></Footer>
+        </>
     )
 }
+
+const Wrapper = styled.div`
+    height: 130vh;
+
+`
 
 const ContactsContainer = styled.div`
     width: 70%;

@@ -47,6 +47,10 @@ const HeaderContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     z-index: 2;
+
+    @media screen and (max-width: 767px){
+        height: 48px
+    }
 `;
 
 const HeaderContent = styled.ul`
@@ -90,7 +94,7 @@ const HeaderContent = styled.ul`
 
 const HeaderItem = styled.div`
     display: none;
-    width: 46px;
+    width: 48px;
     height: 100%;
 
     @media screen and (max-width: 767px){
@@ -101,8 +105,7 @@ const HeaderItem = styled.div`
 const MenuButtonContainer = styled.label`
     display: none;
     height: 100%;
-    width: 30px;
-    margin-right: 16px;
+    width: 48px;
     cursor: pointer;
     flex-direction: column;
     justify-content: center;
@@ -117,7 +120,7 @@ const MenuButton = styled.div`
     display: block;
     background-color: black;
     position: absolute;
-    height: 4px;
+    height: 2px;
     width: 30px;
     transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
     border-radius: 2px;
@@ -126,7 +129,7 @@ const MenuButton = styled.div`
         display: block;
         background-color: black;
         position: absolute;
-        height: 4px;
+        height: 2px;
         width: 30px;
         transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
         border-radius: 2px;

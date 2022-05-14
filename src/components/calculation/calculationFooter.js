@@ -5,12 +5,12 @@ import styled from "styled-components";
 import { usePersistentStore } from "../../store";
 import CalculationPopUp from "./calculationPopUp";
 
-const CalculationFooter = ({price}) => {
+const CalculationFooter = ({ price }) => {
 
     const [show, setShow] = useState(false);
     const { removeAnySelection } = usePersistentStore();
 
-    let  handleDelete = () => {
+    let handleDelete = () => {
         removeAnySelection();
     }
 
@@ -23,12 +23,18 @@ const CalculationFooter = ({price}) => {
             <CalculationFooterWrapper>
                 <CalculationFooterContainer>
                     <CalculationFooterLeft>
-                        <FooterTitle>Стоимость разработки <MobileText>вашего приложения</MobileText></FooterTitle>
+                        <FooterTitle>Стоимость разработки вашего приложения</FooterTitle>
                         <Price>{price} ₽</Price>
                     </CalculationFooterLeft>
                     <CalculationFooterRight>
-                        <FooterBtn className="primaryButtonText" onClick={handleSubmit}>Получить рассчёт <MobileText>стоимости</MobileText></FooterBtn>
-                        <FooterBtnDelete className="tertiaryButtonText" onClick={handleDelete}>Очистить</FooterBtnDelete>
+                        <FooterBtn className="primaryButtonText" disabled={price == 0} onClick={handleSubmit} style={price == 0 ? {backgroundColor: "var(--MediumGrey)", color:"var(--DarkGrey)"} : {backgroundColor: "var(--Blue)"}}>
+                            <BigScreen>Получить рассчёт стоимости</BigScreen>
+                            <MobileText>{price} ₽</MobileText>
+                        </FooterBtn>
+                        <FooterBtnDelete className="tertiaryButtonText" disabled={price == 0} onClick={handleDelete} style={price == 0 ? {color: "var(--MediumGrey)"} : {color: "var(--Blue)"}}>
+                            <BigScreen>Очистить</BigScreen>
+                            <MobileImg src="/Calculation/delete.svg" alt="delete-button"></MobileImg>
+                        </FooterBtnDelete>
                     </CalculationFooterRight>
                 </CalculationFooterContainer>
             </CalculationFooterWrapper>
@@ -71,6 +77,10 @@ const CalculationFooterLeft = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+
+    @media screen and (max-width: 767px){
+        display: none;
+    }
 `
 
 const CalculationFooterRight = styled.div`
@@ -80,6 +90,10 @@ const CalculationFooterRight = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: 767px){
+        width: 100%;
+    }
 `
 const FooterTitle = styled.h4`
     margin: unset;
@@ -101,6 +115,10 @@ const FooterBtn = styled.button`
     color: white;
     letter-spacing: -0.24px;
     cursor: pointer;
+
+    @media screen and (max-width: 767px){
+        height: 48px;
+    }
 `
 
 const FooterBtnDelete = styled.button`
@@ -112,9 +130,29 @@ const FooterBtnDelete = styled.button`
     color: var(--Blue);
     letter-spacing: -0.24px;
     cursor: pointer;
+
+    @media screen and (max-width: 767px){
+        height: 48px;
+        width: 48px;
+    }
 `
 
 const MobileText = styled.span`
+    @media screen and (min-width: 767px){
+        display: none;
+    }
+`
+
+const MobileImg = styled.img`
+    width: 48px;
+    height: 48px;
+
+    @media screen and (min-width: 767px){
+        display: none;
+    }
+`
+
+const BigScreen = styled.span`
     @media screen and (max-width: 767px){
         display: none;
     }

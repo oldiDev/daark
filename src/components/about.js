@@ -3,6 +3,7 @@ import { observer } from "mobx-react-lite";
 import { getSnapshot } from "mobx-state-tree";
 import styled from "styled-components";
 import { usePersistentStore } from "../store";
+import Footer from "./footer";
 
 const About = () => {
 
@@ -12,27 +13,31 @@ const About = () => {
     console.log(getSnapshot(team.team));
 
     return (
-        <AboutContainer>
-            <h1>Команда DAARK</h1>
-            <AboutTeam>
-                {
-                    team.team?.map((e, i) =>
-                        <TeamContainer key={i}>
-                            <TeamImg src={e.avatar} alt="avatar" />
-                            <TeamName className="primaryButtonText">{e.name}</TeamName>
-                            <TeamPosition className="tertiaryButtonText">{e.position}</TeamPosition>
-                            <TeamStack>
-                                {
-                                    e.stack?.map((f, i) => 
-                                        <TeamStackImg src={f.img} alt="stack-img" key={i} />
-                                    )
-                                }
-                            </TeamStack>
-                        </TeamContainer>
-                    )
-                }
-            </AboutTeam>
-        </AboutContainer>
+        <>
+            <AboutContainer>
+                <h1>Команда DAARK</h1>
+                <AboutTeam>
+                    {
+                        team.team?.map((e, i) =>
+                            <TeamContainer key={i}>
+                                <TeamImg src={e.avatar} alt="avatar" />
+                                <TeamName className="primaryButtonText">{e.name}</TeamName>
+                                <TeamPosition className="tertiaryButtonText">{e.position}</TeamPosition>
+                                <TeamStack>
+                                    {
+                                        e.stack?.map((f, i) =>
+                                            <TeamStackImg src={f.img} alt="stack-img" key={i} />
+                                        )
+                                    }
+                                </TeamStack>
+                            </TeamContainer>
+                        )
+                    }
+                </AboutTeam>
+            </AboutContainer>
+            <Footer />
+        </>
+
     )
 }
 
@@ -42,6 +47,7 @@ export default observer(About)
 const AboutContainer = styled.div`
     width: 70%;
     max-width: 1000px;
+    height: fit-content;
     margin: 60px auto;
     display: flex;
     justify-content: center;
