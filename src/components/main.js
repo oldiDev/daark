@@ -46,6 +46,8 @@ const MainContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     z-index: 2;
+    overflow: hidden;
+
 
     @media screen and (max-width: 767px){
         width: 95%;

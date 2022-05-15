@@ -47,7 +47,7 @@ export default observer(About)
 const AboutContainer = styled.div`
     width: 70%;
     max-width: 1000px;
-    height: fit-content;
+    height: 100vh;
     margin: 60px auto;
     display: flex;
     justify-content: center;
@@ -56,6 +56,7 @@ const AboutContainer = styled.div`
 
     @media screen and (max-width: 767px){
         width: 90%;
+        height: fit-content;
     }
 `
 

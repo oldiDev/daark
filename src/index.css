@@ -64,7 +64,7 @@
 @keyframes topMobile {
     0%{
         /* top: 30%; */
-        transform: translateY(60px);
+        transform: translateY(450px);
         opacity: 100%;
     }
     100%{
@@ -92,11 +92,10 @@
         /* top:100%; */
         transform: translateY(1000px);
         opacity: 0%;
-        opacity: 0%;
     }
     100%{
         /* top: 80px; */
-        transform: translateY(-20%);
+        transform: translateY(-190px);
         opacity: 100%;
     }
 }
