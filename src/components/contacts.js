@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
-import FooterMobile from "../footerMobile";
+import FooterMobile from "./footerMobile";
 import Footer from "./footer";
 import IPhone from "./iPhone/iPhone";
 
@@ -45,7 +45,7 @@ const Contacts = () => {
                     </Address>
                 </IphoneContactsContainer>
             </ContactsContainer>
-            <FooterMobile />
+            {/* <FooterMobile /> */}
             <Footer></Footer>
         </>
     )

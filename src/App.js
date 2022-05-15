@@ -14,6 +14,7 @@ import Main from './components/main.js';
 import Pims from './components/projects/pims.js';
 import Woodcoin from './components/projects/woodcoin.js';
 import Vpn from './components/projects/vpn.js';
+import FooterMobile from './components/footerMobile.js';
 
 
 const App = () => {
@@ -23,9 +24,6 @@ const App = () => {
     return (
         <div>
             <BrowserRouter>
-            {
-                // location.pathname == '/contacts' ? <></> : <Header />
-            }
                 <Header />
                 <Routes>
                     <Route path='/' element={<Main />} exact>
@@ -38,6 +36,7 @@ const App = () => {
                     <Route path='/calculation' element={<Calculation />} />
                     <Route path='/about' element={<About />} />
                 </Routes>
+                <FooterMobile />
             </BrowserRouter>
         </div>
     );

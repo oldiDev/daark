@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
-import FooterMobile from "../footerMobile";
+import FooterMobile from "./footerMobile";
 import Footer from "./footer";
 import IPhone from "./iPhone/iPhone";
 
@@ -25,14 +25,14 @@ const Main = () => {
                     </OurProjects>
                     <MobileScreen>
                         {/* <IPhone bgcolor={'white'} /> */}
-                        <IphoneMainContainer>
+                        {/* <IphoneMainContainer> */}
                             <IphoneMainTitle className="SF_h2">Наши проекты</IphoneMainTitle>
                             <AppContainer>
                                 <AppInfo>
-                                    <img src="iPhoneImage/AppIcon/Pims.svg" alt="pims"></img>
+                                    <AppImg src="iPhoneImage/AppIcon/Pims.svg" alt="pims"></AppImg>
                                     <AppName>
                                         <div className="SF_h3">PIMS</div>
-                                        <div className="SF_Body dark-grey">Доставка еды</div>
+                                        <div className="SF_body dark-grey">Доставка еды</div>
                                     </AppName>
                                 </AppInfo>
                                 <Link to="pims">
@@ -43,10 +43,10 @@ const Main = () => {
                             </AppContainer>
                             <AppContainer>
                                 <AppInfo>
-                                    <img src="iPhoneImage/AppIcon/Woodkoin.svg" alt="woodkoin"></img>
+                                    <AppImg src="iPhoneImage/AppIcon/Woodkoin.svg" alt="woodkoin"></AppImg>
                                     <AppName>
                                         <div className="SF_h3">Woodcoin Wallet</div>
-                                        <div className="SF_Body dark-grey">Крипто-кошелёк</div>
+                                        <div className="SF_body dark-grey">Крипто-кошелёк</div>
                                     </AppName>
                                 </AppInfo>
                                 <Link to="woodcoin">
@@ -57,10 +57,10 @@ const Main = () => {
                             </AppContainer>
                             <AppContainer>
                                 <AppInfo>
-                                    <img src="iPhoneImage/AppIcon/VpnWorld.svg" alt="VpnWorld"></img>
+                                    <AppImg src="iPhoneImage/AppIcon/VpnWorld.svg" alt="VpnWorld"></AppImg>
                                     <AppName>
                                         <div className="SF_h3">VPN World</div>
-                                        <div className="SF_Body dark-grey">Безопасное подключение</div>
+                                        <div className="SF_body dark-grey">Безопасное подключение</div>
                                     </AppName>
                                 </AppInfo>
                                 <Link to="vpn">
@@ -71,14 +71,14 @@ const Main = () => {
 
                             </AppContainer>
                             <Outlet />
-                        </IphoneMainContainer>
+                        {/* </IphoneMainContainer> */}
                     </MobileScreen>
                 </MainLeftSide>
                 <MainRightSide>
                     <IPhone bgcolor={'white'} />
                 </MainRightSide>
             </MainContainer>
-            <FooterMobile />
+            {/* <FooterMobile /> */}
             <Footer></Footer>
         </>
 
@@ -100,11 +100,12 @@ const MainContainer = styled.div`
 
 
     @media screen and (max-width: 767px){
-        width: 95%;
+        width: 100%;
         /* justify-content: center; */
         height: 100vh;
         margin-top: 60px;
         justify-content: center;
+        align-items: flex-start;
     }
 `
 
@@ -122,6 +123,8 @@ const LeftSideSwap = styled.div`
     animation: positionTop 0.8s ease-in-out 3.58s 1 normal both;
 
     @media screen and (max-width: 767px){
+        width: 95%;
+        margin: 0px auto;
         animation: topMobile 0.8s ease-in-out 3.58s 1 normal both;
     }
 `
@@ -170,6 +173,10 @@ const BigScreen = styled.div`
 
 const MobileScreen = styled.div`
     margin: 0px auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @media screen and (min-width: 767px){
         display: none;
@@ -181,54 +188,64 @@ const MobileScreen = styled.div`
  `
 
 const IphoneMainContainer = styled.div`
-width: 98%;
-height: 90%;
-margin-left: 8px;
-background-color: white;
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: center;
+    width: 100%;
+    height: fit-content;
+    /* margin-left: 8px; */
+    margin: 0px auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
 `
 
 const IphoneMainTitle = styled.div`
-width: 100%;
-padding: 11px 0px;
-text-align: center;
-box-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    padding: 11px 0px;
+    text-align: center;
+    box-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.3);
+    font-size: 35px;
+    font-weight: 500;
 `
 
 const AppContainer = styled.div`
-width: 90%;
-padding: 8px 0px;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
-border-bottom: 1px solid var(--LightGrey);
+    width: 95%;
+    height: fit-content;
+    padding: 16px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--LightGrey);
 `
 
 const AppInfo = styled.div`
-width: 60%;
-display: flex;
-flex-direction: row;
-justify-content: flex-start;
-align-items: center;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+`
+
+const AppImg = styled.img`
+    width: 100px;
+    height: 100px;
 `
 
 const AppName = styled.div`
-margin: 0px .5em;
+    margin: 0px .5em;
+    font-size: "SFProText";
 `
 
 const OpenBtn = styled.button`
-width: 97px;
-height: 24px;
-color: var(--Blue);
-background-color: var(--LightGrey);
-border-radius: 24px;
-border: unset;
-cursor: pointer;
+    width: 150px;
+    height: 40px;
+    color: var(--Blue);
+    background-color: var(--LightGrey);
+    border-radius: 24px;
+    border: unset;
+    cursor: pointer;
 `
 
 export default Main
