@@ -15,8 +15,8 @@ const Footer = ({ height }) => {
                         Навигация
                     </Title>
                     <Link to="/" className="tertiaryButtonText footer-link">Главная</Link>
-                    <Link to="/calculation" className="tertiaryButtonText footer-link">Калькулятор</Link>
                     <Link to="/contacts" className="tertiaryButtonText footer-link">Контакты</Link>
+                    <Link to="/calculation" className="tertiaryButtonText footer-link">Калькулятор</Link>
                     <Link to="/about" className="tertiaryButtonText footer-link">О нас</Link>
                 </Navigation>
                 <Contacts>

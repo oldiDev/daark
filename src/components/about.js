@@ -49,7 +49,8 @@ export default observer(About)
 const AboutContainer = styled.div`
     width: 70%;
     max-width: 1000px;
-    height: 100vh;
+    min-height: 100vh;
+    /* height: 100vh; */
     margin: 60px auto;
     display: flex;
     justify-content: flex-start;

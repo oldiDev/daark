@@ -105,7 +105,7 @@ const SubText = styled.h4`
 
     @media screen and (max-width: 767px){
         margin-top: 0;
-        line-height: 30px;
+        line-height: 37px;
     }
 `
 

@@ -14,6 +14,8 @@ import { Cloudinary } from "@cloudinary/url-gen";
 
 import { fill } from "@cloudinary/url-gen/actions/resize";
 import { byRadius } from "@cloudinary/url-gen/actions/roundCorners";
+import VideoPlayerFunction from '../../hooks/videoPlayer';
+import VideoPlayerCloudHosted from './video';
 
 
 
@@ -29,6 +31,12 @@ const Pims = () => {
 
     myVideo.resize(fill().width(390).height(850)) // Crop the video, focusing on the faces.
         .roundCorners(byRadius(0));
+
+    const videoOptions = {
+        cloudName: 'dxjubrqnd',
+        publicId: 'daark/IMG_0698_wlfoqi'
+
+    }
 
 
     return (
@@ -49,7 +57,9 @@ const Pims = () => {
                     >
                         <SwiperSlide className='swiper-slider first-slide'>
                             <IphoneContainer>
-                                <AdvancedVideo cldVid={myVideo} autoPlay/>
+                                <AdvancedVideo cldVid={myVideo} controls playsInline loop />
+                                {/* <VideoPlayerFunction options={videoOptions} /> */}
+                                {/* <VideoPlayerCloudHosted options={videoOptions} /> */}
                             </IphoneContainer>
 
                         </SwiperSlide>
