@@ -64,7 +64,7 @@
 @keyframes topMobile {
     0%{
         /* top: 30%; */
-        transform: translateY(450px);
+        transform: translateY(0px);
         opacity: 100%;
     }
     100%{
@@ -161,7 +161,7 @@ footer {
 
     footer {
         bottom: 0;
-        height: fit-content;
+        height: 725px;
         padding-bottom: 40px;
     }
 }
@@ -268,6 +268,7 @@ h4{
         display: flex;
         align-items: center;
         justify-content: center;
+        /* background-color: #ccc; */
     }
 
     .footer-link {

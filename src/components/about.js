@@ -4,6 +4,7 @@ import { getSnapshot } from "mobx-state-tree";
 import styled from "styled-components";
 import { usePersistentStore } from "../store";
 import Footer from "./footer";
+import FooterMobile from "../footerMobile";
 
 const About = () => {
 
@@ -35,6 +36,7 @@ const About = () => {
                     }
                 </AboutTeam>
             </AboutContainer>
+            <FooterMobile />
             <Footer />
         </>
 

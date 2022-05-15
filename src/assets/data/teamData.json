@@ -2,7 +2,7 @@
   "team": [
     {
       "avatar": "/About/avatars/Tema.png",
-      "name": "Артём Сёменов",
+      "name": "Артём Семёнов",
       "position": "Product manager",
       "stack": [
         {
@@ -111,7 +111,7 @@
     {
       "avatar": "/About/avatars/Karim.png",
       "name": "Ouazmir Abdelkarim",
-      "position": "Fullstack developer",
+      "position": "DevOps engineer",
       "stack": [
         {
           "img": "/About/docker.svg"

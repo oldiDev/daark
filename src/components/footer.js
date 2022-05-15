@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Footer = () => {
+const Footer = ({height}) => {
     return (
-        <footer>
+        <footer style={{height:`${height}`}}>
             <Container>
                 <Logo src="/Logo/logo-white.svg" alt="logo-white"></Logo>
                 <Navigation>

@@ -10,14 +10,14 @@ const Header = () => {
     return (
         <div className="header">
             <HeaderContainer>
-                <HeaderItem />
+                {/* <HeaderItem /> */}
                 <Link to="/" className="mobile-logo" onClick={() => setIsChecked(false)}>
                     <Logo src="/Logo/logo.svg" alt="logo"></Logo>
                 </Link>
-                <MenuToggle type="checkbox" id="menu-togle" checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
+                {/* <MenuToggle type="checkbox" id="menu-togle" checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
                 <MenuButtonContainer for="menu-togle">
                     <MenuButton></MenuButton>
-                </MenuButtonContainer>
+                </MenuButtonContainer> */}
                 <HeaderContent>
                     <li>
                         <Link to="/contacts" className="tertiaryButtonText" onClick={() => setIsChecked(false)}>Контакты</Link>
@@ -51,6 +51,7 @@ const HeaderContainer = styled.div`
     @media screen and (max-width: 767px){
         height: 64px;
         width: 100%;
+        justify-content: center;
     }
 `;
 

@@ -255,4 +255,9 @@ const CalculationDisclaimer = styled.div`
     letter-spacing: -0.24px;
     color: var(--MediumGrey);
     height: 20vh;
+
+    @media screen and (max-width: 576px){
+        font-size: 20px;
+        line-height: 28px;
+    }
 `

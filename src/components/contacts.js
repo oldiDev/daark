@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
+import FooterMobile from "../footerMobile";
 import Footer from "./footer";
 import IPhone from "./iPhone/iPhone";
 
@@ -44,54 +45,7 @@ const Contacts = () => {
                     </Address>
                 </IphoneContactsContainer>
             </ContactsContainer>
-            <ContactsFooter>
-                <Tabs>
-                    <Link to="/" className="contacts-link">
-                        <IosTab>
-                            {
-                                (location.pathname == '/') ?
-                                    <>
-                                        <TabImg src="/iPhoneImage/TabBar/projects-blue.svg" alt="projects"></TabImg>
-                                        <TabLabel className="labelSmall blue">Наши проекты</TabLabel>
-                                    </>
-                                    :
-                                    <>
-                                        <TabImg src="/iPhoneImage/TabBar/projects.svg" alt="projects"></TabImg>
-                                        <TabLabel className="labelSmall">Наши проекты</TabLabel>
-                                    </>
-                            }
-                        </IosTab>
-                    </Link>
-                    <Link to="/contacts" className="contacts-link">
-                        <IosTab>
-                            {
-                                (location.pathname == '/contacts') ?
-                                    <>
-                                        <TabImg src="/iPhoneImage/TabBar/contacts-blue.svg" alt="projects"></TabImg>
-                                        <TabLabel className="labelSmall blue">Контакты</TabLabel>
-                                    </>
-                                    :
-                                    <>
-                                        <TabImg src="/iPhoneImage/TabBar/contacts.svg" alt="projects"></TabImg>
-                                        <TabLabel className="labelSmall">Контакты</TabLabel>
-                                    </>
-                            }
-                        </IosTab>
-                    </Link>
-                    <Link to="/calculation" className="contacts-link">
-                        <IosTab>
-                            <TabImg src="/iPhoneImage/TabBar/calculation.svg" alt="projects"></TabImg>
-                            <TabLabel className="labelSmall">Калькулятор</TabLabel>
-                        </IosTab>
-                    </Link>
-                    <Link to="/about" className="contacts-link">
-                        <IosTab>
-                            <TabImg src="/iPhoneImage/TabBar/about.svg" alt="projects"></TabImg>
-                            <TabLabel className="labelSmall">О нас</TabLabel>
-                        </IosTab>
-                    </Link>
-                </Tabs>
-            </ContactsFooter>
+            <FooterMobile />
             <Footer></Footer>
         </>
     )
@@ -115,6 +69,8 @@ const ContactsContainer = styled.div`
 `
 
 const ContactsLaptop = styled.div`
+    width: 100%;
+    height: 100vh;
     @media screen and (max-width: 767px){
         display: none;
     }
@@ -156,15 +112,15 @@ const MobileTitle = styled.div`
 `
 
 const MobileLink = styled.a`
-    padding-left: 1em;
+    padding-left: 0.8em;
     padding-top: .5em;
     color: var(--Blue);
-    font-size: 22px;
+    font-size: 26px;
 `
 
 const Email = styled.div`
     width: 100%;
-    height: 100px;
+    height: 120px;
     background-color: #F2F2F7;
     margin: .5em 0px;
     border-radius: 11px;
@@ -175,7 +131,7 @@ const Email = styled.div`
 
 const Address = styled.div`
     width: 100%;
-    height: 170px;
+    height: 200px;
     background-color: #F2F2F7;
     margin: .5em 0px;
     border-radius: 11px;
@@ -194,12 +150,13 @@ const AddressLeftSide = styled.div`
 `
 
 const AddressContent = styled.div`
-    padding-left: 1.2em;
+    margin-left: 0.8em;
+    margin-bottom: 1em;
     height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: 20px;
+    font-size: 26px;
 `
 
 const AddressRightSide = styled.div`
@@ -209,52 +166,9 @@ const AddressRightSide = styled.div`
 `
 
 const MapImg = styled.img`
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 5px;
-`
-
-const ContactsFooter = styled.div`
-    position: sticky;
-    /* position: fixed; */
-    bottom: 0;
-    height: 100px;
-    width: 100%;
-    background-color: #F2F2F7;
-    /* z-index: 14; */
-
-    @media screen and (min-width: 767px){
-        display: none;
-    }
-`
-
-const Tabs = styled.div`
-    width: 100%;
-    height: 100%;
-    /* padding-top: .5em; */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-`
-
-const IosTab = styled.div`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #828282;
-`
-
-const TabImg = styled.img`
-    width: 45px;
-    height: 45px;
-`
-
-const TabLabel = styled.div`
-    font-size: 18px;
 `
 
 

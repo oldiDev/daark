@@ -5,6 +5,7 @@ import {
     BrowserRouter,
     Routes,
     Route,
+    useLocation,
 } from 'react-router-dom';
 import Contacts from './components/contacts.js';
 import Calculation from './components/calculation/calculation.js';
@@ -17,9 +18,14 @@ import Vpn from './components/projects/vpn.js';
 
 const App = () => {
 
+    // let location = useLocation();
+
     return (
         <div>
             <BrowserRouter>
+            {
+                // location.pathname == '/contacts' ? <></> : <Header />
+            }
                 <Header />
                 <Routes>
                     <Route path='/' element={<Main />} exact>

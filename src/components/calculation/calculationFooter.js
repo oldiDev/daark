@@ -1,9 +1,30 @@
 import { observer } from "mobx-react-lite";
 import { getSnapshot } from "mobx-state-tree";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { usePersistentStore } from "../../store";
 import CalculationPopUp from "./calculationPopUp";
+
+let useClickOutside = (handler) => {
+    let domNode = useRef();
+
+    useEffect(() => {
+        let maybeHandler = (event) => {
+            if (!domNode.current.contains(event.target)) {
+                handler();
+                console.log('yaaaa!!!!')
+            }
+        };
+
+        document.addEventListener("mousedown", maybeHandler);
+
+        return () => {
+            document.removeEventListener("mousedown", maybeHandler);
+        };
+    });
+
+    return domNode;
+};
 
 const CalculationFooter = ({ price }) => {
 
@@ -18,6 +39,10 @@ const CalculationFooter = ({ price }) => {
         setShow(true)
     }
 
+    let domNode = useClickOutside(() => {
+        setShow(false);
+    });
+
     return (
         <>
             <CalculationFooterWrapper>
@@ -27,18 +52,26 @@ const CalculationFooter = ({ price }) => {
                         <Price>{price} ₽</Price>
                     </CalculationFooterLeft>
                     <CalculationFooterRight>
-                        <FooterBtn className="primaryButtonText" disabled={price == 0} onClick={handleSubmit} style={price == 0 ? {backgroundColor: "var(--MediumGrey)", color:"var(--DarkGrey)"} : {backgroundColor: "var(--Blue)"}}>
+                        <FooterBtn className="primaryButtonText" disabled={price == 0} onClick={handleSubmit} style={price == 0 ? { backgroundColor: "var(--MediumGrey)", color: "var(--DarkGrey)" } : { backgroundColor: "var(--Blue)" }}>
                             <BigScreen>Получить рассчёт стоимости</BigScreen>
                             <MobileText>{price} ₽</MobileText>
                         </FooterBtn>
-                        <FooterBtnDelete className="tertiaryButtonText" disabled={price == 0} onClick={handleDelete} style={price == 0 ? {color: "var(--MediumGrey)"} : {color: "var(--Blue)"}}>
+                        <FooterBtnDelete className="tertiaryButtonText" disabled={price == 0} onClick={handleDelete} style={price == 0 ? { color: "var(--MediumGrey)" } : { color: "var(--Blue)" }}>
                             <BigScreen>Очистить</BigScreen>
                             <MobileImg src={price == 0 ? "/Calculation/delete-disabled.svg" : "/Calculation/delete.svg"} alt="delete-button"></MobileImg>
                         </FooterBtnDelete>
                     </CalculationFooterRight>
                 </CalculationFooterContainer>
             </CalculationFooterWrapper>
-            <CalculationPopUp show={show} />
+            {
+                show ?
+                    <PopUpWrapper>
+                        <CalculationPopUp ref={domNode}></CalculationPopUp>
+                    </PopUpWrapper>
+                    :
+                    <></>
+            }
+            {/* <CalculationPopUp show={show} /> */}
         </>
 
     )
@@ -159,5 +192,27 @@ const MobileImg = styled.img`
 const BigScreen = styled.span`
     @media screen and (max-width: 767px){
         display: none;
+    }
+`
+
+const PopUpWrapper = styled.div`
+    position: fixed;
+    z-index: 9998;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.8);
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+    @media screen and (max-width: 1490px){
+        min-height: 150vh
+    }
+
+    @media screen and (max-width: 767px){
+        min-height: 150vh;
     }
 `
