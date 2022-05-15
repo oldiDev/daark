@@ -1,51 +1,56 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useDetectClickOutside } from "react-detect-click-outside";
 import styled from "styled-components";
 import OutsideAlerter from "../../hooks/OutsideClose";
 
 
-let useClickOutside = (handler) => {
-    let domNode = useRef();
+const CalculationPopUp = ({ closePopUp }) => {
 
-    useEffect(() => {
-        let maybeHandler = (event) => {
-            if (!domNode.current.contains(event.target)) {
-                handler();
-            }
-        };
+    // const [open, setOpen] = useState(false);
 
-        document.addEventListener("mousedown", maybeHandler);
 
-        return () => {
-            document.removeEventListener("mousedown", maybeHandler);
-        };
-    });
+    // setTimeout(() => {
+    //     setOpen(show);
+    // }, 100);
 
-    return domNode;
-};
+    // const ref = useDetectClickOutside({ onTriggered: show });
 
-const CalculationPopUp = ({ show }) => {
+    // const modalRef = useRef();
 
-    let domNode = useClickOutside(() => {
-        show = false;
-    });
+    // useEffect(() => {
+    //     const clickOutsideContent = (e) => {
+    //         if (e.target === modalRef.current) {
+    //             setOpen(false);
+    //         }
+    //     };
+    //     window.addEventListener('click', clickOutsideContent);
+    //     return () => {
+    //         window.removeEventListener('click', clickOutsideContent);
+    //     };
+    // }, []);
 
-    // if (show) {
-        return (
-            <>
-                {/* <PopUpWrapper> */}
-                    <PopUpContainer ref={domNode}>
-                        <PopUpImg src="/Logo/logo-big.svg" alt="logo" />
-                        <PopUpInfo className="tertiaryButtonText">Пожалуйста, введите адрес электронной почты.
-                            На него мы вышлем расчет стоимости приложения.</PopUpInfo>
-                        <PopUpInput placeholder="Имя*" required></PopUpInput>
-                        <PopUpInput placeholder="Email*" type="email" required></PopUpInput>
-                        <PopUpInput placeholder="Телефон (необязательно)"></PopUpInput>
-                        <PopUpBtn className="primaryButtonText">Отправить</PopUpBtn>
-                    </PopUpContainer>
-                {/* </PopUpWrapper> */}
+    // if (open) {
+    return (
+        <>
+            <PopUpWrapper>
+                <PopUpContainer>
+                    <CloseBtnContainer>
+                        <CloseBtn onClick={() => closePopUp()}>
+                            <img src="/Calculation/delete-disabled.svg"></img>
+                        </CloseBtn>
+                    </CloseBtnContainer>
+                    <PopUpImg src="/Logo/logo-big.svg" alt="logo" />
+                    <PopUpInfo className="tertiaryButtonText">Пожалуйста, введите адрес электронной почты.
+                        На него мы вышлем расчет стоимости приложения.</PopUpInfo>
+                    <PopUpInput placeholder="Имя*" required></PopUpInput>
+                    <PopUpInput placeholder="Email*" type="email" required></PopUpInput>
+                    <PopUpInput placeholder="Телефон (необязательно)"></PopUpInput>
+                    <PopUpBtn className="primaryButtonText">Отправить</PopUpBtn>
+                </PopUpContainer>
+            </PopUpWrapper>
 
-            </>
-        )
+        </>
+    )
     // } else {
     //     return (<></>)
     // }
@@ -162,5 +167,18 @@ const PopUpBtn = styled.button`
         font-size: 30px;
         max-width: 500px;
     }
+`
+
+const CloseBtnContainer = styled.div`
+    align-items: right;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+`
+
+const CloseBtn = styled.button`
+    background-color: white;
+    z-index: 99;
+    cursor: pointer;
 `
 

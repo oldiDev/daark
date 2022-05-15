@@ -52,7 +52,7 @@ const AboutContainer = styled.div`
     height: 100vh;
     margin: 60px auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     text-align: center;
 
@@ -66,7 +66,7 @@ const AboutTeam = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
 
@@ -130,10 +130,11 @@ const TeamStackImg = styled.img`
     height: 20px;
     margin: 5px 10px 5px 0px;
     box-shadow: 0px 4px 20px rgba(9, 9, 12, 0.1);
-    border-radius: 10px;
+    border-radius: 3px;
 
     @media screen and (max-width: 767px){
         width: 40px;
         height: 40px;
+        border-radius: 10px;
     }
 `

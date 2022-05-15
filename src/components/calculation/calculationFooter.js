@@ -5,26 +5,26 @@ import styled from "styled-components";
 import { usePersistentStore } from "../../store";
 import CalculationPopUp from "./calculationPopUp";
 
-let useClickOutside = (handler) => {
-    let domNode = useRef();
+// let useClickOutside = (handler) => {
+//     let domNode = useRef();
 
-    useEffect(() => {
-        let maybeHandler = (event) => {
-            if (!domNode.current.contains(event.target)) {
-                handler();
-                console.log('yaaaa!!!!')
-            }
-        };
+//     useEffect(() => {
+//         let maybeHandler = (event) => {
+//             if (!domNode.current.contains(event.target)) {
+//                 handler();
+//                 console.log('yaaaa!!!!')
+//             }
+//         };
 
-        document.addEventListener("mousedown", maybeHandler);
+//         document.addEventListener("mousedown", maybeHandler);
 
-        return () => {
-            document.removeEventListener("mousedown", maybeHandler);
-        };
-    });
+//         return () => {
+//             document.removeEventListener("mousedown", maybeHandler);
+//         };
+//     });
 
-    return domNode;
-};
+//     return domNode;
+// };
 
 const CalculationFooter = ({ price }) => {
 
@@ -39,9 +39,14 @@ const CalculationFooter = ({ price }) => {
         setShow(true)
     }
 
-    let domNode = useClickOutside(() => {
+    const closePopUp = () => {
         setShow(false);
-    });
+    }
+
+    let togglePopUp = () => {
+        setShow(!show);
+    }
+
 
     return (
         <>
@@ -52,7 +57,7 @@ const CalculationFooter = ({ price }) => {
                         <Price>{price} ₽</Price>
                     </CalculationFooterLeft>
                     <CalculationFooterRight>
-                        <FooterBtn className="primaryButtonText" disabled={price == 0} onClick={handleSubmit} style={price == 0 ? { backgroundColor: "var(--MediumGrey)", color: "var(--DarkGrey)" } : { backgroundColor: "var(--Blue)" }}>
+                        <FooterBtn className="primaryButtonText" disabled={price == 0} onClick={togglePopUp} style={price == 0 ? { backgroundColor: "var(--LightGrey)", color: "var(--MediumGrey)" } : { backgroundColor: "var(--Blue)" }}>
                             <BigScreen>Получить рассчёт стоимости</BigScreen>
                             <MobileText>{price} ₽</MobileText>
                         </FooterBtn>
@@ -64,13 +69,16 @@ const CalculationFooter = ({ price }) => {
                 </CalculationFooterContainer>
             </CalculationFooterWrapper>
             {
+                show ? <CalculationPopUp closePopUp={togglePopUp}/> : null
+            }
+            {/* {
                 show ?
                     <PopUpWrapper>
-                        <CalculationPopUp ref={domNode}></CalculationPopUp>
+                        <CalculationPopUp></CalculationPopUp>
                     </PopUpWrapper>
                     :
                     <></>
-            }
+            } */}
             {/* <CalculationPopUp show={show} /> */}
         </>
 
@@ -89,6 +97,7 @@ const CalculationFooterWrapper = styled.div`
 
     @media screen and (max-width: 767px){
         height: 120px;
+        bottom: 98px;
     }
 `
 
@@ -137,6 +146,10 @@ const FooterTitle = styled.h4`
     line-height: 24px;
     color: var(--MediumGrey);
     font-weight: normal;
+
+    @media screen and (max-width: 767px){
+        width: 100%;
+    }
 `
 
 const Price = styled.h2`

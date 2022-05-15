@@ -195,6 +195,11 @@ const CalculationSelection = styled.div`
 const CalculationSelectionTitle = styled.h3`
     text-align: center;
     letter-spacing: -0.2px;
+
+
+    @media screen and (max-width: 767px){
+        font-size: 30px;
+    }
 `
 
 const CalculationSelectionContent = styled.div`
@@ -220,6 +225,10 @@ const CalculationInputTitle = styled.div`
     /* color: var(--DarkGrey); */
     margin-top: 16px;
     max-width: 75%;
+    
+    @media screen and (max-width: 767px){
+        font-size: 30px;
+    }
 `
 
 const CalculationImage = styled.img`

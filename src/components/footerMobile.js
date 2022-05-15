@@ -85,7 +85,7 @@ export default FooterMobile
 const ContactsFooter = styled.div`
     /* position: sticky; */
     position: fixed;
-    bottom: 0;
+    bottom: -1px;
     height: 100px;
     width: 100%;
     background-color: #F2F2F7;
