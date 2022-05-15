@@ -54,9 +54,9 @@ const Contacts = () => {
 const ContactsContainer = styled.div`
     width: 70%;
     max-width: 1000px;
-    height: 100vh;
-    margin: 80px auto;
-    margin-bottom: unset;
+    /* height: 100vh; */
+    margin: 100px auto;
+    /* margin-bottom: unset; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,7 +70,7 @@ const ContactsContainer = styled.div`
 
 const ContactsLaptop = styled.div`
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     @media screen and (max-width: 767px){
         display: none;
     }

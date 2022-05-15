@@ -88,9 +88,9 @@ const Main = () => {
 const MainContainer = styled.div`
     width: 75%;
     max-width: 1000px;
-    min-height: 100vh;
-    /* height: 100vh; */
-    margin: 90px auto;
+    /* height: 90vh; */
+    height: 100vh;
+    margin: 80px auto;
     display: flex;
     flex-direction: row;
     align-items: center;

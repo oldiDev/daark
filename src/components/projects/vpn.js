@@ -34,19 +34,19 @@ const Vpn = () => {
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slider">
                             <h1>Проблема:</h1>
-                            <SubText className="tertiaryButtonText">
+                            <SubText>
                                 Из-за политической ситуации граждане России оказались отрезанными от многих интернет-ресурсов. Единственный способ получить доступ к Facebook, Instagram или другому заблокированному источнику - это использовать VPN. Тем не менее, бесплатные версии большинства VPN работают довольно медленно, в то время как оплата премиум-сервиса обходится очень дорого.
                             </SubText>
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slider">
                             <h1>Цель:</h1>
-                            <SubText className="tertiaryButtonText">
+                            <SubText >
                                 Снизить цену на VPN-сервис, сохраняя при этом скорость.
                             </SubText>
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slider">
                             <h1>Решение: </h1>
-                            <SubText className="tertiaryButtonText">
+                            <SubText>
                                 Мы создали приложение, которое использует только один сервер, что значительно сокращает затраты, позволяя пользователям использовать быстрый VPN по более низкой цене.
                             </SubText>
                         </SwiperSlide>
@@ -97,12 +97,14 @@ const LeftSide = styled.div`
     }
 `
 
-const SubText = styled.div`
+const SubText = styled.h4`
     margin: 30px 0;
-    line-height: 19.36px;
+    line-height: 27px;
+    font-weight: 400;
 
     @media screen and (max-width: 767px){
-        line-height: 28px;
+        margin-top: 0;
+        line-height: 30px;
     }
 `
 

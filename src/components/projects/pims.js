@@ -37,15 +37,15 @@ const Pims = () => {
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slider">
                             <h1>Проблема:</h1>
-                            <SubText className="tertiaryButtonText">PIMS открыли свое первое заведение в центре города и столкнулись с длинными очередями из-за высокого спроса. После открытия еще 5 локаций и подключения к Яндекс.Еде они также начали получать 1000 онлайн-заказов на доставку ежемесячно. Они хотели решить проблему длинных очередей, а также сэкономить 30%-ную комиссию, которую они платили Яндексу за свою службу доставки.</SubText>
+                            <SubText >PIMS открыли свое первое заведение в центре города и столкнулись с длинными очередями из-за высокого спроса. После открытия еще 5 локаций и подключения к Яндекс.Еде они также начали получать 1000 онлайн-заказов на доставку ежемесячно. Они хотели решить проблему длинных очередей, а также сэкономить 30%-ную комиссию, которую они платили Яндексу за свою службу доставки.</SubText>
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slider">
                             <h1>Цель:</h1>
-                            <SubText className="tertiaryButtonText">Создать решение для предварительного заказа еды на вынос, чтобы не стоять в очереди, а также прямую службу доставки от PIMS.</SubText>
+                            <SubText >Создать решение для предварительного заказа еды на вынос, чтобы не стоять в очереди, а также прямую службу доставки от PIMS.</SubText>
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slider">
                             <h1>Решение: </h1>
-                            <SubText className="tertiaryButtonText">Простое в использовании приложение с возможностью заказа на вынос или доставки.</SubText>
+                            <SubText>Простое в использовании приложение с возможностью заказа на вынос или доставки.</SubText>
                         </SwiperSlide>
                     </Swiper>
                 </LeftSide>
@@ -65,7 +65,7 @@ export default Pims;
 
 const Container = styled.div`
     width: 75%;
-    /* height: 100vh; */
+    height: 100vh;
     max-width: 1000px;
     margin: 80px auto;
     display: flex;
@@ -108,12 +108,15 @@ const RightSide = styled.div`
     }
 `
 
-const SubText = styled.div`
+const SubText = styled.h4`
     margin: 30px 0;
-    line-height: 19.36px;
+    line-height: 27px;
+    font-weight: 400;
 
     @media screen and (max-width: 767px){
-        line-height: 28px;
+        margin-top: 0;
+        line-height: 37px;
+
     }
 `
 
