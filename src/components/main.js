@@ -89,7 +89,7 @@ const MainContainer = styled.div`
     width: 75%;
     max-width: 1000px;
     /* height: 90vh; */
-    height: 100vh;
+    min-height: 100vh;
     margin: 80px auto;
     display: flex;
     flex-direction: row;

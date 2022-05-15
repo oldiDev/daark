@@ -68,6 +68,7 @@ export default Vpn;
 const Container = styled.div`
     width: 75%;
     max-width: 1000px;
+    min-height: 100vh;
     margin: 80px auto;
     display: flex;
     flex-direction: row;

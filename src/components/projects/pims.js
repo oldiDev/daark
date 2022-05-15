@@ -6,9 +6,30 @@ import "swiper/css/pagination";
 import { Mousewheel, Pagination } from "swiper";
 import IPhone from '../iPhone/iPhone';
 import Footer from '../footer';
+import IphonePims from '../iPhone/IPhonePims';
+
+import { AdvancedVideo } from '@cloudinary/react';
+import { Cloudinary } from "@cloudinary/url-gen";
+
+
+import { fill } from "@cloudinary/url-gen/actions/resize";
+import { byRadius } from "@cloudinary/url-gen/actions/roundCorners";
+
 
 
 const Pims = () => {
+
+    const cld = new Cloudinary({
+        cloud: {
+            cloudName: 'dxjubrqnd'
+        }
+    });
+
+    const myVideo = cld.video('daark/IMG_0698_wlfoqi');
+
+    myVideo.resize(fill().width(390).height(850)) // Crop the video, focusing on the faces.
+        .roundCorners(byRadius(0));
+
 
     return (
         <>
@@ -28,7 +49,7 @@ const Pims = () => {
                     >
                         <SwiperSlide className='swiper-slider first-slide'>
                             <IphoneContainer>
-                                <IPhone bgcolor={"#1D2B3C"}></IPhone>
+                                <AdvancedVideo cldVid={myVideo} autoPlay/>
                             </IphoneContainer>
 
                         </SwiperSlide>
@@ -50,7 +71,7 @@ const Pims = () => {
                     </Swiper>
                 </LeftSide>
                 <RightSide>
-                    <IPhone bgcolor={"#1D2B3C"}></IPhone>
+                    <IphonePims />
                 </RightSide>
             </Container>
             <Footer />
@@ -65,7 +86,8 @@ export default Pims;
 
 const Container = styled.div`
     width: 75%;
-    height: 100vh;
+    /* height: 130vh; */
+    min-height: 100vh;
     max-width: 1000px;
     margin: 80px auto;
     display: flex;

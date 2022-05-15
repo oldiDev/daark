@@ -2,11 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Footer = ({height}) => {
+const Footer = ({ height }) => {
     return (
-        <footer style={{height:`${height}`}}>
+        <footer style={{ height: `${height}` }}>
             <Container>
-                <Logo src="/Logo/logo-white.svg" alt="logo-white"></Logo>
+                <Link to="/">
+                    <Logo src="/Logo/logo-white.svg" alt="logo-white"></Logo>
+                </Link>
+
                 <Navigation>
                     <Title>
                         Навигация
@@ -20,8 +23,8 @@ const Footer = ({height}) => {
                     <Title>
                         Контакты
                     </Title>
-                    <MobileLink href="tel:+79999797515"  className="tertiaryButtonText">+79999797515</MobileLink>
-                    <MobileLink  href="mailto:hello@daark.ru" className="tertiaryButtonText">hello@daark.ru</MobileLink>
+                    <MobileLink href="tel:+79999797515" className="tertiaryButtonText">+79999797515</MobileLink>
+                    <MobileLink href="mailto:hello@daark.ru" className="tertiaryButtonText">hello@daark.ru</MobileLink>
                 </Contacts>
                 <Address>
                     <Title>Адреса</Title>

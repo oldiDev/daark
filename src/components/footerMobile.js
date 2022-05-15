@@ -12,7 +12,7 @@ const FooterMobile = () => {
                 <Link to="/" className="contacts-link">
                     <IosTab>
                         {
-                            (location.pathname == '/') ?
+                            (location.pathname == '/' || location.pathname == '/pims' || location.pathname == '/vpn' || location.pathname == '/woodcoin') ?
                                 <>
                                     <TabImg src="/iPhoneImage/TabBar/projects-blue.svg" alt="projects"></TabImg>
                                     <TabLabel className="labelSmall blue">Наши проекты</TabLabel>
