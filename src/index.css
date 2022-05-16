@@ -149,7 +149,7 @@ footer {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 100;
     background-color: rgb(255, 255, 255, 0.8);
     backdrop-filter: blur(0.5em);
 }
@@ -166,6 +166,13 @@ footer {
     }
 }
 
+.swiper {
+    margin-top: 80px;
+    width: 100%;
+    height: 500px;
+    z-index: 0;
+}
+
 .slider-style{
     display: flex;
     align-items: center;
@@ -174,15 +181,40 @@ footer {
     z-index: 0;
 }
 
-.swiper-slider{
+.swiper-slide{
+    width: 350px;
+    height: 500px;
+    text-align: center;
+    font-size: 18px;
+    background: #ccc;
     display: flex;
-    align-items: flex-start;
     justify-content: center;
-    flex-direction: column;
-    height: 100%;
-    z-index: 0;
-    
+    align-items: center;
 }
+
+.swiper-slide-visible {
+    opacity: 0.25;
+}
+
+.swiper-button-next {
+    right: 39% !important;
+}
+
+.swiper-button-prev {
+    left: 39% !important;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    color: var(--Blue) !important;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
 
 .first-slide{
     align-items: center;
@@ -193,7 +225,19 @@ footer {
     .first-slide {
         display: none;
     }
+
+    .for-mobile {
+        display: none;
+        height: 600px !important;
+    }
 }
+
+@media screen and (max-width: 767px) {
+    .for-desktop{
+        display: none;
+    }
+}
+
 
 
 code {
