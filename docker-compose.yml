@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  daark_web:
+    container_name: daark_web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '1337:80'
