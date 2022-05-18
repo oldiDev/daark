@@ -27,8 +27,12 @@ const Pims = () => {
                 initialSlide={1}
                 className="for-mobile"
             >
-                <SwiperSlide>Screen 1</SwiperSlide>
-                <SwiperSlide>Screen 2</SwiperSlide>
+                <SwiperSlide>
+                    <ProjectImg src="/Projects/pims/01 - Default.png" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <ProjectImg src="/Projects/pims/03 - Connected - Speed.png" />
+                </SwiperSlide>
                 <SwiperSlide>Screen 3</SwiperSlide>
                 <SwiperSlide>Screen 4</SwiperSlide>
                 <SwiperSlide>Screen 5</SwiperSlide>
@@ -47,17 +51,25 @@ const Pims = () => {
                 initialSlide={1}
                 className="for-desktop"
             >
-                <SwiperSlide>Screen 1</SwiperSlide>
-                <SwiperSlide>Screen 2</SwiperSlide>
-                <SwiperSlide>Screen 3</SwiperSlide>
+                <SwiperSlide>
+                    <ProjectImg src="/Projects/pims/01 - Default.png" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <ProjectImg src="/Projects/pims/03 - Connected - Speed.png" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    img
+                </SwiperSlide>
                 <SwiperSlide>Screen 4</SwiperSlide>
                 <SwiperSlide>Screen 5</SwiperSlide>
 
             </Swiper>
+            <OpacityRight />
+            <OpacityLeft />
             <Container>
                 <Title>PIMS</Title>
                 <About>
-                    <h2>Тут будет инфа о проектах</h2>
+                    <AboutTitle>Тут будет инфа о проектах</AboutTitle>
                     <h3>Люблю пимс, но ****</h3>
                 </About>
                 <Techonolgy>
@@ -90,8 +102,8 @@ const Pims = () => {
                     </TechonologyItem>
                 </Techonolgy>
                 <CostContainer>
-                    <h2>Стоимость разработки: </h2>
-                    <h2>от 50 000 000 &#36;</h2>
+                    <CostTitle>Стоимость разработки: </CostTitle>
+                    <Cost>от 50 000 000 &#36;</Cost>
                 </CostContainer>
             </Container>
             <Footer />
@@ -121,8 +133,40 @@ const Container = styled.div`
     }
 `
 
+const OpacityRight = styled.div`
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: auto;
+    width: 39%;
+    height: 700px;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
+    /* opacity: 50%; */
+    z-index: 50;
+
+    @media screen and (max-width: 767px){
+        width: 26%;
+        /* height: 100vh; */
+    }
+`
+const OpacityLeft = styled.div`
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: auto;
+    width: 39%;
+    height: 700px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
+    z-index: 50;
+
+    @media screen and (max-width: 767px){
+        width: 26%;
+        /* height: 100vh; */
+    }
+`
+
 const Title = styled.h1`
-    margin: 30px auto;
+    margin: 50px auto;
 `
 
 const About = styled.div`
@@ -132,6 +176,11 @@ const About = styled.div`
     align-items: flex-start;
     justify-content: center;
 `
+
+const AboutTitle = styled.h2`
+    margin-top: unset;
+`
+
 const Techonolgy = styled.div`
     width: 100%;
     margin: 30px auto;
@@ -174,9 +223,38 @@ const TechonologyName = styled.span`
 
 const CostContainer = styled.div`
     width: 100%;
-    margin: 30px 0px;
+    margin-top: 30px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+
+    @media screen and (max-width: 767px){
+        align-items: flex-end;
+        margin-bottom: 60px;
+    }
+`
+
+const CostTitle = styled.h2`
+
+    @media screen and (max-width: 767px){
+        margin: unset;
+    }
+`
+
+const Cost = styled.h2`
+    width: fit-content;
+    margin-left: 30px;
+    text-align: right;
+
+    @media screen and (max-width: 767px){
+        width: 55%;
+        margin: unset;
+    }
+`
+
+const ProjectImg = styled.img`
+    width: 323px;
+    height: 700px;
 `
