@@ -1,3 +1,4 @@
+import { concatenate } from "@cloudinary/url-gen/actions/videoEdit";
 import { observer } from "mobx-react-lite";
 import { getSnapshot } from "mobx-state-tree";
 import React, { useEffect, useRef, useState } from "react";
@@ -47,6 +48,8 @@ const CalculationFooter = ({ price }) => {
         setShow(!show);
     }
 
+    console.log('----', price.toString().split(''), '------')
+    console.log(price.toString().split('000'))
 
     return (
         <>

@@ -27,12 +27,32 @@
       ],
       "techology": [
         {
-          "img": "",
-          "name": ""
+          "img": "/Projects/techology/typescript.svg",
+          "name": "TypeScript"
         },
         {
-          "img": "",
-          "name": ""
+          "img": "/Projects/techology/java.svg",
+          "name": "Java"
+        },
+        {
+          "img": "/Projects/techology/Figma.svg",
+          "name": "Figma"
+        },
+        {
+          "img": "/Projects/techology/react.svg",
+          "name": "React Native"
+        },
+        {
+          "img": "/Projects/techology/mobx.svg",
+          "name": "MobX-state-tree"
+        },
+        {
+          "img": "/Projects/techology/mysql.svg",
+          "name": "MySQL"
+        },
+        {
+          "img": "/Projects/techology/cloudinary.svg",
+          "name": "Cloudunary"
         }
       ],
       "cost": 50000000
@@ -41,20 +61,51 @@
       "name": "VPN World",
       "swiper": [
         {
-          "img": ""
+          "img": "/Projects/vpn/1.png"
         },
         {
-          "img": ""
+          "img": "/Projects/vpn/2.png"
+        },
+        {
+          "img": "/Projects/vpn/3.png"
         }
       ],
       "techology": [
         {
-          "img": "",
-          "name": ""
+          "img": "/Projects/techology/typescript.svg",
+          "name": "TypeScript"
         },
         {
-          "img": "",
-          "name": ""
+          "img": "/Projects/techology/swift.svg",
+          "name": "Swift"
+        },
+        {
+          "img": "/Projects/techology/java.svg",
+          "name": "Java"
+        },
+        {
+          "img": "/Projects/techology/react.svg",
+          "name": "React Native"
+        },
+        {
+          "img": "/Projects/techology/rust.svg",
+          "name": "Rust"
+        },
+        {
+          "img": "/Projects/techology/electron.svg",
+          "name": "Electron"
+        },
+        {
+          "img": "/Projects/techology/spring.svg",
+          "name": "Spring"
+        },
+        {
+          "img": "/Projects/techology/mobx.svg",
+          "name": "MobX-state-tree"
+        },
+        {
+          "img": "/Projects/techology/Figma.svg",
+          "name": "Figma"
         }
       ],
       "cost": 50000000
@@ -63,20 +114,51 @@
       "name": "Woodcoin",
       "swiper": [
         {
-          "img": ""
+          "img": "/Projects/woodcoin/1.png"
         },
         {
-          "img": ""
+          "img": "/Projects/woodcoin/2.png"
+        },
+        {
+          "img": "/Projects/woodcoin/3.png"
+        },
+        {
+          "img": "/Projects/woodcoin/4.png"
+        },
+        {
+          "img": "/Projects/woodcoin/5.png"
+        },
+        {
+          "img": "/Projects/woodcoin/6.png"
+        },
+        {
+          "img": "/Projects/woodcoin/7.png"
         }
       ],
       "techology": [
         {
-          "img": "",
-          "name": ""
+          "img": "/Projects/techology/typescript.svg",
+          "name": "TypeScript"
         },
         {
-          "img": "",
-          "name": ""
+          "img": "/Projects/techology/react.svg",
+          "name": "React Native"
+        },
+        {
+          "img": "/Projects/techology/mobx.svg",
+          "name": "MobX-state-tree"
+        },
+        {
+          "img": "/Projects/techology/c++.svg",
+          "name": "C++"
+        },
+        {
+          "img": "/Projects/techology/bitcore.svg",
+          "name": "BitCore"
+        },
+        {
+          "img": "/Projects/techology/Figma.svg",
+          "name": "Figma"
         }
       ],
       "cost": 50000000

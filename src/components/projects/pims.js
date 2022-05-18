@@ -20,7 +20,7 @@ const Pims = () => {
 
     const pims = getSnapshot(projects.projects[0]);
 
-    console.log(pims)
+    // console.log(pims)
 
 
     return (
@@ -79,7 +79,7 @@ const Pims = () => {
             <OpacityRight />
             <OpacityLeft />
             <Container>
-                <Title>PIMS</Title>
+                <Title>{pims.name}</Title>
                 <About>
                     <AboutTitle>Тут будет инфа о проектах</AboutTitle>
                     <h3>Люблю пимс, но ****</h3>
@@ -92,6 +92,7 @@ const Pims = () => {
                         pims.techology.map((e) =>
                             <TechonologyItem>
                                 <TechonologyIMG src={e.img} />
+                                {/* <img src={e.img}></img> */}
                                 <TechonologyName>
                                     <h3>{e.name}</h3>
                                 </TechonologyName>
@@ -200,12 +201,14 @@ const TechonologyTitle = styled.div`
 const TechonologyIMG = styled.img`
     width: 100px;
     height: 100px;
-    background-color: #ccc;
+    /* background-color: #ccc; */
+    box-shadow: 4px 4px 16px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 19px;
 `
 
 const TechonologyItem = styled.div`
     display: flex;
-    margin: 30px 0px;
+    margin: 10px 0px;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
