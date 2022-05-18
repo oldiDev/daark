@@ -1,13 +1,16 @@
 import { types } from "mobx-state-tree";
 import createPersistentStore from "mst-persistent-store";
 import CalculationStore from "./calculationStore";
-import data from "../assets/data/teamData.json"
+import data from "../assets/data/teamData.json";
+import projectData from '../assets/data/projectData.json'
 import TeamStore from "./aboutStore";
+import ProjectsStore from "./projectStore";
 
 
 export const RootStore = types.model('RootStore', {
     calculation: types.optional(CalculationStore, {}),
     team: types.optional(TeamStore, {}),
+    projects: types.optional(ProjectsStore, {})
 })
     .actions((self) => ({
         setCalculation: (appType, projectType, uniqueScreen, degreeDevelopment, functions, services) => {
@@ -37,6 +40,7 @@ export const [PersistentStoreProvider, usePersistentStore] = createPersistentSto
     {
         team: data,
         calculation: {},
+        projects: projectData,
     },
 )
 

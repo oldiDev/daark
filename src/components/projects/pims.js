@@ -7,63 +7,75 @@ import "swiper/css/navigation";
 
 import { Mousewheel, Pagination, Navigation } from "swiper";
 import Footer from '../footer';
+import { Image, ImageGroup } from 'react-fullscreen-image';
+import { usePersistentStore } from '../../store';
+import { getSnapshot } from 'mobx-state-tree';
+import { observer } from 'mobx-react-lite';
 
 
 
 const Pims = () => {
 
+    const { projects } = usePersistentStore();
+
+    const pims = getSnapshot(projects.projects[0]);
+
+    console.log(pims)
 
 
     return (
         <>
             <Swiper
                 slidesPerView={2}
-                spaceBetween={30}
+                spaceBetween={80}
                 loop={true}
                 updateOnWindowResize
                 observer
                 observerParents
                 centeredSlides={true}
-                initialSlide={1}
+                // initialSlide={1}
                 className="for-mobile"
             >
-                <SwiperSlide>
-                    <ProjectImg src="/Projects/pims/01 - Default.png" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <ProjectImg src="/Projects/pims/03 - Connected - Speed.png" />
-                </SwiperSlide>
-                <SwiperSlide>Screen 3</SwiperSlide>
-                <SwiperSlide>Screen 4</SwiperSlide>
-                <SwiperSlide>Screen 5</SwiperSlide>
+                {/* <ImageGroup> */}
+                {
+                    pims.swiper?.map((i) =>
+                        <SwiperSlide key={i}>
+                            <ProjectImg src={i.img} />
+                        </SwiperSlide>
+                    )
+                }
 
+                {/* </ImageGroup> */}
             </Swiper>
-            <Swiper
-                slidesPerView={5}
-                spaceBetween={30}
-                loop={true}
-                navigation={true}
-                modules={[Navigation]}
-                updateOnWindowResize
-                observer
-                centeredSlides={true}
-                observerParents
-                initialSlide={1}
-                className="for-desktop"
-            >
-                <SwiperSlide>
-                    <ProjectImg src="/Projects/pims/01 - Default.png" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <ProjectImg src="/Projects/pims/03 - Connected - Speed.png" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    img
-                </SwiperSlide>
-                <SwiperSlide>Screen 4</SwiperSlide>
-                <SwiperSlide>Screen 5</SwiperSlide>
 
-            </Swiper>
+            <ImageGroup>
+                <Swiper
+                    slidesPerView={5}
+                    spaceBetween={30}
+                    loop={true}
+                    navigation={true}
+                    modules={[Navigation]}
+                    updateOnWindowResize
+                    observer
+                    centeredSlides={true}
+                    observerParents
+                    // initialSlide={1}
+                    className="for-desktop"
+                >
+                    {/* <ImageGroup> */}
+                    {
+                        pims.swiper?.map((i) =>
+                            <SwiperSlide key={i}>
+                                <ProjectImg src={i.img} />
+                            </SwiperSlide>
+                        )
+                    }
+
+                    {/* </ImageGroup> */}
+                </Swiper>
+            </ImageGroup>
+
+
             <OpacityRight />
             <OpacityLeft />
             <Container>
@@ -76,34 +88,20 @@ const Pims = () => {
                     <TechonologyTitle>
                         <h2 style={{ margin: "unset" }}>Технологии</h2>
                     </TechonologyTitle>
-                    <TechonologyItem>
-                        <TechonologyIMG />
-                        <TechonologyName>
-                            <h3>Название технологии</h3>
-                        </TechonologyName>
-                    </TechonologyItem>
-                    <TechonologyItem>
-                        <TechonologyIMG />
-                        <TechonologyName>
-                            <h3>Название технологии</h3>
-                        </TechonologyName>
-                    </TechonologyItem>
-                    <TechonologyItem>
-                        <TechonologyIMG />
-                        <TechonologyName>
-                            <h3>Название технологии</h3>
-                        </TechonologyName>
-                    </TechonologyItem>
-                    <TechonologyItem>
-                        <TechonologyIMG />
-                        <TechonologyName>
-                            <h3>Название технологии</h3>
-                        </TechonologyName>
-                    </TechonologyItem>
+                    {
+                        pims.techology.map((e) =>
+                            <TechonologyItem>
+                                <TechonologyIMG src={e.img} />
+                                <TechonologyName>
+                                    <h3>{e.name}</h3>
+                                </TechonologyName>
+                            </TechonologyItem>
+                        )
+                    }
                 </Techonolgy>
                 <CostContainer>
                     <CostTitle>Стоимость разработки: </CostTitle>
-                    <Cost>от 50 000 000 &#36;</Cost>
+                    <Cost>от {pims.cost.toString()} &#36;</Cost>
                 </CostContainer>
             </Container>
             <Footer />
@@ -113,7 +111,7 @@ const Pims = () => {
 
 }
 
-export default Pims;
+export default observer(Pims);
 
 
 const Container = styled.div`
@@ -139,8 +137,8 @@ const OpacityRight = styled.div`
     right: 0;
     left: auto;
     width: 39%;
-    height: 700px;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
+    height: 770px;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     /* opacity: 50%; */
     z-index: 50;
 
@@ -155,8 +153,8 @@ const OpacityLeft = styled.div`
     left: 0;
     right: auto;
     width: 39%;
-    height: 700px;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
+    height: 770px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     z-index: 50;
 
     @media screen and (max-width: 767px){
@@ -257,4 +255,6 @@ const Cost = styled.h2`
 const ProjectImg = styled.img`
     width: 323px;
     height: 700px;
+    border-radius: 24px;
+    box-shadow: 8px 10px 20px 4px rgba(0, 0, 0, 0.15);
 `

@@ -1,0 +1,85 @@
+{
+  "projects": [
+    {
+      "name": "PIMS",
+      "swiper": [
+        {
+          "img": "/Projects/pims/1.png"
+        },
+        {
+          "img": "/Projects/pims/2.png"
+        },
+        {
+          "img": "/Projects/pims/6.png"
+        },
+        {
+          "img": "/Projects/pims/4.png"
+        },
+        {
+          "img": "/Projects/pims/5.png"
+        },
+        {
+          "img": "/Projects/pims/3.png"
+        },
+        {
+          "img": "/Projects/pims/7.png"
+        }
+      ],
+      "techology": [
+        {
+          "img": "",
+          "name": ""
+        },
+        {
+          "img": "",
+          "name": ""
+        }
+      ],
+      "cost": 50000000
+    },
+    {
+      "name": "VPN World",
+      "swiper": [
+        {
+          "img": ""
+        },
+        {
+          "img": ""
+        }
+      ],
+      "techology": [
+        {
+          "img": "",
+          "name": ""
+        },
+        {
+          "img": "",
+          "name": ""
+        }
+      ],
+      "cost": 50000000
+    },
+    {
+      "name": "Woodcoin",
+      "swiper": [
+        {
+          "img": ""
+        },
+        {
+          "img": ""
+        }
+      ],
+      "techology": [
+        {
+          "img": "",
+          "name": ""
+        },
+        {
+          "img": "",
+          "name": ""
+        }
+      ],
+      "cost": 50000000
+    }
+  ]
+}
