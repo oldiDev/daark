@@ -47,33 +47,55 @@ const Pims = () => {
 
                 {/* </ImageGroup> */}
             </Swiper>
+            <Swiper
+                slidesPerView={3}
+                spaceBetween={50}
+                loop={true}
+                updateOnWindowResize
+                observer
+                observerParents
+                centeredSlides={true}
+                // initialSlide={1}
+                className="for-tablet"
+            >
+                {/* <ImageGroup> */}
+                {
+                    woodcoin.swiper?.map((i) =>
+                        <SwiperSlide key={i}>
+                            <ProjectImg src={i.img} />
+                        </SwiperSlide>
+                    )
+                }
 
-            <ImageGroup>
-                <Swiper
-                    slidesPerView={5}
-                    spaceBetween={30}
-                    loop={true}
-                    navigation={true}
-                    modules={[Navigation]}
-                    updateOnWindowResize
-                    observer
-                    centeredSlides={true}
-                    observerParents
-                    // initialSlide={1}
-                    className="for-desktop"
-                >
-                    {/* <ImageGroup> */}
-                    {
-                        woodcoin.swiper?.map((i) =>
-                            <SwiperSlide key={i}>
-                                <ProjectImg src={i.img} />
-                            </SwiperSlide>
-                        )
-                    }
+                {/* </ImageGroup> */}
+            </Swiper>
 
-                    {/* </ImageGroup> */}
-                </Swiper>
-            </ImageGroup>
+            {/* <ImageGroup> */}
+            <Swiper
+                slidesPerView={5}
+                spaceBetween={30}
+                loop={true}
+                navigation={true}
+                modules={[Navigation]}
+                updateOnWindowResize
+                observer
+                centeredSlides={true}
+                observerParents
+                // initialSlide={1}
+                className="for-desktop"
+            >
+                {/* <ImageGroup> */}
+                {
+                    woodcoin.swiper?.map((i) =>
+                        <SwiperSlide key={i}>
+                            <ProjectImg src={i.img} />
+                        </SwiperSlide>
+                    )
+                }
+
+                {/* </ImageGroup> */}
+            </Swiper>
+            {/* </ImageGroup> */}
 
 
             <OpacityRight />

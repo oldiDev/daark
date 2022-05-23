@@ -47,6 +47,28 @@ const Pims = () => {
 
                 {/* </ImageGroup> */}
             </Swiper>
+            <Swiper
+                slidesPerView={3}
+                spaceBetween={50}
+                loop={true}
+                updateOnWindowResize
+                observer
+                observerParents
+                centeredSlides={true}
+                // initialSlide={1}
+                className="for-tablet"
+            >
+                {/* <ImageGroup> */}
+                {
+                    pims.swiper?.map((i) =>
+                        <SwiperSlide key={i}>
+                            <ProjectImg src={i.img} />
+                        </SwiperSlide>
+                    )
+                }
+
+                {/* </ImageGroup> */}
+            </Swiper>
 
             <ImageGroup>
                 <Swiper

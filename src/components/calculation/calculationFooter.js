@@ -5,6 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { usePersistentStore } from "../../store";
 import CalculationPopUp from "./calculationPopUp";
+import '@cidekar/browser-email-share'
 
 // let useClickOutside = (handler) => {
 //     let domNode = useRef();
@@ -48,8 +49,8 @@ const CalculationFooter = ({ price }) => {
         setShow(!show);
     }
 
-    console.log('----', price.toString().split(''), '------')
-    console.log(price.toString().split('000'))
+    // console.log('----', price.toString().split(''), '------');
+    // console.log(price.toString().split('000'));
 
     return (
         <>
@@ -72,7 +73,7 @@ const CalculationFooter = ({ price }) => {
                 </CalculationFooterContainer>
             </CalculationFooterWrapper>
             {
-                show ? <CalculationPopUp closePopUp={togglePopUp}/> : null
+                show ? <CalculationPopUp closePopUp={togglePopUp} /> : null
             }
             {/* {
                 show ?

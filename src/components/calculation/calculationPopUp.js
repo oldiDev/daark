@@ -45,7 +45,7 @@ const CalculationPopUp = ({ closePopUp }) => {
                     <PopUpInput placeholder="Имя*" required></PopUpInput>
                     <PopUpInput placeholder="Email*" type="email" required></PopUpInput>
                     <PopUpInput placeholder="Телефон (необязательно)"></PopUpInput>
-                    <PopUpBtn className="primaryButtonText">Отправить</PopUpBtn>
+                    <PopUpBtn className="primaryButtonText email">Отправить</PopUpBtn>
                 </PopUpContainer>
             </PopUpWrapper>
 
