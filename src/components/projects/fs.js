@@ -75,7 +75,7 @@ const FootSkill = () => {
             <ImageGroup>
                 <Swiper
                     slidesPerView={3}
-                    spaceBetween={1500}
+                    spaceBetween={600}
                     loop={true}
                     navigation={true}
                     modules={[Navigation, Autoplay]}
@@ -297,7 +297,7 @@ const Cost = styled.h2`
 `
 
 const ProjectImg = styled.img`
-    width: 1245px;
+    width: 1000px;
     height: 700px;
     border-radius: 24px;
     box-shadow: 8px 10px 20px 4px rgba(0, 0, 0, 0.15);

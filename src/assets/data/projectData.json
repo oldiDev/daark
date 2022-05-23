@@ -171,6 +171,12 @@
       "swiper": [
         {
           "img": "/Projects/fs/1.jpg"
+        },
+        {
+          "img": "/Projects/fs/2.jpg"
+        },
+        {
+          "img": "/Projects/fs/3.jpeg"
         }
       ],
       "techology": [
