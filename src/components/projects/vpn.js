@@ -108,9 +108,16 @@ const Pims = () => {
             <Container>
                 <Title>{vpnWorld.name}</Title>
                 <About>
-                    <AboutTitle>Тут будет инфа о проектах</AboutTitle>
-                    <h3>Люблю пимс, но ****</h3>
+                    <AboutTitle>VPN WORLD. JUST PULL DOWN!</AboutTitle>
+                    <AboutText>Актуальность VPN приложений растет с каждым днем. Мы подумали о том, что рядовому обывателю не нужна нагрузка в виде настроек сервера и другого функционала. Просто свайп вниз и Вы онлайн!</AboutText>
+                    <AboutText>Наш сервис прост в использовании и доступен на всех устройствах. Мы создали с нуля мобильное приложение под Android и iOS, также реализовали сборки под Windows, MacOs, Linux.</AboutText>
+                    <AboutText>Решение разрабатывалось нами в течение 22-ух календарных дней. Сейчас вы можете скачать результаты нашей работы в плэй-маркетах вашего телефона или на сайте: <a href='http://vpn.oldi.dev'>vpn.oldi.dev</a></AboutText>
                 </About>
+                <LinkContainer>
+                    <a href='https://apps.apple.com/ru/app/vpnworld/id1624305127?l=ru'>
+                        <LinkImage src="/Projects/downloadAppStore.svg" />
+                    </a>
+                </LinkContainer>
                 <Techonolgy>
                     <TechonologyTitle>
                         <h2 style={{ margin: "unset" }}>Технологии</h2>
@@ -126,11 +133,12 @@ const Pims = () => {
                         )
                     }
                 </Techonolgy>
+
                 <CostContainer>
                     <CostTitle>Стоимость разработки: </CostTitle>
                     <Cost>от {vpnWorld.cost.toString().split('').reverse().map((e, i) =>
                         e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
-                    ).reverse().join('')} &#36;</Cost>
+                    ).reverse().join('')} &#8381;</Cost>
                 </CostContainer>
             </Container>
             <Footer />
@@ -194,7 +202,7 @@ const OpacityLeft = styled.div`
 
 const Title = styled.h1`
     margin: 50px auto;
-`
+    `
 
 const About = styled.div`
     width: 100%;
@@ -202,10 +210,22 @@ const About = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-`
+    `
 
 const AboutTitle = styled.h2`
     margin-top: unset;
+    `
+
+const AboutText = styled.h4`
+    font-size: 24px;
+    margin: 15px 0px;
+    line-height: 30px;
+    font-weight: normal;
+
+    @media screen and (max-width: 767px){
+            font-size: 28px;
+            line-height: 36px;
+        }
 `
 
 const Techonolgy = styled.div`
@@ -288,4 +308,22 @@ const ProjectImg = styled.img`
     height: 700px;
     border-radius: 24px;
     box-shadow: 8px 10px 20px 4px rgba(0, 0, 0, 0.15);
+`
+
+const LinkContainer = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+`
+
+const LinkImage = styled.img`
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+
+    @media screen and (max-width: 767px){
+        width: 210px;
+        height: 70px;
+    }
 `

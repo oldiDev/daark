@@ -109,8 +109,10 @@ const Pims = () => {
             <Container>
                 <Title>{pims.name}</Title>
                 <About>
-                    <AboutTitle>Тут будет инфа о проектах</AboutTitle>
-                    <h3>Люблю пимс, но ****</h3>
+                    <AboutTitle>PIMS – это напиток на основе чая, который перевернет твое сознание, даст природную энергию и прокачает твои вкусовые рецепторы</AboutTitle>
+                    <AboutText>Приложение для доставки напитков PIMS - один из самых интересных проектов, которые создавала наша команда. Стояла задача написать кросс-платформенное решение для клиентов PIMS, которое поможет избежать очередей на кассах и снизить расходы на доставку продукции.</AboutText>
+                    <AboutText>Мы создали с нуля мобильное приложение под Android и iOS, связанное со своей панелью администратора. Через админ-панель сотрудники ресторана редактируют позиции меню, следят за статусами заказа и контролируют доставку напитков. Для оформление доставки мы интегрировали сервисы Яндекса, а для приема оплат была проведена интеграция мобильного SDK банка.</AboutText>
+                    <AboutText>Программный комплекс разрабатывался нами в течение 7-ми месяцев. Сейчас вы можете скачать результаты нашей работы в плэй-маркетах вашего смартфона.</AboutText>
                 </About>
                 <Techonolgy>
                     <TechonologyTitle>
@@ -128,11 +130,12 @@ const Pims = () => {
                         )
                     }
                 </Techonolgy>
+
                 <CostContainer>
                     <CostTitle>Стоимость разработки: </CostTitle>
                     <Cost>от {pims.cost.toString().split('').reverse().map((e, i) =>
                         e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
-                    ).reverse().join('')} &#36;</Cost>
+                    ).reverse().join('')} &#8381;</Cost>
                 </CostContainer>
             </Container>
             <Footer />
@@ -160,7 +163,7 @@ const Container = styled.div`
         width: 90%;
         /* height: 100vh; */
     }
-`
+    `
 
 const OpacityRight = styled.div`
     position: absolute;
@@ -172,12 +175,12 @@ const OpacityRight = styled.div`
     background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     /* opacity: 50%; */
     z-index: 50;
-
+    
     @media screen and (max-width: 767px){
         width: 26%;
         /* height: 100vh; */
     }
-`
+    `
 const OpacityLeft = styled.div`
     position: absolute;
     top: 80px;
@@ -187,16 +190,16 @@ const OpacityLeft = styled.div`
     height: 770px;
     background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     z-index: 50;
-
+    
     @media screen and (max-width: 767px){
         width: 26%;
         /* height: 100vh; */
     }
-`
+    `
 
 const Title = styled.h1`
     margin: 50px auto;
-`
+    `
 
 const About = styled.div`
     width: 100%;
@@ -204,11 +207,23 @@ const About = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-`
+    `
 
 const AboutTitle = styled.h2`
     margin-top: unset;
 `
+
+const AboutText = styled.h4`
+        font-size: 24px;
+        margin: 15px 0px;
+        line-height: 30px;
+        font-weight: normal;
+    
+        @media screen and (max-width: 767px){
+            font-size: 28px;
+            line-height: 36px;
+        }
+ `
 
 const Techonolgy = styled.div`
     width: 100%;
@@ -290,4 +305,11 @@ const ProjectImg = styled.img`
     height: 700px;
     border-radius: 24px;
     box-shadow: 8px 10px 20px 4px rgba(0, 0, 0, 0.15);
+`
+
+const LinkContainer = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 `

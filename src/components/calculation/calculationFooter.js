@@ -57,12 +57,14 @@ const CalculationFooter = ({ price }) => {
                         <FooterTitle>Стоимость разработки вашего приложения</FooterTitle>
                         <Price>{price.toString().split('').reverse().map((e, i) =>
                             e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
-                        ).reverse().join('')} ₽</Price>
+                        ).reverse().join('')} &#8381;</Price>
                     </CalculationFooterLeft>
                     <CalculationFooterRight>
                         <FooterBtn className="primaryButtonText" disabled={price == 0} onClick={togglePopUp} style={price == 0 ? { backgroundColor: "var(--LightGrey)", color: "var(--MediumGrey)" } : { backgroundColor: "var(--Blue)" }}>
                             <BigScreen>Получить рассчёт стоимости</BigScreen>
-                            <MobileText>{price} ₽</MobileText>
+                            <MobileText>{price.toString().split('').reverse().map((e, i) =>
+                                e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
+                            ).reverse().join('')} &#8381;</MobileText>
                         </FooterBtn>
                         <FooterBtnDelete className="tertiaryButtonText" disabled={price == 0} onClick={handleDelete} style={price == 0 ? { color: "var(--MediumGrey)" } : { color: "var(--Blue)" }}>
                             <BigScreen>Очистить</BigScreen>
@@ -100,7 +102,7 @@ const CalculationFooterWrapper = styled.div`
 
     @media screen and (max-width: 767px){
         height: 120px;
-        bottom: 98px;
+        bottom: calc(var(--mobile-bar-height) - 1px) ;
     }
 `
 

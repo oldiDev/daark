@@ -108,8 +108,10 @@ const Pims = () => {
             <Container>
                 <Title>{woodcoin.name}</Title>
                 <About>
-                    <AboutTitle>Тут будет инфа о проектах</AboutTitle>
-                    <h3>Люблю пимс, но ****</h3>
+                    <AboutTitle>Woodcoin Crypto Currency. You Can Rely On</AboutTitle>
+                    <AboutText>Мультивалютный крипто-кошелек - это челендж, который приняла наша команда. Стояла задача написать кросс-платформенное решение для хранения монет LOG и других криптовалют. На выполнение задачи был отведен 1 месяц.</AboutText>
+                    <AboutText>Мы создали с нуля мобильное приложение под Android и iOs. Пользователи приложения могут хранить/отправлять/принимать криптовалюту LOG и другие валюты прямо на телефоне. В ходе работы разработчикам пришлось дописывать программный комплекс Woodcoin для интеграции с мобильным приложением.</AboutText>
+                    <AboutText>Решение разрабатывалось нами в течение 32-ух календарных дней. Сейчас вы можете скачать результаты нашей работы в плэй-маркетах вашего телефона.</AboutText>
                 </About>
                 <Techonolgy>
                     <TechonologyTitle>
@@ -130,7 +132,7 @@ const Pims = () => {
                     <CostTitle>Стоимость разработки: </CostTitle>
                     <Cost>от {woodcoin.cost.toString().split('').reverse().map((e, i) =>
                         e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
-                    ).reverse().join('')} &#36;</Cost>
+                    ).reverse().join('')} &#8381;</Cost>
                 </CostContainer>
             </Container>
             <Footer />
@@ -202,10 +204,22 @@ const About = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-`
+    `
 
 const AboutTitle = styled.h2`
     margin-top: unset;
+    `
+
+const AboutText = styled.h4`
+    font-size: 24px;
+    margin: 15px 0px;
+    line-height: 30px;
+    font-weight: normal;
+
+    @media screen and (max-width: 767px){
+            font-size: 28px;
+            line-height: 36px;
+        }
 `
 
 const Techonolgy = styled.div`

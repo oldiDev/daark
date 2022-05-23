@@ -55,7 +55,7 @@
           "name": "Cloudinary"
         }
       ],
-      "cost": 50000000
+      "cost": 7000000
     },
     {
       "name": "VPN World",
@@ -68,6 +68,9 @@
         },
         {
           "img": "/Projects/vpn/3.png"
+        },
+        {
+          "img": "/Projects/vpn/4.png"
         }
       ],
       "techology": [
@@ -108,10 +111,10 @@
           "name": "Figma"
         }
       ],
-      "cost": 50000000
+      "cost": 3500000
     },
     {
-      "name": "Woodcoin",
+      "name": "Woodcoin Wallet",
       "swiper": [
         {
           "img": "/Projects/woodcoin/1.png"
@@ -161,7 +164,30 @@
           "name": "Figma"
         }
       ],
-      "cost": 50000000
+      "cost": 3500000
+    },
+    {
+      "name": "FootSkill",
+      "swiper": [
+        {
+          "img": ""
+        }
+      ],
+      "techology": [
+        {
+          "img": "/Projects/techology/Figma.svg",
+          "name": "Figma"
+        },
+        {
+          "img": "",
+          "name": "JavaScript"
+        },
+        {
+          "img": "/Projects/techology/react.svg",
+          "name": "React"
+        }
+      ],
+      "cost": 10000
     }
   ]
 }

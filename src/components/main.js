@@ -26,51 +26,64 @@ const Main = () => {
                     <MobileScreen>
                         {/* <IPhone bgcolor={'white'} /> */}
                         {/* <IphoneMainContainer> */}
-                            <IphoneMainTitle className="SF_h2">Наши проекты</IphoneMainTitle>
-                            <AppContainer>
-                                <AppInfo>
-                                    <AppImg src="iPhoneImage/AppIcon/Pims.svg" alt="pims"></AppImg>
-                                    <AppName>
-                                        <div className="SF_h3">PIMS</div>
-                                        <div className="SF_body dark-grey">Доставка еды</div>
-                                    </AppName>
-                                </AppInfo>
-                                <Link to="pims">
-                                    <OpenBtn>
-                                        <span className="buttonText">Открыть</span>
-                                    </OpenBtn>
-                                </Link>
-                            </AppContainer>
-                            <AppContainer>
-                                <AppInfo>
-                                    <AppImg src="iPhoneImage/AppIcon/Woodkoin.svg" alt="woodkoin"></AppImg>
-                                    <AppName>
-                                        <div className="SF_h3">Woodcoin Wallet</div>
-                                        <div className="SF_body dark-grey">Крипто-кошелёк</div>
-                                    </AppName>
-                                </AppInfo>
-                                <Link to="woodcoin">
-                                    <OpenBtn>
-                                        <span className="buttonText">Открыть</span>
-                                    </OpenBtn>
-                                </Link>
-                            </AppContainer>
-                            <AppContainer>
-                                <AppInfo>
-                                    <AppImg src="iPhoneImage/AppIcon/VpnWorld.svg" alt="VpnWorld"></AppImg>
-                                    <AppName>
-                                        <div className="SF_h3">VPN World</div>
-                                        <div className="SF_body dark-grey">Безопасное подключение</div>
-                                    </AppName>
-                                </AppInfo>
-                                <Link to="vpn">
-                                    <OpenBtn>
-                                        <span className="buttonText">Открыть</span>
-                                    </OpenBtn>
-                                </Link>
-
-                            </AppContainer>
-                            <Outlet />
+                        <IphoneMainTitle className="SF_h2">Наши проекты</IphoneMainTitle>
+                        <AppContainer>
+                            <AppInfo>
+                                <AppImg src="iPhoneImage/AppIcon/Pims.svg" alt="pims"></AppImg>
+                                <AppName>
+                                    <div className="SF_h3">PIMS</div>
+                                    <div className="SF_body dark-grey">Доставка еды</div>
+                                </AppName>
+                            </AppInfo>
+                            <Link to="pims">
+                                <OpenBtn>
+                                    <span className="buttonText">Открыть</span>
+                                </OpenBtn>
+                            </Link>
+                        </AppContainer>
+                        <AppContainer>
+                            <AppInfo>
+                                <AppImg src="iPhoneImage/AppIcon/Woodkoin.svg" alt="woodkoin"></AppImg>
+                                <AppName>
+                                    <div className="SF_h3">Woodcoin Wallet</div>
+                                    <div className="SF_body dark-grey">Крипто-кошелёк</div>
+                                </AppName>
+                            </AppInfo>
+                            <Link to="woodcoin">
+                                <OpenBtn>
+                                    <span className="buttonText">Открыть</span>
+                                </OpenBtn>
+                            </Link>
+                        </AppContainer>
+                        <AppContainer>
+                            <AppInfo>
+                                <AppImg src="iPhoneImage/AppIcon/VpnWorld.svg" alt="VpnWorld"></AppImg>
+                                <AppName>
+                                    <div className="SF_h3">VPN World</div>
+                                    <div className="SF_body dark-grey">Безопасное подключение</div>
+                                </AppName>
+                            </AppInfo>
+                            <Link to="vpn">
+                                <OpenBtn>
+                                    <span className="buttonText">Открыть</span>
+                                </OpenBtn>
+                            </Link>
+                        </AppContainer>
+                        <AppContainer>
+                            <AppInfo>
+                                <AppImg src="iPhoneImage/AppIcon/FS.svg" alt="FootSkill"></AppImg>
+                                <AppName>
+                                    <div className="SF_h3">FootSkill</div>
+                                    <div className="SF_body dark-grey">Личный кабинет футбольной школы</div>
+                                </AppName>
+                            </AppInfo>
+                            <Link to="fs">
+                                <OpenBtn>
+                                    <span className="buttonText">Открыть</span>
+                                </OpenBtn>
+                            </Link>
+                        </AppContainer>
+                        <Outlet />
                         {/* </IphoneMainContainer> */}
                     </MobileScreen>
                 </MainLeftSide>
