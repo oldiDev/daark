@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@cidekar/browser-email-share": "^1.0.0",
     "@cloudinary/react": "^1.4.0",
     "@cloudinary/url-gen": "^1.8.0",
     "@testing-library/jest-dom": "^5.16.4",

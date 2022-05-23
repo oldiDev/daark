@@ -123,7 +123,9 @@ const Pims = () => {
                 </Techonolgy>
                 <CostContainer>
                     <CostTitle>Стоимость разработки: </CostTitle>
-                    <Cost>от {woodcoin.cost.toString()} &#36;</Cost>
+                    <Cost>от {woodcoin.cost.toString().split('').reverse().map((e, i) =>
+                        e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
+                    ).reverse().join('')} &#36;</Cost>
                 </CostContainer>
             </Container>
             <Footer />

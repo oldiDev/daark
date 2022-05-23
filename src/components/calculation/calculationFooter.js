@@ -1,11 +1,11 @@
+import React, { useEffect, useRef, useState } from "react";
 import { concatenate } from "@cloudinary/url-gen/actions/videoEdit";
 import { observer } from "mobx-react-lite";
 import { getSnapshot } from "mobx-state-tree";
-import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { usePersistentStore } from "../../store";
 import CalculationPopUp from "./calculationPopUp";
-import '@cidekar/browser-email-share'
+
 
 // let useClickOutside = (handler) => {
 //     let domNode = useRef();
@@ -49,16 +49,15 @@ const CalculationFooter = ({ price }) => {
         setShow(!show);
     }
 
-    // console.log('----', price.toString().split(''), '------');
-    // console.log(price.toString().split('000'));
-
     return (
         <>
             <CalculationFooterWrapper>
                 <CalculationFooterContainer>
                     <CalculationFooterLeft>
                         <FooterTitle>Стоимость разработки вашего приложения</FooterTitle>
-                        <Price>{price} ₽</Price>
+                        <Price>{price.toString().split('').reverse().map((e, i) =>
+                            e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
+                        ).reverse().join('')} ₽</Price>
                     </CalculationFooterLeft>
                     <CalculationFooterRight>
                         <FooterBtn className="primaryButtonText" disabled={price == 0} onClick={togglePopUp} style={price == 0 ? { backgroundColor: "var(--LightGrey)", color: "var(--MediumGrey)" } : { backgroundColor: "var(--Blue)" }}>
