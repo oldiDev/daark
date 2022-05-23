@@ -11,7 +11,7 @@ const IphoneMain = () => {
                     <img src="iPhoneImage/AppIcon/Pims.svg" alt="pims"></img>
                     <AppName>
                         <div className="SF_h3">PIMS</div>
-                        <div className="SF_Body dark-grey">Доставка еды</div>
+                        <div className="SF_body dark-grey">Доставка еды</div>
                     </AppName>
                 </AppInfo>
                 <Link to="pims">
