@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from "swiper";
 import 'swiper/css';
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/autoplay";
 
-import { Mousewheel, Pagination, Navigation } from "swiper";
 import Footer from '../footer';
 import { Image, ImageGroup } from 'react-fullscreen-image';
 import { usePersistentStore } from '../../store';
@@ -28,6 +29,8 @@ const Pims = () => {
             <Swiper
                 slidesPerView={2}
                 spaceBetween={80}
+                modules={[Autoplay]}
+                autoplay={true}
                 loop={true}
                 updateOnWindowResize
                 observer
@@ -50,6 +53,8 @@ const Pims = () => {
             <Swiper
                 slidesPerView={3}
                 spaceBetween={50}
+                modules={[Autoplay]}
+                autoplay={true}
                 loop={true}
                 updateOnWindowResize
                 observer
@@ -76,7 +81,8 @@ const Pims = () => {
                     spaceBetween={30}
                     loop={true}
                     navigation={true}
-                    modules={[Navigation]}
+                    modules={[Navigation, Autoplay]}
+                    autoplay={true}
                     updateOnWindowResize
                     observer
                     centeredSlides={true}
