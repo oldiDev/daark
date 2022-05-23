@@ -11,7 +11,7 @@ const IphoneMain = () => {
                     <img src="iPhoneImage/AppIcon/Pims.svg" alt="pims"></img>
                     <AppName>
                         <div className="SF_h3">PIMS</div>
-                        <div className="SF_Body dark-grey">Доставка еды</div>
+                        <div className="SF_body dark-grey">Доставка еды</div>
                     </AppName>
                 </AppInfo>
                 <Link to="pims">
@@ -25,7 +25,7 @@ const IphoneMain = () => {
                     <img src="iPhoneImage/AppIcon/Woodkoin.svg" alt="woodkoin"></img>
                     <AppName>
                         <div className="SF_h3">Woodcoin Wallet</div>
-                        <div className="SF_Body dark-grey">Крипто-кошелёк</div>
+                        <div className="SF_body dark-grey">Крипто-кошелёк</div>
                     </AppName>
                 </AppInfo>
                 <Link to="woodcoin">
@@ -39,7 +39,7 @@ const IphoneMain = () => {
                     <img src="iPhoneImage/AppIcon/VpnWorld.svg" alt="VpnWorld"></img>
                     <AppName>
                         <div className="SF_h3">VPN World</div>
-                        <div className="SF_Body dark-grey">Безопасное подключение</div>
+                        <div className="SF_body dark-grey">Безопасное подключение</div>
                     </AppName>
                 </AppInfo>
                 <Link to="vpn">
@@ -47,8 +47,21 @@ const IphoneMain = () => {
                         <span className="buttonText">Открыть</span>
                     </OpenBtn>
                 </Link>
-
             </AppContainer>
+            {/* <AppContainer>
+                <AppInfo>
+                    <img src="iPhoneImage/AppIcon/FS.svg" alt="FootSkill"></img>
+                    <AppName>
+                        <div className="SF_h3">FootSkill</div>
+                        <div className="SF_body dark-grey">Личный кабинет футбольной школы</div>
+                    </AppName>
+                </AppInfo>
+                <Link to="fs">
+                    <OpenBtn>
+                        <span className="buttonText">Открыть</span>
+                    </OpenBtn>
+                </Link>
+            </AppContainer> */}
             <Outlet />
         </IphoneMainContainer>
     )

@@ -15,6 +15,7 @@ import Pims from './components/projects/pims.js';
 import Woodcoin from './components/projects/woodcoin.js';
 import Vpn from './components/projects/vpn.js';
 import FooterMobile from './components/footerMobile.js';
+import FootSkill from './components/projects/fs.js';
 
 
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
                     <Route path="/pims" element={<Pims />} />
                     <Route path="/woodcoin" element={<Woodcoin />}></Route>
                     <Route path='/vpn' element={<Vpn />}></Route>
+                    <Route path='/fs' element={<FootSkill />}></Route>
                     <Route path="/contacts" element={<Contacts />} />
                     <Route path='/calculation' element={<Calculation />} />
                     <Route path='/about' element={<About />} />

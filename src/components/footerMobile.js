@@ -12,7 +12,7 @@ const FooterMobile = () => {
                 <Link to="/" className="contacts-link">
                     <IosTab>
                         {
-                            (location.pathname == '/' || location.pathname == '/pims' || location.pathname == '/vpn' || location.pathname == '/woodcoin') ?
+                            (location.pathname == '/' || location.pathname == '/pims' || location.pathname == '/vpn' || location.pathname == '/woodcoin' || location.pathname == '/fs')  ?
                                 <>
                                     <TabImg src="/iPhoneImage/TabBar/projects-blue.svg" alt="projects"></TabImg>
                                     <TabLabel className="labelSmall blue">Наши проекты</TabLabel>
@@ -86,7 +86,7 @@ const ContactsFooter = styled.div`
     /* position: sticky; */
     position: fixed;
     bottom: -1px;
-    height: 100px;
+    height: var(--mobile-bar-height);
     width: 100%;
     background-color: #F2F2F7;
     z-index: 14;
@@ -102,7 +102,7 @@ const Tabs = styled.div`
     /* padding-top: .5em; */
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 `
 

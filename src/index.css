@@ -116,6 +116,8 @@
     --VeryLightGrey: #F2F2F2;
     --Blue: #2F80ED;
     --LightBlue: #8CB9F6;
+    --mobile-bar-height-raw: 100px;
+    --mobile-bar-height: calc(var(--mobile-bar-height-raw) + env(safe-area-inset-bottom));
 }
 
 body {
@@ -149,7 +151,7 @@ footer {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 100;
     background-color: rgb(255, 255, 255, 0.8);
     backdrop-filter: blur(0.5em);
 }
@@ -161,9 +163,16 @@ footer {
 
     footer {
         bottom: 0;
-        height: 725px;
+        height: 770px;
         padding-bottom: 40px;
     }
+}
+
+.swiper {
+    margin-top: 80px;
+    width: 100%;
+    height: 770px;
+    z-index: 0;
 }
 
 .slider-style{
@@ -174,15 +183,44 @@ footer {
     z-index: 0;
 }
 
-.swiper-slider{
+.swiper-slide{
+    width: 350px;
+    height: 500px;
+    text-align: center;
+    font-size: 18px;
+    /* background: #ccc; */
     display: flex;
-    align-items: flex-start;
     justify-content: center;
-    flex-direction: column;
-    height: 100%;
-    z-index: 0;
-    
+    align-items: center;
 }
+
+.swiper-slide-web-sites{
+    width: 1240px !important
+}
+
+.swiper-slide-visible {
+    opacity: 0.25;
+}
+
+.swiper-button-next {
+    right: 39% !important;
+}
+
+.swiper-button-prev {
+    left: 39% !important;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    color: var(--Blue) !important;
+}
+
+.swiper-slide img {
+    /* display: block;
+    width: 100%;
+    height: 100%; */
+    object-fit: cover;
+}
+  
 
 .first-slide{
     align-items: center;
@@ -193,7 +231,30 @@ footer {
     .first-slide {
         display: none;
     }
+
+    .for-mobile {
+        display: none;
+    }
 }
+
+@media screen and (max-width: 1365px) {
+    .for-desktop{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .for-tablet{
+        display: none
+    }
+}
+
+@media screen and (min-width: 1365px) {
+    .for-tablet {
+        display: none;
+    }
+}
+
 
 
 code {
@@ -278,7 +339,7 @@ h4{
 
     .contacts-link{
         width: 25%;
-        height: 100%;
+        height: 100px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -307,7 +368,7 @@ h4{
 
 .SF_body{
     font-family: 'SFProText';
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: -0.41px;
 }
 

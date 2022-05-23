@@ -1,9 +1,11 @@
+import React, { useEffect, useRef, useState } from "react";
+import { concatenate } from "@cloudinary/url-gen/actions/videoEdit";
 import { observer } from "mobx-react-lite";
 import { getSnapshot } from "mobx-state-tree";
-import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { usePersistentStore } from "../../store";
 import CalculationPopUp from "./calculationPopUp";
+
 
 // let useClickOutside = (handler) => {
 //     let domNode = useRef();
@@ -47,19 +49,22 @@ const CalculationFooter = ({ price }) => {
         setShow(!show);
     }
 
-
     return (
         <>
             <CalculationFooterWrapper>
                 <CalculationFooterContainer>
                     <CalculationFooterLeft>
                         <FooterTitle>Стоимость разработки вашего приложения</FooterTitle>
-                        <Price>{price} ₽</Price>
+                        <Price>{price.toString().split('').reverse().map((e, i) =>
+                            e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
+                        ).reverse().join('')} &#8381;</Price>
                     </CalculationFooterLeft>
                     <CalculationFooterRight>
                         <FooterBtn className="primaryButtonText" disabled={price == 0} onClick={togglePopUp} style={price == 0 ? { backgroundColor: "var(--LightGrey)", color: "var(--MediumGrey)" } : { backgroundColor: "var(--Blue)" }}>
                             <BigScreen>Получить рассчёт стоимости</BigScreen>
-                            <MobileText>{price} ₽</MobileText>
+                            <MobileText>{price.toString().split('').reverse().map((e, i) =>
+                                e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
+                            ).reverse().join('')} &#8381;</MobileText>
                         </FooterBtn>
                         <FooterBtnDelete className="tertiaryButtonText" disabled={price == 0} onClick={handleDelete} style={price == 0 ? { color: "var(--MediumGrey)" } : { color: "var(--Blue)" }}>
                             <BigScreen>Очистить</BigScreen>
@@ -69,7 +74,7 @@ const CalculationFooter = ({ price }) => {
                 </CalculationFooterContainer>
             </CalculationFooterWrapper>
             {
-                show ? <CalculationPopUp closePopUp={togglePopUp}/> : null
+                show ? <CalculationPopUp closePopUp={togglePopUp} /> : null
             }
             {/* {
                 show ?
@@ -97,7 +102,7 @@ const CalculationFooterWrapper = styled.div`
 
     @media screen and (max-width: 767px){
         height: 120px;
-        bottom: 98px;
+        bottom: calc(var(--mobile-bar-height) - 1px) ;
     }
 `
 

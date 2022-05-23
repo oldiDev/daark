@@ -1,0 +1,197 @@
+{
+  "projects": [
+    {
+      "name": "PIMS",
+      "swiper": [
+        {
+          "img": "/Projects/pims/1.png"
+        },
+        {
+          "img": "/Projects/pims/2.png"
+        },
+        {
+          "img": "/Projects/pims/6.png"
+        },
+        {
+          "img": "/Projects/pims/4.png"
+        },
+        {
+          "img": "/Projects/pims/5.png"
+        },
+        {
+          "img": "/Projects/pims/3.png"
+        },
+        {
+          "img": "/Projects/pims/7.png"
+        }
+      ],
+      "techology": [
+        {
+          "img": "/Projects/techology/typescript.svg",
+          "name": "TypeScript"
+        },
+        {
+          "img": "/Projects/techology/java.svg",
+          "name": "Java"
+        },
+        {
+          "img": "/Projects/techology/Figma.svg",
+          "name": "Figma"
+        },
+        {
+          "img": "/Projects/techology/react.svg",
+          "name": "React Native"
+        },
+        {
+          "img": "/Projects/techology/mobx.svg",
+          "name": "MobX-state-tree"
+        },
+        {
+          "img": "/Projects/techology/mysql.svg",
+          "name": "MySQL"
+        },
+        {
+          "img": "/Projects/techology/cloudinary.svg",
+          "name": "Cloudinary"
+        }
+      ],
+      "cost": 7000000
+    },
+    {
+      "name": "VPN World",
+      "swiper": [
+        {
+          "img": "/Projects/vpn/1.png"
+        },
+        {
+          "img": "/Projects/vpn/2.png"
+        },
+        {
+          "img": "/Projects/vpn/3.png"
+        },
+        {
+          "img": "/Projects/vpn/4.png"
+        }
+      ],
+      "techology": [
+        {
+          "img": "/Projects/techology/typescript.svg",
+          "name": "TypeScript"
+        },
+        {
+          "img": "/Projects/techology/swift.svg",
+          "name": "Swift"
+        },
+        {
+          "img": "/Projects/techology/java.svg",
+          "name": "Java"
+        },
+        {
+          "img": "/Projects/techology/react.svg",
+          "name": "React Native"
+        },
+        {
+          "img": "/Projects/techology/rust.svg",
+          "name": "Rust"
+        },
+        {
+          "img": "/Projects/techology/electron.svg",
+          "name": "Electron"
+        },
+        {
+          "img": "/Projects/techology/spring.svg",
+          "name": "Spring"
+        },
+        {
+          "img": "/Projects/techology/mobx.svg",
+          "name": "MobX-state-tree"
+        },
+        {
+          "img": "/Projects/techology/Figma.svg",
+          "name": "Figma"
+        }
+      ],
+      "cost": 1000000
+    },
+    {
+      "name": "Woodcoin Wallet",
+      "swiper": [
+        {
+          "img": "/Projects/woodcoin/1.png"
+        },
+        {
+          "img": "/Projects/woodcoin/2.png"
+        },
+        {
+          "img": "/Projects/woodcoin/3.png"
+        },
+        {
+          "img": "/Projects/woodcoin/4.png"
+        },
+        {
+          "img": "/Projects/woodcoin/5.png"
+        },
+        {
+          "img": "/Projects/woodcoin/6.png"
+        },
+        {
+          "img": "/Projects/woodcoin/7.png"
+        }
+      ],
+      "techology": [
+        {
+          "img": "/Projects/techology/typescript.svg",
+          "name": "TypeScript"
+        },
+        {
+          "img": "/Projects/techology/react.svg",
+          "name": "React Native"
+        },
+        {
+          "img": "/Projects/techology/mobx.svg",
+          "name": "MobX-state-tree"
+        },
+        {
+          "img": "/Projects/techology/c++.svg",
+          "name": "C++"
+        },
+        {
+          "img": "/Projects/techology/bitcore.svg",
+          "name": "BitCore"
+        },
+        {
+          "img": "/Projects/techology/Figma.svg",
+          "name": "Figma"
+        }
+      ],
+      "cost": 3500000
+    },
+    {
+      "name": "FootSkill",
+      "swiper": [
+        {
+          "img": "/Projects/fs/1.jpg"
+        }
+      ],
+      "techology": [
+        {
+          "img": "/Projects/techology/Figma.svg",
+          "name": "Figma"
+        },
+        {
+          "img": "/Projects/techology/js.svg",
+          "name": "JavaScript"
+        },
+        {
+          "img": "/Projects/techology/react.svg",
+          "name": "React"
+        },
+        {
+          "img": "/Projects/techology/axios.svg",
+          "name": "Axios"
+        }
+      ],
+      "cost": 10000
+    }
+  ]
+}

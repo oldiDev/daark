@@ -8,7 +8,7 @@ const Header = () => {
     const [isChecked, setIsChecked] = useState(false);
 
     return (
-        <div className="header">
+        <header className="header">
             <HeaderContainer>
                 {/* <HeaderItem /> */}
                 <Link to="/" className="mobile-logo" onClick={() => setIsChecked(false)}>
@@ -31,7 +31,7 @@ const Header = () => {
                 </HeaderContent>
             </HeaderContainer>
             <Outlet />
-        </div>
+        </header>
     )
 }
 

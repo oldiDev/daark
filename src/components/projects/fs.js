@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from "swiper";
@@ -13,12 +13,10 @@ import { getSnapshot } from 'mobx-state-tree';
 import { observer } from 'mobx-react-lite';
 
 
-
-const Pims = () => {
-
+const FootSkill = () => {
     const { projects } = usePersistentStore();
 
-    const vpnWorld = getSnapshot(projects.projects[1]);
+    const fs = getSnapshot(projects.projects[3]);
 
     // console.log(pims)
 
@@ -40,7 +38,7 @@ const Pims = () => {
             >
                 {/* <ImageGroup> */}
                 {
-                    vpnWorld.swiper?.map((i) =>
+                    fs.swiper?.map((i) =>
                         <SwiperSlide key={i}>
                             <ProjectImg src={i.img} />
                         </SwiperSlide>
@@ -64,7 +62,7 @@ const Pims = () => {
             >
                 {/* <ImageGroup> */}
                 {
-                    vpnWorld.swiper?.map((i) =>
+                    fs.swiper?.map((i) =>
                         <SwiperSlide key={i}>
                             <ProjectImg src={i.img} />
                         </SwiperSlide>
@@ -76,8 +74,8 @@ const Pims = () => {
 
             <ImageGroup>
                 <Swiper
-                    slidesPerView={5}
-                    spaceBetween={30}
+                    slidesPerView={3}
+                    spaceBetween={1500}
                     loop={true}
                     navigation={true}
                     modules={[Navigation, Autoplay]}
@@ -91,7 +89,7 @@ const Pims = () => {
                 >
                     {/* <ImageGroup> */}
                     {
-                        vpnWorld.swiper?.map((i) =>
+                        fs.swiper?.map((i) =>
                             <SwiperSlide key={i}>
                                 <ProjectImg src={i.img} />
                             </SwiperSlide>
@@ -106,26 +104,22 @@ const Pims = () => {
             <OpacityRight />
             <OpacityLeft />
             <Container>
-                <Title>{vpnWorld.name}</Title>
+                <Title>{fs.name}</Title>
                 <About>
-                    <AboutTitle>VPN WORLD. JUST PULL DOWN!</AboutTitle>
-                    <AboutText>Актуальность VPN приложений растет с каждым днем. Мы подумали о том, что рядовому обывателю не нужна нагрузка в виде настроек сервера и другого функционала. Просто свайп вниз и Вы онлайн!</AboutText>
-                    <AboutText>Наш сервис прост в использовании и доступен на всех устройствах. Мы создали с нуля мобильное приложение под Android и iOS, также реализовали сборки под Windows, MacOs, Linux.</AboutText>
-                    <AboutText>Решение разрабатывалось нами в течение 22-ух календарных дней. Сейчас вы можете скачать результаты нашей работы в плэй-маркетах вашего телефона или на сайте: <a href='http://vpn.oldi.dev'>vpn.oldi.dev</a></AboutText>
+                    <AboutTitle>PIMS – это напиток на основе чая, который перевернет твое сознание, даст природную энергию и прокачает твои вкусовые рецепторы</AboutTitle>
+                    <AboutText>Приложение для доставки напитков PIMS - один из самых интересных проектов, которые создавала наша команда. Стояла задача написать кросс-платформенное решение для клиентов PIMS, которое поможет избежать очередей на кассах и снизить расходы на доставку продукции.</AboutText>
+                    <AboutText>Мы создали с нуля мобильное приложение под Android и iOS, связанное со своей панелью администратора. Через админ-панель сотрудники ресторана редактируют позиции меню, следят за статусами заказа и контролируют доставку напитков. Для оформление доставки мы интегрировали сервисы Яндекса, а для приема оплат была проведена интеграция мобильного SDK банка.</AboutText>
+                    <AboutText>Программный комплекс разрабатывался нами в течение 7-ми месяцев. Сейчас вы можете скачать результаты нашей работы в плэй-маркетах вашего смартфона.</AboutText>
                 </About>
-                <LinkContainer>
-                    <a href='https://apps.apple.com/ru/app/vpnworld/id1624305127?l=ru'>
-                        <LinkImage src="/Projects/downloadAppStore.svg" />
-                    </a>
-                </LinkContainer>
                 <Techonolgy>
                     <TechonologyTitle>
                         <h2 style={{ margin: "unset" }}>Технологии</h2>
                     </TechonologyTitle>
                     {
-                        vpnWorld.techology.map((e) =>
+                        fs.techology.map((e) =>
                             <TechonologyItem>
                                 <TechonologyIMG src={e.img} />
+                                {/* <img src={e.img}></img> */}
                                 <TechonologyName>
                                     <h3>{e.name}</h3>
                                 </TechonologyName>
@@ -136,7 +130,7 @@ const Pims = () => {
 
                 <CostContainer>
                     <CostTitle>Стоимость разработки: </CostTitle>
-                    <Cost>от {vpnWorld.cost.toString().split('').reverse().map((e, i) =>
+                    <Cost>от {fs.cost.toString().split('').reverse().map((e, i) =>
                         e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
                     ).reverse().join('')} &#8381;</Cost>
                 </CostContainer>
@@ -145,10 +139,9 @@ const Pims = () => {
         </>
 
     )
-
 }
 
-export default observer(Pims);
+export default observer(FootSkill);
 
 
 const Container = styled.div`
@@ -304,7 +297,7 @@ const Cost = styled.h2`
 `
 
 const ProjectImg = styled.img`
-    width: 323px;
+    width: 1245px;
     height: 700px;
     border-radius: 24px;
     box-shadow: 8px 10px 20px 4px rgba(0, 0, 0, 0.15);
