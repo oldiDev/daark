@@ -111,7 +111,7 @@
           "name": "Figma"
         }
       ],
-      "cost": 3500000
+      "cost": 1000000
     },
     {
       "name": "Woodcoin Wallet",
@@ -170,7 +170,7 @@
       "name": "FootSkill",
       "swiper": [
         {
-          "img": ""
+          "img": "/Projects/fs/1.jpg"
         }
       ],
       "techology": [
@@ -179,12 +179,16 @@
           "name": "Figma"
         },
         {
-          "img": "",
+          "img": "/Projects/techology/js.svg",
           "name": "JavaScript"
         },
         {
           "img": "/Projects/techology/react.svg",
           "name": "React"
+        },
+        {
+          "img": "/Projects/techology/axios.svg",
+          "name": "Axios"
         }
       ],
       "cost": 10000
