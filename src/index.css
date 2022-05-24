@@ -185,10 +185,6 @@ footer {
     align-items: center;
 }
 
-.swiper-slide-web-sites{
-    width: 1240px !important
-}
-
 .swiper-slide-visible {
     opacity: 0.25;
 }

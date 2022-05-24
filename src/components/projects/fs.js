@@ -24,8 +24,8 @@ const FootSkill = () => {
     return (
         <>
             <Swiper
-                slidesPerView={3}
-                spaceBetween={470}
+                slidesPerView={2}
+                spaceBetween={280}
                 modules={[Autoplay, Pagination]}
                 autoplay={true}
                 pagination={{
@@ -51,10 +51,13 @@ const FootSkill = () => {
                 {/* </ImageGroup> */}
             </Swiper>
             <Swiper
-                slidesPerView={3}
-                spaceBetween={1100}
-                modules={[Autoplay]}
+                slidesPerView={2}
+                spaceBetween={500}
+                modules={[Autoplay, Pagination]}
                 autoplay={true}
+                pagination={{
+                    clickable: true,
+                }}
                 loop={true}
                 updateOnWindowResize
                 observer
@@ -77,8 +80,8 @@ const FootSkill = () => {
 
             <ImageGroup>
                 <Swiper
-                    slidesPerView={3}
-                    spaceBetween={1100}
+                    slidesPerView={2}
+                    spaceBetween={500}
                     loop={true}
                     // navigation={true}
                     modules={[Autoplay, Pagination]}
@@ -179,7 +182,7 @@ const OpacityRight = styled.div`
     z-index: 50;
 
     @media screen and (max-width: 767px){
-        width: 26%;
+        width: 17%;
         height: 301px;
         /* height: 100vh; */
     }
@@ -195,7 +198,7 @@ const OpacityLeft = styled.div`
     z-index: 50;
 
     @media screen and (max-width: 767px){
-        width: 26%;
+        width: 17%;
         height: 301px;
         /* height: 100vh; */
     }
@@ -311,7 +314,7 @@ const ProjectImg = styled.img`
     box-shadow: 8px 10px 20px 4px rgba(0, 0, 0, 0.15);
 
     @media screen and (max-width: 767px) {
-        width: 428px; 
+        width: 393px; 
     }
 `
 
