@@ -61,19 +61,6 @@
     }
 }
 
-@keyframes topMobile {
-    0%{
-        /* top: 30%; */
-        transform: translateY(250px);
-        opacity: 100%;
-    }
-    100%{
-        /* top: -100%; */
-        transform: translateY(-1000px);
-        opacity: 0%;
-    }
-}
-
 @keyframes positionBottom {
     0%{
         /* top:100%; */
@@ -95,7 +82,7 @@
     }
     100%{
         /* top: 80px; */
-        transform: translateY(-380px);
+        transform: translateY(-40px);
         opacity: 100%;
     }
 }
@@ -175,6 +162,10 @@ footer {
     z-index: 0;
 }
 
+.for-websites{
+    height: 300px !important;
+}
+
 .slider-style{
     display: flex;
     align-items: center;
@@ -192,10 +183,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.swiper-slide-web-sites{
-    width: 1240px !important
 }
 
 .swiper-slide-visible {
@@ -289,7 +276,7 @@ h3{
 }
 
 h4{
-    font-family: "Inter";
+    font-family: 'Inter';
     font-size: 20px;
     letter-spacing: -0.24px;
 }

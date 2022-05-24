@@ -101,6 +101,9 @@
           "img": "/About/redux.svg"
         },
         {
+          "img": "/About/mst.svg"
+        },
+        {
           "img": "/About/vue.svg"
         },
         {
@@ -123,7 +126,7 @@
           "img": "/About/npm.svg"
         },
         {
-          "img": "/About/HTML.svg"
+          "img": "/About/html.svg"
         },
         {
           "img": "/About/css.svg"
@@ -139,6 +142,9 @@
         },
         {
           "img": "/About/redux.svg"
+        },
+        {
+          "img": "/About/mst.svg"
         },
         {
           "img": "/About/bootstrap.svg"
@@ -179,6 +185,9 @@
         },
         {
           "img": "/About/redux.svg"
+        },
+        {
+          "img": "/About/mst.svg"
         }
       ]
     },

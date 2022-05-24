@@ -107,7 +107,7 @@
           "name": "MobX-state-tree"
         },
         {
-          "img": "/Projects/techology/Figma.svg",
+          "img": "/Projects/techology/figma.svg",
           "name": "Figma"
         }
       ],
@@ -160,7 +160,7 @@
           "name": "BitCore"
         },
         {
-          "img": "/Projects/techology/Figma.svg",
+          "img": "/Projects/techology/figma.svg",
           "name": "Figma"
         }
       ],
@@ -171,11 +171,17 @@
       "swiper": [
         {
           "img": "/Projects/fs/1.jpg"
+        },
+        {
+          "img": "/Projects/fs/2.jpg"
+        },
+        {
+          "img": "/Projects/fs/3.jpeg"
         }
       ],
       "techology": [
         {
-          "img": "/Projects/techology/Figma.svg",
+          "img": "/Projects/techology/figma.svg",
           "name": "Figma"
         },
         {

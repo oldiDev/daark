@@ -136,9 +136,7 @@ const LeftSideSwap = styled.div`
     animation: positionTop 0.8s ease-in-out 3.58s 1 normal both;
 
     @media screen and (max-width: 767px){
-        width: 95%;
-        margin: 0px auto;
-        animation: topMobile 0.8s ease-in-out 3.58s 1 normal both;
+        display: none;
     }
 `
 
@@ -195,7 +193,7 @@ const MobileScreen = styled.div`
         display: none;
     }
     @media screen and (max-width: 767px){
-        animation: bottomMobile 0.6s ease-in-out 3.8s 1 normal both;
+        animation: bottomMobile 0.6s ease-in-out 0.3s 1 normal both;
         zoom: 1.25;
     }
  `
