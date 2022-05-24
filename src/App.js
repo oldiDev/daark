@@ -24,7 +24,7 @@ const App = () => {
 
     return (
         <div>
-            <BrowserRouter>
+            <BrowserRouter basename='/'>
                 <Header />
                 <Routes>
                     <Route path='/' element={<Main />} exact>

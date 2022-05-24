@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from "swiper";
+import { Navigation, Autoplay, Pagination } from "swiper";
 import 'swiper/css';
 import "swiper/css/navigation";
 import "swiper/css/autoplay"
@@ -24,17 +24,20 @@ const FootSkill = () => {
     return (
         <>
             <Swiper
-                slidesPerView={2}
-                spaceBetween={80}
-                modules={[Autoplay]}
+                slidesPerView={3}
+                spaceBetween={470}
+                modules={[Autoplay, Pagination]}
                 autoplay={true}
+                pagination={{
+                    clickable: true,
+                }}
                 loop={true}
                 updateOnWindowResize
                 observer
                 observerParents
                 centeredSlides={true}
                 // initialSlide={1}
-                className="for-mobile"
+                className="for-mobile for-websites"
             >
                 {/* <ImageGroup> */}
                 {
@@ -49,7 +52,7 @@ const FootSkill = () => {
             </Swiper>
             <Swiper
                 slidesPerView={3}
-                spaceBetween={50}
+                spaceBetween={1100}
                 modules={[Autoplay]}
                 autoplay={true}
                 loop={true}
@@ -75,11 +78,14 @@ const FootSkill = () => {
             <ImageGroup>
                 <Swiper
                     slidesPerView={3}
-                    spaceBetween={600}
+                    spaceBetween={1100}
                     loop={true}
-                    navigation={true}
-                    modules={[Navigation, Autoplay]}
+                    // navigation={true}
+                    modules={[Autoplay, Pagination]}
                     autoplay={true}
+                    pagination={{
+                        clickable: true,
+                    }}
                     updateOnWindowResize
                     observer
                     centeredSlides={true}
@@ -166,7 +172,7 @@ const OpacityRight = styled.div`
     top: 80px;
     right: 0;
     left: auto;
-    width: 39%;
+    width: 25%;
     height: 770px;
     background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     /* opacity: 50%; */
@@ -174,6 +180,7 @@ const OpacityRight = styled.div`
 
     @media screen and (max-width: 767px){
         width: 26%;
+        height: 301px;
         /* height: 100vh; */
     }
 `
@@ -182,13 +189,14 @@ const OpacityLeft = styled.div`
     top: 80px;
     left: 0;
     right: auto;
-    width: 39%;
+    width: 25%;
     height: 770px;
     background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     z-index: 50;
 
     @media screen and (max-width: 767px){
         width: 26%;
+        height: 301px;
         /* height: 100vh; */
     }
 `
@@ -301,6 +309,10 @@ const ProjectImg = styled.img`
     height: 700px;
     border-radius: 24px;
     box-shadow: 8px 10px 20px 4px rgba(0, 0, 0, 0.15);
+
+    @media screen and (max-width: 767px) {
+        width: 428px; 
+    }
 `
 
 const LinkContainer = styled.div`
