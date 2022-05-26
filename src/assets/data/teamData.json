@@ -1,224 +1,224 @@
 {
   "team": [
     {
-      "avatar": "/About/avatars/Tema.png",
+      "avatar": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567197/daark/About/avatars/Tema_jugzdq.png",
       "name": "Артём Семёнов",
       "position": "Product manager",
       "stack": [
         {
-          "img": "/About/gitlab.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567176/daark/About/gitlab_whw9xr.svg"
         },
         {
-          "img": "/About/java.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567178/daark/About/java_x0dzit.svg"
         },
         {
-          "img": "/About/docker.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567176/daark/About/docker_fqemxt.svg"
         },
         {
-          "img": "/About/graphql.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567176/daark/About/graphql_l23ibz.svg"
         },
         {
-          "img": "/About/npm.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567178/daark/About/npm_j6sriv.svg"
         },
         {
-          "img": "/About/python.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567180/daark/About/python_whqblf.svg"
         },
         {
-          "img": "/About/figma.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567176/daark/About/figma_fbxrui.svg"
         },
         {
-          "img": "/About/angular.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567174/daark/About/angular_lxuand.svg"
         },
         {
-          "img": "/About/rust.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567180/daark/About/rust_pntiva.svg"
         },
         {
-          "img": "/About/ts.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567182/daark/About/ts_z6dz1o.svg"
         },
         {
-          "img": "/About/react.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567180/daark/About/react_sj12fz.svg"
         },
         {
-          "img": "/About/redux.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567180/daark/About/redux_qlhc5d.svg"
         }
       ]
     },
     {
-      "avatar": "/About/avatars/Dan.png",
+      "avatar": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567197/daark/About/avatars/Dan_ffynvn.png",
       "name": "Данила Ворновицкий",
       "position": "UI/UX",
       "stack": [
         {
-          "img": "/About/figma.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567176/daark/About/figma_fbxrui.svg"
         },
         {
-          "img": "/About/ai.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567174/daark/About/ai_sktnjj.svg"
         },
         {
-          "img": "/About/ps.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567180/daark/About/ps_zfygvn.svg"
         },
         {
-          "img": "/About/xd.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567182/daark/About/xd_uiaa0j.svg"
         },
         {
-          "img": "/About/flutter.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567176/daark/About/flutter_dvhrbw.svg"
         },
         {
-          "img": "/About/html.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567177/daark/About/html_bzmpcs.svg"
         },
         {
-          "img": "/About/css.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567175/daark/About/css_du9y7i.svg"
         },
         {
-          "img": "/About/gitlab.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567176/daark/About/gitlab_whw9xr.svg"
         },
         {
-          "img": "/About/swift.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567181/daark/About/swift_nppw6c.svg"
         }
       ]
     },
     {
-      "avatar": "/About/avatars/Slava.png",
+      "avatar": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567197/daark/About/avatars/Slava_ggj2al.png",
       "name": "Вячеслав Нестерцев",
       "position": "Front-end developer",
       "stack": [
         {
-          "img": "/About/html.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567177/daark/About/html_bzmpcs.svg"
         },
         {
-          "img": "/About/css.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567175/daark/About/css_du9y7i.svg"
         },
         {
-          "img": "/About/js.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567178/daark/About/js_s6ycye.svg"
         },
         {
-          "img": "/About/ts.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567182/daark/About/ts_z6dz1o.svg"
         },
         {
-          "img": "/About/react.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567180/daark/About/react_sj12fz.svg"
         },
         {
-          "img": "/About/redux.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567180/daark/About/redux_qlhc5d.svg"
         },
         {
-          "img": "/About/mst.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567178/daark/About/mst_urkwdv.svg"
         },
         {
-          "img": "/About/vue.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567182/daark/About/vue_rptwii.svg"
         },
         {
-          "img": "/About/bootstrap.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567174/daark/About/bootstrap_zzgmva.svg"
         }
       ]
     },
     {
-      "avatar": "/About/avatars/Karim.png",
+      "avatar": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567197/daark/About/avatars/Karim_wcc6on.png",
       "name": "Ouazmir Abdelkarim",
       "position": "DevOps engineer",
       "stack": [
         {
-          "img": "/About/docker.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567176/daark/About/docker_fqemxt.svg"
         },
         {
-          "img": "/About/nodejs.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567178/daark/About/nodejs_nvy01k.svg"
         },
         {
-          "img": "/About/npm.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567178/daark/About/npm_j6sriv.svg"
         },
         {
-          "img": "/About/html.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567177/daark/About/html_bzmpcs.svg"
         },
         {
-          "img": "/About/css.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567175/daark/About/css_du9y7i.svg"
         },
         {
-          "img": "/About/js.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567178/daark/About/js_s6ycye.svg"
         },
         {
-          "img": "/About/ts.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567182/daark/About/ts_z6dz1o.svg"
         },
         {
-          "img": "/About/react.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567180/daark/About/react_sj12fz.svg"
         },
         {
-          "img": "/About/redux.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567180/daark/About/redux_qlhc5d.svg"
         },
         {
-          "img": "/About/mst.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567178/daark/About/mst_urkwdv.svg"
         },
         {
-          "img": "/About/bootstrap.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567174/daark/About/bootstrap_zzgmva.svg"
         },
         {
-          "img": "/About/rust.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567180/daark/About/rust_pntiva.svg"
         }
       ]
     },
     {
-      "avatar": "/About/avatars/Kirill.png",
+      "avatar": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567197/daark/About/avatars/Kirill_z9eryj.png",
       "name": "Кирилл Алекcеев",
       "position": "Fullstack developer",
       "stack": [
         {
-          "img": "/About/php.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567179/daark/About/php_feazl1.svg"
         },
         {
-          "img": "/About/c++.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567174/daark/About/c_c0g7yq.svg"
         },
         {
-          "img": "/About/c.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567174/daark/About/c_i7fvw9.svg"
         },
         {
-          "img": "/About/html.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567177/daark/About/html_bzmpcs.svg"
         },
         {
-          "img": "/About/css.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567175/daark/About/css_du9y7i.svg"
         },
         {
-          "img": "/About/js.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567178/daark/About/js_s6ycye.svg"
         },
         {
-          "img": "/About/ts.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567182/daark/About/ts_z6dz1o.svg"
         },
         {
-          "img": "/About/react.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567180/daark/About/react_sj12fz.svg"
         },
         {
-          "img": "/About/redux.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567180/daark/About/redux_qlhc5d.svg"
         },
         {
-          "img": "/About/mst.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567178/daark/About/mst_urkwdv.svg"
         }
       ]
     },
     {
-      "avatar": "/About/avatars/Shoma.png",
+      "avatar": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567197/daark/About/avatars/Shoma_bal70f.png",
       "name": "Шамиль Махмудов",
       "position": "Fullstack developer",
       "stack": [
         {
-          "img": "/About/python.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567180/daark/About/python_whqblf.svg"
         },
         {
-          "img": "/About/html.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567177/daark/About/html_bzmpcs.svg"
         },
         {
-          "img": "/About/css.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567175/daark/About/css_du9y7i.svg"
         },
         {
-          "img": "/About/js.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567178/daark/About/js_s6ycye.svg"
         },
         {
-          "img": "/About/ts.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567182/daark/About/ts_z6dz1o.svg"
         },
         {
-          "img": "/About/react.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567180/daark/About/react_sj12fz.svg"
         },
         {
-          "img": "/About/redux.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567180/daark/About/redux_qlhc5d.svg"
         },
         {
-          "img": "/About/bootstrap.svg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567174/daark/About/bootstrap_zzgmva.svg"
         }
       ]
     }

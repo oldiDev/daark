@@ -29,7 +29,7 @@ const Main = () => {
                         <IphoneMainTitle className="SF_h2">Наши проекты</IphoneMainTitle>
                         <AppContainer>
                             <AppInfo>
-                                <AppImg src="iPhoneImage/AppIcon/Pims.svg" alt="pims"></AppImg>
+                                <AppImg src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653568134/daark/iPhoneImage/AppIcon/Pims_bd6jwn.svg" alt="pims"></AppImg>
                                 <AppName>
                                     <div className="SF_h3">PIMS</div>
                                     <div className="SF_body dark-grey">Доставка еды</div>
@@ -43,7 +43,7 @@ const Main = () => {
                         </AppContainer>
                         <AppContainer>
                             <AppInfo>
-                                <AppImg src="iPhoneImage/AppIcon/Woodkoin.svg" alt="woodkoin"></AppImg>
+                                <AppImg src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653568135/daark/iPhoneImage/AppIcon/Woodkoin_pjwmjc.svg" alt="woodkoin"></AppImg>
                                 <AppName>
                                     <div className="SF_h3">Woodcoin Wallet</div>
                                     <div className="SF_body dark-grey">Крипто-кошелёк</div>
@@ -57,7 +57,7 @@ const Main = () => {
                         </AppContainer>
                         <AppContainer>
                             <AppInfo>
-                                <AppImg src="iPhoneImage/AppIcon/VpnWorld.svg" alt="VpnWorld"></AppImg>
+                                <AppImg src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653568134/daark/iPhoneImage/AppIcon/VpnWorld_xp8ggz.svg" alt="VpnWorld"></AppImg>
                                 <AppName>
                                     <div className="SF_h3">VPN World</div>
                                     <div className="SF_body dark-grey">Безопасное подключение</div>
@@ -71,7 +71,7 @@ const Main = () => {
                         </AppContainer>
                         {/* <AppContainer>
                             <AppInfo>
-                                <AppImg src="iPhoneImage/AppIcon/FS.svg" alt="FootSkill"></AppImg>
+                                <AppImg src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653568134/daark/iPhoneImage/AppIcon/FS_sjmtrv.svg" alt="FootSkill"></AppImg>
                                 <AppName>
                                     <div className="SF_h3">FootSkill</div>
                                     <div className="SF_body dark-grey">Личный кабинет футбольной школы</div>

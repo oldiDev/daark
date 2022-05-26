@@ -16,7 +16,7 @@ const Contacts = () => {
                     <IPhone bgcolor={'#F2F2F7'} />
                 </ContactsLaptop>
                 <IphoneContactsContainer>
-                    <MobileImg src="/iPhoneImage/Contacts/avatar.svg"></MobileImg>
+                    <MobileImg src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653568463/daark/iPhoneImage/Contacts/avatar_gel4a1.svg"></MobileImg>
                     <h1 className="SF_h1">Данила Ворновицкий</h1>
                     <Mobile>
                         <MobileTitle className="SF_bodySmall">мобильный</MobileTitle>
@@ -40,7 +40,7 @@ const Contacts = () => {
                             </AddressContent>
                         </AddressLeftSide>
                         <AddressRightSide>
-                            <MapImg src="/iPhoneImage/Contacts/map.png" alt="map"></MapImg>
+                            <MapImg src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653568463/daark/iPhoneImage/Contacts/map_j6mfex.png" alt="map"></MapImg>
                         </AddressRightSide>
                     </Address>
                 </IphoneContactsContainer>
