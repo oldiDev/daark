@@ -4,7 +4,7 @@ import styled from "styled-components";
 const IphoneContact = () => {
     return (
         <IphoneContactsContainer>
-            <img src="/iPhoneImage/Contacts/avatar.svg"></img>
+            <img src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653568463/daark/iPhoneImage/Contacts/avatar_gel4a1.svg"></img>
             <h1 className="SF_h1">Данила Ворновицкий</h1>
             <Mobile>
                 <MobileTitle className="SF_bodySmall">мобильный</MobileTitle>
@@ -28,7 +28,7 @@ const IphoneContact = () => {
                     </AddressContent>
                 </AddressLeftSide>
                 <AddressRightSide>
-                    <MapImg src="/iPhoneImage/Contacts/map.png" alt="map"></MapImg>
+                    <MapImg src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653568463/daark/iPhoneImage/Contacts/map_j6mfex.png" alt="map"></MapImg>
                 </AddressRightSide>
             </Address>
         </IphoneContactsContainer>

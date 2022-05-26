@@ -8,7 +8,7 @@ const IphoneMain = () => {
             <IphoneMainTitle className="SF_h2">Наши проекты</IphoneMainTitle>
             <AppContainer>
                 <AppInfo>
-                    <img src="iPhoneImage/AppIcon/Pims.svg" alt="pims"></img>
+                    <img src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653568134/daark/iPhoneImage/AppIcon/Pims_bd6jwn.svg" alt="pims"></img>
                     <AppName>
                         <div className="SF_h3">PIMS</div>
                         <div className="SF_body dark-grey">Доставка еды</div>
@@ -22,7 +22,7 @@ const IphoneMain = () => {
             </AppContainer>
             <AppContainer>
                 <AppInfo>
-                    <img src="iPhoneImage/AppIcon/Woodkoin.svg" alt="woodkoin"></img>
+                    <img src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653568135/daark/iPhoneImage/AppIcon/Woodkoin_pjwmjc.svg" alt="woodkoin"></img>
                     <AppName>
                         <div className="SF_h3">Woodcoin Wallet</div>
                         <div className="SF_body dark-grey">Крипто-кошелёк</div>
@@ -36,7 +36,7 @@ const IphoneMain = () => {
             </AppContainer>
             <AppContainer>
                 <AppInfo>
-                    <img src="iPhoneImage/AppIcon/VpnWorld.svg" alt="VpnWorld"></img>
+                    <img src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653568134/daark/iPhoneImage/AppIcon/VpnWorld_xp8ggz.svg" alt="VpnWorld"></img>
                     <AppName>
                         <div className="SF_h3">VPN World</div>
                         <div className="SF_body dark-grey">Безопасное подключение</div>
@@ -50,7 +50,7 @@ const IphoneMain = () => {
             </AppContainer>
             {/* <AppContainer>
                 <AppInfo>
-                    <img src="iPhoneImage/AppIcon/FS.svg" alt="FootSkill"></img>
+                    <img src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653568134/daark/iPhoneImage/AppIcon/FS_sjmtrv.svg" alt="FootSkill"></img>
                     <AppName>
                         <div className="SF_h3">FootSkill</div>
                         <div className="SF_body dark-grey">Личный кабинет футбольной школы</div>

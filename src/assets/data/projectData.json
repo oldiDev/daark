@@ -4,54 +4,54 @@
       "name": "PIMS",
       "swiper": [
         {
-          "img": "/Projects/pims/1.png"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653565981/daark/Projects/pims/1.png"
         },
         {
-          "img": "/Projects/pims/2.png"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653565981/daark/Projects/pims/2_nbzudp.png"
         },
         {
-          "img": "/Projects/pims/6.png"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653565981/daark/Projects/pims/6_cl95ng.png"
         },
         {
-          "img": "/Projects/pims/4.png"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653565981/daark/Projects/pims/4_pqydvf.png"
         },
         {
-          "img": "/Projects/pims/5.png"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653565981/daark/Projects/pims/5_plievp.png"
         },
         {
-          "img": "/Projects/pims/3.png"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653565980/daark/Projects/pims/3.png"
         },
         {
-          "img": "/Projects/pims/7.png"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653565982/daark/Projects/pims/7.png"
         }
       ],
       "techology": [
         {
-          "img": "/Projects/techology/typescript.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566643/daark/Projects/technology/typescript_tvnqfy.svg",
           "name": "TypeScript"
         },
         {
-          "img": "/Projects/techology/java.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566641/daark/Projects/technology/java_mmq165.svg",
           "name": "Java"
         },
         {
-          "img": "/Projects/techology/Figma.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566639/daark/Projects/technology/figma_p5dewl.svg",
           "name": "Figma"
         },
         {
-          "img": "/Projects/techology/react.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566641/daark/Projects/technology/react_botlo0.svg",
           "name": "React Native"
         },
         {
-          "img": "/Projects/techology/mobx.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566641/daark/Projects/technology/mobx_bh2afa.svg",
           "name": "MobX-state-tree"
         },
         {
-          "img": "/Projects/techology/mysql.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566641/daark/Projects/technology/mysql_dzrxnj.svg",
           "name": "MySQL"
         },
         {
-          "img": "/Projects/techology/cloudinary.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566639/daark/Projects/technology/cloudinary_ql8xkt.svg",
           "name": "Cloudinary"
         }
       ],
@@ -61,53 +61,53 @@
       "name": "VPN World",
       "swiper": [
         {
-          "img": "/Projects/vpn/1.png"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566307/daark/Projects/vpn/1_qgk1ur.png"
         },
         {
-          "img": "/Projects/vpn/2.png"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566307/daark/Projects/vpn/2_v13h26.png"
         },
         {
-          "img": "/Projects/vpn/3.png"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566307/daark/Projects/vpn/3_ecdjzm.png"
         },
         {
-          "img": "/Projects/vpn/4.png"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566307/daark/Projects/vpn/4_ncsqrn.png"
         }
       ],
       "techology": [
         {
-          "img": "/Projects/techology/typescript.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566643/daark/Projects/technology/typescript_tvnqfy.svg",
           "name": "TypeScript"
         },
         {
-          "img": "/Projects/techology/swift.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566643/daark/Projects/technology/swift_dsfbkk.svg",
           "name": "Swift"
         },
         {
-          "img": "/Projects/techology/java.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566641/daark/Projects/technology/java_mmq165.svg",
           "name": "Java"
         },
         {
-          "img": "/Projects/techology/react.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566641/daark/Projects/technology/react_botlo0.svg",
           "name": "React Native"
         },
         {
-          "img": "/Projects/techology/rust.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566643/daark/Projects/technology/swift_dsfbkk.svg",
           "name": "Rust"
         },
         {
-          "img": "/Projects/techology/electron.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566639/daark/Projects/technology/electron_s1abmn.svg",
           "name": "Electron"
         },
         {
-          "img": "/Projects/techology/spring.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566643/daark/Projects/technology/spring_uidex1.svg",
           "name": "Spring"
         },
         {
-          "img": "/Projects/techology/mobx.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566641/daark/Projects/technology/mobx_bh2afa.svg",
           "name": "MobX-state-tree"
         },
         {
-          "img": "/Projects/techology/figma.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566639/daark/Projects/technology/figma_p5dewl.svg",
           "name": "Figma"
         }
       ],
@@ -117,50 +117,50 @@
       "name": "Woodcoin Wallet",
       "swiper": [
         {
-          "img": "/Projects/woodcoin/1.png"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566434/daark/Projects/woodcoin/1_olf5wj.png"
         },
         {
-          "img": "/Projects/woodcoin/2.png"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566434/daark/Projects/woodcoin/2_fbfgkk.png"
         },
         {
-          "img": "/Projects/woodcoin/3.png"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566434/daark/Projects/woodcoin/3_capspf.png"
         },
         {
-          "img": "/Projects/woodcoin/4.png"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566434/daark/Projects/woodcoin/4_xwtwko.png"
         },
         {
-          "img": "/Projects/woodcoin/5.png"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566434/daark/Projects/woodcoin/5_r4wuh7.png"
         },
         {
-          "img": "/Projects/woodcoin/6.png"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566434/daark/Projects/woodcoin/6_zkpesd.png"
         },
         {
-          "img": "/Projects/woodcoin/7.png"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566434/daark/Projects/woodcoin/7_yhskzv.png"
         }
       ],
       "techology": [
         {
-          "img": "/Projects/techology/typescript.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566643/daark/Projects/technology/typescript_tvnqfy.svg",
           "name": "TypeScript"
         },
         {
-          "img": "/Projects/techology/react.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566641/daark/Projects/technology/react_botlo0.svg",
           "name": "React Native"
         },
         {
-          "img": "/Projects/techology/mobx.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566641/daark/Projects/technology/mobx_bh2afa.svg",
           "name": "MobX-state-tree"
         },
         {
-          "img": "/Projects/techology/c++.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566639/daark/Projects/technology/c_lc9hud.svg",
           "name": "C++"
         },
         {
-          "img": "/Projects/techology/bitcore.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566639/daark/Projects/technology/bitcore_y8l9ip.svg",
           "name": "BitCore"
         },
         {
-          "img": "/Projects/techology/figma.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566639/daark/Projects/technology/figma_p5dewl.svg",
           "name": "Figma"
         }
       ],
@@ -170,30 +170,30 @@
       "name": "FootSkill",
       "swiper": [
         {
-          "img": "/Projects/fs/1.jpg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653565954/daark/Projects/fs/1_lmaaln.jpg"
         },
         {
-          "img": "/Projects/fs/2.jpg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653565950/daark/Projects/fs/2_rwkjek.jpg"
         },
         {
-          "img": "/Projects/fs/3.jpeg"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653565959/daark/Projects/fs/3_iakue0.jpg"
         }
       ],
       "techology": [
         {
-          "img": "/Projects/techology/figma.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566639/daark/Projects/technology/figma_p5dewl.svg",
           "name": "Figma"
         },
         {
-          "img": "/Projects/techology/js.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566641/daark/Projects/technology/js_j8f0hc.svg",
           "name": "JavaScript"
         },
         {
-          "img": "/Projects/techology/react.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566641/daark/Projects/technology/react_botlo0.svg",
           "name": "React"
         },
         {
-          "img": "/Projects/techology/axios.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566639/daark/Projects/technology/axios_kff2hf.svg",
           "name": "Axios"
         }
       ],

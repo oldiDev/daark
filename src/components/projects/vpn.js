@@ -115,7 +115,7 @@ const Pims = () => {
                 </About>
                 <LinkContainer>
                     <a href='https://apps.apple.com/ru/app/vpnworld/id1624305127?l=ru'>
-                        <LinkImage src="/Projects/downloadAppStore.svg" />
+                        <LinkImage src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567044/daark/Projects/downloadAppStore_ymttuc.svg" />
                     </a>
                 </LinkContainer>
                 <Techonolgy>
