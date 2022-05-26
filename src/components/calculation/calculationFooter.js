@@ -1,21 +1,52 @@
+import React, { useEffect, useRef, useState } from "react";
+import { concatenate } from "@cloudinary/url-gen/actions/videoEdit";
 import { observer } from "mobx-react-lite";
 import { getSnapshot } from "mobx-state-tree";
-import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { usePersistentStore } from "../../store";
 import CalculationPopUp from "./calculationPopUp";
 
-const CalculationFooter = ({price}) => {
+
+// let useClickOutside = (handler) => {
+//     let domNode = useRef();
+
+//     useEffect(() => {
+//         let maybeHandler = (event) => {
+//             if (!domNode.current.contains(event.target)) {
+//                 handler();
+//                 console.log('yaaaa!!!!')
+//             }
+//         };
+
+//         document.addEventListener("mousedown", maybeHandler);
+
+//         return () => {
+//             document.removeEventListener("mousedown", maybeHandler);
+//         };
+//     });
+
+//     return domNode;
+// };
+
+const CalculationFooter = ({ price }) => {
 
     const [show, setShow] = useState(false);
     const { removeAnySelection } = usePersistentStore();
 
-    let  handleDelete = () => {
+    let handleDelete = () => {
         removeAnySelection();
     }
 
     let handleSubmit = () => {
         setShow(true)
+    }
+
+    const closePopUp = () => {
+        setShow(false);
+    }
+
+    let togglePopUp = () => {
+        setShow(!show);
     }
 
     return (
@@ -24,15 +55,36 @@ const CalculationFooter = ({price}) => {
                 <CalculationFooterContainer>
                     <CalculationFooterLeft>
                         <FooterTitle>Стоимость разработки вашего приложения</FooterTitle>
-                        <Price>{price} ₽</Price>
+                        <Price>{price.toString().split('').reverse().map((e, i) =>
+                            e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
+                        ).reverse().join('')} &#8381;</Price>
                     </CalculationFooterLeft>
                     <CalculationFooterRight>
-                        <FooterBtn className="primaryButtonText" onClick={handleSubmit}>Получить рассчёт <MobileText>стоимости</MobileText></FooterBtn>
-                        <FooterBtnDelete className="tertiaryButtonText" onClick={handleDelete}>Очистить</FooterBtnDelete>
+                        <FooterBtn className="primaryButtonText" disabled={price == 0} onClick={togglePopUp} style={price == 0 ? { backgroundColor: "var(--LightGrey)", color: "var(--MediumGrey)" } : { backgroundColor: "var(--Blue)" }}>
+                            <BigScreen>Получить рассчёт стоимости</BigScreen>
+                            <MobileText>{price.toString().split('').reverse().map((e, i) =>
+                                e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
+                            ).reverse().join('')} &#8381;</MobileText>
+                        </FooterBtn>
+                        <FooterBtnDelete className="tertiaryButtonText" disabled={price == 0} onClick={handleDelete} style={price == 0 ? { color: "var(--MediumGrey)" } : { color: "var(--Blue)" }}>
+                            <BigScreen>Очистить</BigScreen>
+                            <MobileImg src={price == 0 ? "/Calculation/delete-disabled.svg" : "/Calculation/delete.svg"} alt="delete-button"></MobileImg>
+                        </FooterBtnDelete>
                     </CalculationFooterRight>
                 </CalculationFooterContainer>
             </CalculationFooterWrapper>
-            <CalculationPopUp show={show} />
+            {
+                show ? <CalculationPopUp closePopUp={togglePopUp} /> : null
+            }
+            {/* {
+                show ?
+                    <PopUpWrapper>
+                        <CalculationPopUp></CalculationPopUp>
+                    </PopUpWrapper>
+                    :
+                    <></>
+            } */}
+            {/* <CalculationPopUp show={show} /> */}
         </>
 
     )
@@ -47,6 +99,11 @@ const CalculationFooterWrapper = styled.div`
     bottom: 0;
     border-top: 1px solid #F1F1F1;
     background-color: white;
+
+    @media screen and (max-width: 767px){
+        height: 120px;
+        bottom: calc(var(--mobile-bar-height) - 1px) ;
+    }
 `
 
 const CalculationFooterContainer = styled.div`
@@ -58,6 +115,10 @@ const CalculationFooterContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: 767px){
+        width: 90%;
+    }
 `
 
 const CalculationFooterLeft = styled.div`
@@ -67,6 +128,10 @@ const CalculationFooterLeft = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+
+    @media screen and (max-width: 767px){
+        display: none;
+    }
 `
 
 const CalculationFooterRight = styled.div`
@@ -76,12 +141,20 @@ const CalculationFooterRight = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: 767px){
+        width: 100%;
+    }
 `
 const FooterTitle = styled.h4`
     margin: unset;
     line-height: 24px;
     color: var(--MediumGrey);
     font-weight: normal;
+
+    @media screen and (max-width: 767px){
+        width: 100%;
+    }
 `
 
 const Price = styled.h2`
@@ -97,6 +170,10 @@ const FooterBtn = styled.button`
     color: white;
     letter-spacing: -0.24px;
     cursor: pointer;
+
+    @media screen and (max-width: 767px){
+        height: 65px;
+    }
 `
 
 const FooterBtnDelete = styled.button`
@@ -108,10 +185,52 @@ const FooterBtnDelete = styled.button`
     color: var(--Blue);
     letter-spacing: -0.24px;
     cursor: pointer;
+
+    @media screen and (max-width: 767px){
+        height: 48px;
+        width: 48px;
+    }
 `
 
 const MobileText = styled.span`
+    @media screen and (min-width: 767px){
+        display: none;
+    }
+`
+
+const MobileImg = styled.img`
+    width: 48px;
+    height: 48px;
+
+    @media screen and (min-width: 767px){
+        display: none;
+    }
+`
+
+const BigScreen = styled.span`
     @media screen and (max-width: 767px){
         display: none;
+    }
+`
+
+const PopUpWrapper = styled.div`
+    position: fixed;
+    z-index: 9998;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.8);
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+    @media screen and (max-width: 1490px){
+        min-height: 150vh
+    }
+
+    @media screen and (max-width: 767px){
+        min-height: 150vh;
     }
 `

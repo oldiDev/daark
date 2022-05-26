@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from "swiper";
+import { Navigation, Autoplay, Pagination } from "swiper";
 import 'swiper/css';
-import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "swiper/css/autoplay";
+import "swiper/css/autoplay"
 
 import Footer from '../footer';
 import { Image, ImageGroup } from 'react-fullscreen-image';
@@ -14,12 +13,10 @@ import { getSnapshot } from 'mobx-state-tree';
 import { observer } from 'mobx-react-lite';
 
 
-
-const Pims = () => {
-
+const FootSkill = () => {
     const { projects } = usePersistentStore();
 
-    const pims = getSnapshot(projects.projects[0]);
+    const fs = getSnapshot(projects.projects[3]);
 
     // console.log(pims)
 
@@ -28,21 +25,24 @@ const Pims = () => {
         <>
             <Swiper
                 slidesPerView={2}
-                spaceBetween={80}
-                modules={[Autoplay]}
+                spaceBetween={280}
+                modules={[Autoplay, Pagination]}
                 autoplay={true}
+                pagination={{
+                    clickable: true,
+                }}
                 loop={true}
                 updateOnWindowResize
                 observer
                 observerParents
                 centeredSlides={true}
                 // initialSlide={1}
-                className="for-mobile"
+                className="for-mobile for-websites"
             >
                 {/* <ImageGroup> */}
                 {
-                    pims.swiper?.map((i, e) =>
-                        <SwiperSlide key={e}>
+                    fs.swiper?.map((i) =>
+                        <SwiperSlide key={i}>
                             <ProjectImg src={i.img} />
                         </SwiperSlide>
                     )
@@ -51,10 +51,13 @@ const Pims = () => {
                 {/* </ImageGroup> */}
             </Swiper>
             <Swiper
-                slidesPerView={3}
-                spaceBetween={50}
-                modules={[Autoplay]}
+                slidesPerView={2}
+                spaceBetween={500}
+                modules={[Autoplay, Pagination]}
                 autoplay={true}
+                pagination={{
+                    clickable: true,
+                }}
                 loop={true}
                 updateOnWindowResize
                 observer
@@ -65,8 +68,8 @@ const Pims = () => {
             >
                 {/* <ImageGroup> */}
                 {
-                    pims.swiper?.map((i, e) =>
-                        <SwiperSlide key={e}>
+                    fs.swiper?.map((i) =>
+                        <SwiperSlide key={i}>
                             <ProjectImg src={i.img} />
                         </SwiperSlide>
                     )
@@ -77,12 +80,15 @@ const Pims = () => {
 
             <ImageGroup>
                 <Swiper
-                    slidesPerView={5}
-                    spaceBetween={30}
+                    slidesPerView={2}
+                    spaceBetween={500}
                     loop={true}
-                    navigation={true}
-                    modules={[Navigation, Autoplay]}
+                    // navigation={true}
+                    modules={[Autoplay, Pagination]}
                     autoplay={true}
+                    pagination={{
+                        clickable: true,
+                    }}
                     updateOnWindowResize
                     observer
                     centeredSlides={true}
@@ -92,8 +98,8 @@ const Pims = () => {
                 >
                     {/* <ImageGroup> */}
                     {
-                        pims.swiper?.map((i, e) =>
-                            <SwiperSlide key={e}>
+                        fs.swiper?.map((i) =>
+                            <SwiperSlide key={i}>
                                 <ProjectImg src={i.img} />
                             </SwiperSlide>
                         )
@@ -107,7 +113,7 @@ const Pims = () => {
             <OpacityRight />
             <OpacityLeft />
             <Container>
-                <Title>{pims.name}</Title>
+                <Title>{fs.name}</Title>
                 <About>
                     <AboutTitle>PIMS – это напиток на основе чая, который перевернет твое сознание, даст природную энергию и прокачает твои вкусовые рецепторы</AboutTitle>
                     <AboutText>Приложение для доставки напитков PIMS - один из самых интересных проектов, которые создавала наша команда. Стояла задача написать кросс-платформенное решение для клиентов PIMS, которое поможет избежать очередей на кассах и снизить расходы на доставку продукции.</AboutText>
@@ -119,8 +125,8 @@ const Pims = () => {
                         <h2 style={{ margin: "unset" }}>Технологии</h2>
                     </TechonologyTitle>
                     {
-                        pims.techology.map((e, i) =>
-                            <TechonologyItem key={i}>
+                        fs.techology.map((e) =>
+                            <TechonologyItem>
                                 <TechonologyIMG src={e.img} />
                                 {/* <img src={e.img}></img> */}
                                 <TechonologyName>
@@ -133,7 +139,7 @@ const Pims = () => {
 
                 <CostContainer>
                     <CostTitle>Стоимость разработки: </CostTitle>
-                    <Cost>от {pims.cost.toString().split('').reverse().map((e, i) =>
+                    <Cost>от {fs.cost.toString().split('').reverse().map((e, i) =>
                         e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
                     ).reverse().join('')} &#8381;</Cost>
                 </CostContainer>
@@ -142,10 +148,9 @@ const Pims = () => {
         </>
 
     )
-
 }
 
-export default observer(Pims);
+export default observer(FootSkill);
 
 
 const Container = styled.div`
@@ -163,39 +168,41 @@ const Container = styled.div`
         width: 90%;
         /* height: 100vh; */
     }
-    `
+`
 
 const OpacityRight = styled.div`
     position: absolute;
     top: 80px;
     right: 0;
     left: auto;
-    width: 39%;
+    width: 25%;
     height: 770px;
     background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     /* opacity: 50%; */
     z-index: 50;
-    
+
     @media screen and (max-width: 767px){
-        width: 26%;
+        width: 17%;
+        height: 301px;
         /* height: 100vh; */
     }
-    `
+`
 const OpacityLeft = styled.div`
     position: absolute;
     top: 80px;
     left: 0;
     right: auto;
-    width: 39%;
+    width: 25%;
     height: 770px;
     background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     z-index: 50;
-    
+
     @media screen and (max-width: 767px){
-        width: 26%;
+        width: 17%;
+        height: 301px;
         /* height: 100vh; */
     }
-    `
+`
 
 const Title = styled.h1`
     margin: 50px auto;
@@ -211,19 +218,19 @@ const About = styled.div`
 
 const AboutTitle = styled.h2`
     margin-top: unset;
-`
+    `
 
 const AboutText = styled.h4`
-        font-size: 24px;
-        margin: 15px 0px;
-        line-height: 30px;
-        font-weight: normal;
-    
-        @media screen and (max-width: 767px){
+    font-size: 24px;
+    margin: 15px 0px;
+    line-height: 30px;
+    font-weight: normal;
+
+    @media screen and (max-width: 767px){
             font-size: 28px;
             line-height: 36px;
         }
- `
+`
 
 const Techonolgy = styled.div`
     width: 100%;
@@ -247,7 +254,7 @@ const TechonologyIMG = styled.img`
     width: 100px;
     height: 100px;
     /* background-color: #ccc; */
-    box-shadow: 4px 4px 16px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 4px 8px 16px 4px rgba(0, 0, 0, 0.10);
     border-radius: 19px;
 `
 
@@ -301,15 +308,30 @@ const Cost = styled.h2`
 `
 
 const ProjectImg = styled.img`
-    width: 323px;
+    width: 1000px;
     height: 700px;
     border-radius: 24px;
     box-shadow: 8px 10px 20px 4px rgba(0, 0, 0, 0.15);
+
+    @media screen and (max-width: 767px) {
+        width: 393px; 
+    }
 `
 
 const LinkContainer = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
+`
+
+const LinkImage = styled.img`
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+
+    @media screen and (max-width: 767px){
+        width: 210px;
+        height: 70px;
+    }
 `

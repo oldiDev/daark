@@ -13,6 +13,16 @@
     src: url('assets/fonts/SF-Pro-Text-Semibold.otf');
 }
 
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/Inter-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'InterSemibold';
+    src: url('assets/fonts/Inter-SemiBold.ttf');
+}
+
 @keyframes mainPageFirst {
     0% {
         color: black;
@@ -40,33 +50,39 @@
 
 @keyframes positionTop {
     0%{
-        top: 40%;
+        /* top: 30%; */
+        transform: translateY(0);
         opacity: 100%;
     }
     100%{
-        top: -100%;
+        /* top: -100%; */
+        transform: translateY(-1000px);
         opacity: 0%;
     }
 }
 
 @keyframes positionBottom {
     0%{
-        top:100%;
+        /* top:100%; */
+        transform: translateY(1000px);
         opacity: 0%;
     }
     100%{
-        top: 40%;
+        /* top: 40%; */
+        transform: translateY(-250px);
         opacity: 100%;
     }
 }
 
 @keyframes bottomMobile {
     0%{
-        top:100%;
+        /* top:100%; */
+        transform: translateY(1000px);
         opacity: 0%;
     }
     100%{
-        top: 15%;
+        /* top: 80px; */
+        transform: translateY(-40px);
         opacity: 100%;
     }
 }
@@ -87,13 +103,16 @@
     --VeryLightGrey: #F2F2F2;
     --Blue: #2F80ED;
     --LightBlue: #8CB9F6;
+    --mobile-bar-height-raw: 100px;
+    --mobile-bar-height: calc(var(--mobile-bar-height-raw) + env(safe-area-inset-bottom));
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'SFPro', 'Inter' sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'SFProText', 'SFProTextMedium', 'SFProTextSemibold' , 'Inter', 'Poppins' sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: white;
 }
 
 button{
@@ -101,17 +120,25 @@ button{
     padding: unset;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1440px), (min-width: 767px) {
     body{
         zoom: 0.75;
     }
+}
+
+footer {
+    width: 100%;
+    background-color: black;
+    height: 240px;
+    position: relative;
+    bottom: 0;
 }
 
 .header{
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 100;
     background-color: rgb(255, 255, 255, 0.8);
     backdrop-filter: blur(0.5em);
 }
@@ -120,34 +147,101 @@ button{
     .header{
         transition: background .36s cubic-bezier(0.32, 0.08, 0.24, 1), height .56s cubic-bezier(0.32, 0.08, 0.24, 1);
     }
+
+    footer {
+        bottom: 0;
+        height: 770px;
+        padding-bottom: 40px;
+    }
+}
+
+.swiper {
+    margin-top: 80px;
+    width: 100%;
+    height: 770px;
+    z-index: 0;
+}
+
+.for-websites{
+    height: 300px !important;
 }
 
 .slider-style{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120vh;
+    height: 100vh;
     z-index: 0;
 }
 
-.swiper-slider{
+.swiper-slide{
+    width: 350px;
+    height: 500px;
+    text-align: center;
+    font-size: 18px;
+    /* background: #ccc; */
     display: flex;
-    align-items: flex-start;
     justify-content: center;
-    flex-direction: column;
-    height: 100%;
-    z-index: 0;
+    align-items: center;
 }
+
+.swiper-slide-visible {
+    opacity: 0.25;
+}
+
+.swiper-button-next {
+    right: 39% !important;
+}
+
+.swiper-button-prev {
+    left: 39% !important;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    color: var(--Blue) !important;
+}
+
+.swiper-slide img {
+    /* display: block;
+    width: 100%;
+    height: 100%; */
+    object-fit: cover;
+}
+  
 
 .first-slide{
     align-items: center;
+    justify-content: flex-start;
 }
 
 @media screen and (min-width: 767px) {
     .first-slide {
         display: none;
     }
+
+    .for-mobile {
+        display: none;
+    }
 }
+
+@media screen and (max-width: 1365px) {
+    .for-desktop{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .for-tablet{
+        display: none
+    }
+}
+
+@media screen and (min-width: 1365px) {
+    .for-tablet {
+        display: none;
+    }
+}
+
 
 
 code {
@@ -164,32 +258,32 @@ code {
 }
 
 h1{
-    font-family: 'Inter';
-    font-weight: 600;
+    font-family: 'InterSemibold';
+    font-weight: 400;
     font-size: 40px;
 }
 
 h2{
-    font-family: 'Inter';
-    font-weight: 600;
+    font-family: 'InterSemibold';
+    font-weight: 400;
     font-size: 32px;
 }
 
 h3{
-    font-family: 'Inter';
-    font-weight: 600;
+    font-family: 'InterSemibold';
+    font-weight: 400;
     font-size: 24px;
 }
 
 h4{
-    font-family: "Inter";
+    font-family: 'Inter';
     font-size: 20px;
     letter-spacing: -0.24px;
 }
 
 .primaryButtonText {
-    font-family: 'Inter';
-    font-weight: 600;
+    font-family: 'InterSemibold';
+    font-weight: 400;
     font-size: 16px;
 }
 
@@ -197,6 +291,46 @@ h4{
     font-family: 'Inter';
     font-size: 16px;
     line-height: 19px;
+}
+
+@media screen and (max-width: 767px){
+    h1{
+        font-size: 55px;
+    }
+
+    h4{
+        font-size: 30px;
+    }
+
+    .primaryButtonText{
+        font-size: 35px;
+    }
+
+    .tertiaryButtonText {
+        font-size: 25px;
+        line-height: 28px;
+    }
+
+    .mobile-logo {
+        height: 100%;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: #ccc; */
+    }
+
+    .footer-link {
+        margin: 4px;
+    }
+
+    .contacts-link{
+        width: 25%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .SF_h1 {
@@ -221,7 +355,7 @@ h4{
 
 .SF_body{
     font-family: 'SFProText';
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: -0.41px;
 }
 
@@ -243,6 +377,24 @@ h4{
     font-weight: 400;
     font-size: 10px;
     letter-spacing: -0.24px;
+}
+
+@media screen and (max-width: 767px) {
+    .SF_h1 {
+        font-size: 40px;
+    }
+
+    .SF_h3 {
+        font-size: 25px;
+    }
+
+    .SF_body {
+        font-size: 20px;
+    }
+
+    .buttonText {
+        font-size: 20px;
+    }
 }
 
 a{

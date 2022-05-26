@@ -3,36 +3,43 @@ import { observer } from "mobx-react-lite";
 import { getSnapshot } from "mobx-state-tree";
 import styled from "styled-components";
 import { usePersistentStore } from "../store";
+import Footer from "./footer";
+import FooterMobile from "./footerMobile";
 
 const About = () => {
 
     const { team } = usePersistentStore();
 
 
-    console.log(getSnapshot(team.team));
+    // console.log(getSnapshot(team.team));
 
     return (
-        <AboutContainer>
-            <h1>Команда DAARK</h1>
-            <AboutTeam>
-                {
-                    team.team?.map((e, i) =>
-                        <TeamContainer key={i}>
-                            <TeamImg src={e.avatar} alt="avatar" />
-                            <TeamName className="primaryButtonText">{e.name}</TeamName>
-                            <TeamPosition className="tertiaryButtonText">{e.position}</TeamPosition>
-                            <TeamStack>
-                                {
-                                    e.stack?.map((f, i) => 
-                                        <TeamStackImg src={f.img} alt="stack-img" key={i} />
-                                    )
-                                }
-                            </TeamStack>
-                        </TeamContainer>
-                    )
-                }
-            </AboutTeam>
-        </AboutContainer>
+        <>
+            <AboutContainer>
+                <h1>Команда DAARK</h1>
+                <AboutTeam>
+                    {
+                        team.team?.map((e, i) =>
+                            <TeamContainer key={i}>
+                                <TeamImg src={e.avatar} alt="avatar" />
+                                <TeamName className="primaryButtonText">{e.name}</TeamName>
+                                <TeamPosition className="tertiaryButtonText">{e.position}</TeamPosition>
+                                <TeamStack>
+                                    {
+                                        e.stack?.map((f, i) =>
+                                            <TeamStackImg src={f.img} alt="stack-img" key={i} />
+                                        )
+                                    }
+                                </TeamStack>
+                            </TeamContainer>
+                        )
+                    }
+                </AboutTeam>
+            </AboutContainer>
+            {/* <FooterMobile /> */}
+            <Footer />
+        </>
+
     )
 }
 
@@ -42,18 +49,25 @@ export default observer(About)
 const AboutContainer = styled.div`
     width: 70%;
     max-width: 1000px;
+    min-height: 100vh;
+    /* height: 100vh; */
     margin: 60px auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     text-align: center;
+
+    @media screen and (max-width: 767px){
+        width: 90%;
+        height: fit-content;
+    }
 `
 
 const AboutTeam = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
 
@@ -71,7 +85,10 @@ const TeamContainer = styled.div`
     align-items: flex-start;
 
     @media screen and (max-width: 767px){
-        width: 300px
+        width: 85%;
+        height: 700px;
+        margin-left: auto;
+        margin-right: auto;
     }
 `
 
@@ -80,13 +97,13 @@ const TeamImg = styled.img`
     height: 200px;
 
     @media screen and (max-width: 767px){
-        height: 300px;
-        width: 300px;
+        height: 500px;
+        width: 100%;
     }
 `
 
 const TeamName = styled.div`
-    font-weight: bold;
+    font-weight: normal;
     margin: 4px 0px;
 `
 
@@ -103,6 +120,10 @@ const TeamStack = styled.div`
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 767px){
+        margin-top: 15px
+    }
 `
 
 const TeamStackImg = styled.img`
@@ -110,4 +131,11 @@ const TeamStackImg = styled.img`
     height: 20px;
     margin: 5px 10px 5px 0px;
     box-shadow: 0px 4px 20px rgba(9, 9, 12, 0.1);
+    border-radius: 3px;
+
+    @media screen and (max-width: 767px){
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
 `

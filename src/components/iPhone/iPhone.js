@@ -20,12 +20,19 @@ const IPhone = ({ bgcolor }) => {
                 return <IphoneMain />;
             case '/contacts':
                 return <IphoneContact />;
-            case '/pims':
-                return <IphonePims />;
+            // case '/pims':
+            //     return <IphonePims />;
             case '/woodcoin':
                 return <IphoneWoodcoin />;
             case '/vpn':
                 return <IphoneVPN />;
+        }
+    }
+
+    let renderApps = (param) => {
+        switch (param) {
+            case '/pims':
+                return <IphonePims />;
         }
     }
 
@@ -41,7 +48,7 @@ const IPhone = ({ bgcolor }) => {
                 <Screen>
                     <StatusBar>
                         <LeftSide className="primaryButtonText">
-                            {(time.getHours().length < 10) ? '0' + time.getHours() : time.getHours()}
+                            {(time.getHours() < 10) ? '0' + time.getHours() : time.getHours()}
                             :
                             {(time.getMinutes() < 10) ? '0' + time.getMinutes() : time.getMinutes()}
                         </LeftSide>
@@ -107,7 +114,7 @@ const IPhone = ({ bgcolor }) => {
                                     <HomeLine />
                                 </HomeIndicator>
                             </IosTabBar>
-                            : 
+                            :
                             <></>
                     }
 
@@ -129,6 +136,7 @@ const Iphone = styled.div`
     margin: 0px auto;
     border-radius: 70px;
     background-image: url(/iPhoneImage/iPhoneImage.svg);
+    z-index: 99;
 
 `
 
@@ -157,6 +165,7 @@ const StatusBar = styled.div`
 const LeftSide = styled.span`
     width: 54px;
     height: 21px;
+    font-size: 16px;
 `
 
 const RightSide = styled.span`

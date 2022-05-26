@@ -12,6 +12,7 @@ import {
 } from "../../data/calculationData";
 import { usePersistentStore } from "../../store";
 import CalculationFooter from "./calculationFooter";
+import '../../index.css'
 
 const Calculation = () => {
 
@@ -89,7 +90,7 @@ const Calculation = () => {
                     <CalculationSelectionContent>
                         {
                             calculation.projectType?.map((e, i) =>
-                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeProjectType ? e.togle : removePojectTypeSelection}>
+                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeProjectType ? e.togle : null}>
                                     <CalculationImage src={e.isSelected ? e.ProjectTypeIcon.split('.')[0] + '-blue.svg' : e.ProjectTypeIcon} alt="logo" />
                                     <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{e.ProjectTypeName}</CalculationInputTitle>
                                 </CalculationInput>
@@ -102,7 +103,7 @@ const Calculation = () => {
                     <CalculationSelectionContent>
                         {
                             calculation.uniqueScreen?.map((e, i) =>
-                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeUniqueScreen ? e.togle : removePojectTypeSelection}>
+                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeUniqueScreen ? e.togle : null}>
                                     <CalculationImage src={e.isSelected ? e.UniqueScreenIcon.split('.')[0] + '-blue.svg' : e.UniqueScreenIcon} alt="logo" />
                                     <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{e.UniqueScreenName}</CalculationInputTitle>
                                 </CalculationInput>
@@ -115,7 +116,7 @@ const Calculation = () => {
                     <CalculationSelectionContent>
                         {
                             calculation.degreeDevelopment?.map((e, i) =>
-                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeDegreeDevelopment ? e.togle : removePojectTypeSelection}>
+                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeDegreeDevelopment ? e.togle : null}>
                                     <CalculationImage src={e.isSelected ? e.DegreeDevelopmentIcon.split('.')[0] + '-blue.svg' : e.DegreeDevelopmentIcon} alt="logo" />
                                     <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{e.DegreeDevelopmentName}</CalculationInputTitle>
                                 </CalculationInput>
@@ -128,7 +129,7 @@ const Calculation = () => {
                     <CalculationSelectionContent>
                         {
                             calculation.functions?.map((e, i) =>
-                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeFunctions ? e.togle : removePojectTypeSelection}>
+                                <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeFunctions ? e.togle : null}>
                                     <CalculationImage src={e.isSelected ? e.FunctionsIcon.split('.')[0] + '-blue.svg' : e.FunctionsIcon} alt="logo" />
                                     <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{e.FunctionsName}</CalculationInputTitle>
                                 </CalculationInput>
@@ -171,7 +172,7 @@ const CalculationContainer = styled.div`
 `
 
 const CalculationLabel = styled.div`
-    font-family: 'Inter';
+    font-family: "Inter";
     font-size: 36px;
     font-weight: bold;
     line-height: 44px;
@@ -194,6 +195,11 @@ const CalculationSelection = styled.div`
 const CalculationSelectionTitle = styled.h3`
     text-align: center;
     letter-spacing: -0.2px;
+
+
+    @media screen and (max-width: 767px){
+        font-size: 30px;
+    }
 `
 
 const CalculationSelectionContent = styled.div`
@@ -219,6 +225,10 @@ const CalculationInputTitle = styled.div`
     /* color: var(--DarkGrey); */
     margin-top: 16px;
     max-width: 75%;
+    
+    @media screen and (max-width: 767px){
+        font-size: 30px;
+    }
 `
 
 const CalculationImage = styled.img`
@@ -254,4 +264,9 @@ const CalculationDisclaimer = styled.div`
     letter-spacing: -0.24px;
     color: var(--MediumGrey);
     height: 20vh;
+
+    @media screen and (max-width: 576px){
+        font-size: 20px;
+        line-height: 28px;
+    }
 `

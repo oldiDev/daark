@@ -1,28 +1,59 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useDetectClickOutside } from "react-detect-click-outside";
 import styled from "styled-components";
+import OutsideAlerter from "../../hooks/OutsideClose";
 
-const CalculationPopUp = ({ show }) => {
 
-    if (show) {
-        return (
-            <>
-                <PopUpWrapper>
-                    <PopUpContainer>
-                        <PopUpImg src="/Logo/logo-big.svg" alt="logo" />
-                        <PopUpInfo className="tertiaryButtonText">Пожалуйста, введите адрес электронной почты.
-                            На него мы вышлем расчет стоимости приложения.</PopUpInfo>
-                            <PopUpInput placeholder="Имя*" required></PopUpInput>
-                            <PopUpInput placeholder="Email*" type="email" required></PopUpInput>
-                            <PopUpInput placeholder="Телефон (необязательно)"></PopUpInput>
-                            <PopUpBtn className="primaryButtonText">Отправить</PopUpBtn>
-                    </PopUpContainer>
-                </PopUpWrapper>
+const CalculationPopUp = ({ closePopUp }) => {
 
-            </>
-        )
-    } else {
-        return (<></>)
-    }
+    // const [open, setOpen] = useState(false);
+
+
+    // setTimeout(() => {
+    //     setOpen(show);
+    // }, 100);
+
+    // const ref = useDetectClickOutside({ onTriggered: show });
+
+    // const modalRef = useRef();
+
+    // useEffect(() => {
+    //     const clickOutsideContent = (e) => {
+    //         if (e.target === modalRef.current) {
+    //             setOpen(false);
+    //         }
+    //     };
+    //     window.addEventListener('click', clickOutsideContent);
+    //     return () => {
+    //         window.removeEventListener('click', clickOutsideContent);
+    //     };
+    // }, []);
+
+    // if (open) {
+    return (
+        <>
+            <PopUpWrapper>
+                <PopUpContainer>
+                    <CloseBtnContainer>
+                        <CloseBtn onClick={() => closePopUp()}>
+                            <img src="/Calculation/delete-disabled.svg"></img>
+                        </CloseBtn>
+                    </CloseBtnContainer>
+                    <PopUpImg src="/Logo/logo-big.svg" alt="logo" />
+                    <PopUpInfo className="tertiaryButtonText">Пожалуйста, введите адрес электронной почты.
+                        На него мы вышлем расчет стоимости приложения.</PopUpInfo>
+                    <PopUpInput placeholder="Имя*" required></PopUpInput>
+                    <PopUpInput placeholder="Email*" type="email" required></PopUpInput>
+                    <PopUpInput placeholder="Телефон (необязательно)"></PopUpInput>
+                    <PopUpBtn className="primaryButtonText" id="email">Отправить</PopUpBtn>
+                </PopUpContainer>
+            </PopUpWrapper>
+
+        </>
+    )
+    // } else {
+    //     return (<></>)
+    // }
 }
 
 export default CalculationPopUp;
@@ -51,7 +82,7 @@ const PopUpWrapper = styled.div`
 
 const PopUpContainer = styled.form`
     position: relative;
-    width: 50%;
+    width: 100%;
     max-width: 800px;
     height: 70%;
     margin-top: 5%;
@@ -64,18 +95,32 @@ const PopUpContainer = styled.form`
 
     @media screen and (max-width: 767px){
         width: 95%;
-        margin-top: 50%;
+        height: 100%;
+        margin: 0px auto;
+        margin-top: 20%;
     }
 `
 
 const PopUpImg = styled.img`
     margin-top: 3em; 
+
+    @media screen and (max-width: 767px){
+        width: 148px;
+    }
 `
 
 const PopUpInfo = styled.div`
     width: 75%;
     text-align: center;
     margin: 2em 0px;
+    
+
+    @media screen and (max-width: 767px){
+        width: 95%;
+        font-size: 30px;
+        line-height: 35px;
+        margin: 1.5em 0px;
+    }
 `
 
 const PopUpInput = styled.input`
@@ -97,6 +142,13 @@ const PopUpInput = styled.input`
         border-color: var(--Blue);
     }
 
+    @media screen and (max-width: 767px){
+        margin: .5em 0px;
+        width: 85%;
+        height: 80px;
+        font-size: 25px;
+    }
+
 `
 const PopUpBtn = styled.button`
     width: 40%;
@@ -106,5 +158,27 @@ const PopUpBtn = styled.button`
     color: white;
     background-color: var(--Blue);
     border-radius: 8px;
+
+    @media screen and (max-width: 767px){
+        margin: 1em 0px;
+        margin-bottom: 1.5em;
+        height: 2.5em;
+        width: 60%;
+        font-size: 30px;
+        max-width: 500px;
+    }
+`
+
+const CloseBtnContainer = styled.div`
+    align-items: right;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+`
+
+const CloseBtn = styled.button`
+    background-color: white;
+    z-index: 99;
+    cursor: pointer;
 `
 

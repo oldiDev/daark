@@ -8,16 +8,16 @@ const Header = () => {
     const [isChecked, setIsChecked] = useState(false);
 
     return (
-        <div className="header">
+        <header className="header">
             <HeaderContainer>
-                <HeaderItem />
-                <Link to="/" style={{ height: "20px" }} onClick={() => setIsChecked(false)}>
-                    <img src="/Logo/logo.svg" alt="logo"></img>
+                {/* <HeaderItem /> */}
+                <Link to="/" className="mobile-logo" onClick={() => setIsChecked(false)}>
+                    <Logo src="/Logo/logo.svg" alt="logo"></Logo>
                 </Link>
-                <MenuToggle type="checkbox" id="menu-togle" checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
+                {/* <MenuToggle type="checkbox" id="menu-togle" checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
                 <MenuButtonContainer for="menu-togle">
                     <MenuButton></MenuButton>
-                </MenuButtonContainer>
+                </MenuButtonContainer> */}
                 <HeaderContent>
                     <li>
                         <Link to="/contacts" className="tertiaryButtonText" onClick={() => setIsChecked(false)}>Контакты</Link>
@@ -31,13 +31,13 @@ const Header = () => {
                 </HeaderContent>
             </HeaderContainer>
             <Outlet />
-        </div>
+        </header>
     )
 }
 
 
 const HeaderContainer = styled.div`
-    width: 100%;
+    width: 75%;
     max-width: 1000px;
     height: 40px;
     margin: 0px auto;
@@ -47,6 +47,12 @@ const HeaderContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     z-index: 2;
+
+    @media screen and (max-width: 767px){
+        height: 64px;
+        width: 100%;
+        justify-content: center;
+    }
 `;
 
 const HeaderContent = styled.ul`
@@ -62,7 +68,7 @@ const HeaderContent = styled.ul`
         top: 0;
         height: 0;
         width: 100%;
-        margin: 40px 0;
+        margin: 64px 0;
         flex-direction: column;
         justify-content: flex-start;
         z-index: 4;
@@ -88,9 +94,27 @@ const HeaderContent = styled.ul`
     }
 `;
 
+const LogoContainer = styled.div`
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
+const Logo = styled.img`
+    width: 74px;
+    height: 20px;
+
+    @media screen and (max-width: 767px){
+        height: 32px;
+        width: 112px;
+    }
+`
+
 const HeaderItem = styled.div`
     display: none;
-    width: 40px;
+    width: 64px;
     height: 100%;
 
     @media screen and (max-width: 767px){
@@ -101,8 +125,7 @@ const HeaderItem = styled.div`
 const MenuButtonContainer = styled.label`
     display: none;
     height: 100%;
-    width: 30px;
-    margin-right: 16px;
+    width: 64px;
     cursor: pointer;
     flex-direction: column;
     justify-content: center;
@@ -117,7 +140,7 @@ const MenuButton = styled.div`
     display: block;
     background-color: black;
     position: absolute;
-    height: 4px;
+    height: 2px;
     width: 30px;
     transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
     border-radius: 2px;
@@ -126,7 +149,7 @@ const MenuButton = styled.div`
         display: block;
         background-color: black;
         position: absolute;
-        height: 4px;
+        height: 2px;
         width: 30px;
         transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
         border-radius: 2px;
@@ -172,7 +195,7 @@ const MenuToggle = styled.input`
     &:checked ~ ${HeaderContent} { 
         width: 100%;
         height: 150vh;
-        margin: 40px 0;
+        margin: 64px 0;
         padding: 30em 0;
         /* transition: height 0.4s cubic-bezier(0.32, 0.08, 0.24, 1), padding 0.4s cubic-bezier(0.32, 0.08, 0.24, 1); */
         visibility: visible;
