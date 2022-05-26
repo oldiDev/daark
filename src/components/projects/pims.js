@@ -41,8 +41,8 @@ const Pims = () => {
             >
                 {/* <ImageGroup> */}
                 {
-                    pims.swiper?.map((i) =>
-                        <SwiperSlide key={i}>
+                    pims.swiper?.map((i, e) =>
+                        <SwiperSlide key={e}>
                             <ProjectImg src={i.img} />
                         </SwiperSlide>
                     )
@@ -65,8 +65,8 @@ const Pims = () => {
             >
                 {/* <ImageGroup> */}
                 {
-                    pims.swiper?.map((i) =>
-                        <SwiperSlide key={i}>
+                    pims.swiper?.map((i, e) =>
+                        <SwiperSlide key={e}>
                             <ProjectImg src={i.img} />
                         </SwiperSlide>
                     )
@@ -92,8 +92,8 @@ const Pims = () => {
                 >
                     {/* <ImageGroup> */}
                     {
-                        pims.swiper?.map((i) =>
-                            <SwiperSlide key={i}>
+                        pims.swiper?.map((i, e) =>
+                            <SwiperSlide key={e}>
                                 <ProjectImg src={i.img} />
                             </SwiperSlide>
                         )
@@ -119,8 +119,8 @@ const Pims = () => {
                         <h2 style={{ margin: "unset" }}>Технологии</h2>
                     </TechonologyTitle>
                     {
-                        pims.techology.map((e) =>
-                            <TechonologyItem>
+                        pims.techology.map((e, i) =>
+                            <TechonologyItem key={i}>
                                 <TechonologyIMG src={e.img} />
                                 {/* <img src={e.img}></img> */}
                                 <TechonologyName>
