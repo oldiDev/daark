@@ -40,8 +40,8 @@ const Pims = () => {
             >
                 {/* <ImageGroup> */}
                 {
-                    woodcoin.swiper?.map((i) =>
-                        <SwiperSlide key={i}>
+                    woodcoin.swiper?.map((i, e) =>
+                        <SwiperSlide key={e}>
                             <ProjectImg src={i.img} />
                         </SwiperSlide>
                     )
@@ -64,8 +64,8 @@ const Pims = () => {
             >
                 {/* <ImageGroup> */}
                 {
-                    woodcoin.swiper?.map((i) =>
-                        <SwiperSlide key={i}>
+                    woodcoin.swiper?.map((i, e) =>
+                        <SwiperSlide key={e}>
                             <ProjectImg src={i.img} />
                         </SwiperSlide>
                     )
@@ -91,8 +91,8 @@ const Pims = () => {
             >
                 {/* <ImageGroup> */}
                 {
-                    woodcoin.swiper?.map((i) =>
-                        <SwiperSlide key={i}>
+                    woodcoin.swiper?.map((i, e) =>
+                        <SwiperSlide key={e}>
                             <ProjectImg src={i.img} />
                         </SwiperSlide>
                     )
@@ -118,8 +118,8 @@ const Pims = () => {
                         <h2 style={{ margin: "unset" }}>Технологии</h2>
                     </TechonologyTitle>
                     {
-                        woodcoin.techology.map((e) =>
-                            <TechonologyItem>
+                        woodcoin.techology.map((e, i) =>
+                            <TechonologyItem key={i}>
                                 <TechonologyIMG src={e.img} />
                                 <TechonologyName>
                                     <h3>{e.name}</h3>
