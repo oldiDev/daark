@@ -1,8 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 const Footer = ({ height }) => {
+
+    const { t } = useTranslation();
+
     return (
         <footer style={{ height: `${height}` }}>
             <Container>
@@ -12,24 +17,24 @@ const Footer = ({ height }) => {
 
                 <Navigation>
                     <Title>
-                        Навигация
+                        {t('navigation')}
                     </Title>
-                    <Link to="/" className="tertiaryButtonText footer-link">Главная</Link>
-                    <Link to="/contacts" className="tertiaryButtonText footer-link">Контакты</Link>
-                    <Link to="/calculation" className="tertiaryButtonText footer-link">Калькулятор</Link>
-                    <Link to="/about" className="tertiaryButtonText footer-link">О нас</Link>
+                    <Link to="/" className="tertiaryButtonText footer-link"> {t('main')}</Link>
+                    <Link to="/contacts" className="tertiaryButtonText footer-link"> {t('contacts')}</Link>
+                    <Link to="/calculation" className="tertiaryButtonText footer-link"> {t('calculator')}</Link>
+                    <Link to="/about" className="tertiaryButtonText footer-link"> {t('about')}</Link>
                 </Navigation>
                 <Contacts>
                     <Title>
-                        Контакты
+                    {t('contacts')}
                     </Title>
                     <MobileLink href="tel:+79999797515" className="tertiaryButtonText">+79999797515</MobileLink>
                     <MobileLink href="mailto:hello@daark.ru" className="tertiaryButtonText">hello@daark.ru</MobileLink>
                 </Contacts>
                 <Address>
-                    <Title>Адреса</Title>
-                    <AddressContent className="tertiaryButtonText">Москва,</AddressContent>
-                    <AddressContent className="tertiaryButtonText">ул. Малышева 20, 109390</AddressContent>
+                    <Title> {t('address')}</Title>
+                    <AddressContent className="tertiaryButtonText"> {t('city')}</AddressContent>
+                    <AddressContent className="tertiaryButtonText"> {t('street')}</AddressContent>
                 </Address>
             </Container>
         </footer>

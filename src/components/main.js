@@ -4,22 +4,25 @@ import styled from "styled-components";
 import FooterMobile from "./footerMobile";
 import Footer from "./footer";
 import IPhone from "./iPhone/iPhone";
+import i18next from 'i18next'
+import { useTranslation } from 'react-i18next'
 
 const Main = () => {
+    const { t } = useTranslation()
 
     return (
         <>
             <MainContainer>
                 <MainLeftSide>
                     <LeftSideSwap>
-                        <FirstString>Цифровое решение для вашего бизнеса</FirstString>
-                        <SecondString>Полный цикл разработки</SecondString>
-                        <ThirdString>Уникальные решения</ThirdString>
+                        <FirstString>{t('digital_solution')}</FirstString>
+                        <SecondString>{t('development_cycle')}</SecondString>
+                        <ThirdString>{t('unique_solutions')}</ThirdString>
                     </LeftSideSwap>
 
                     <OurProjects>
                         <BigScreen>
-                            <div>Наши проекты</div>
+                            <div>{t('our_projects')}</div>
                             <img src="Main/Arrow.svg" alt="arrow"></img>
                         </BigScreen>
                     </OurProjects>

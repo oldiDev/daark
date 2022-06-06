@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import Radium from 'radium';
 import { Link, Outlet } from "react-router-dom";
 import styled, { css } from "styled-components";
+import i18next from 'i18next'
+import { useTranslation } from 'react-i18next'
 
 const Header = () => {
 
     const [isChecked, setIsChecked] = useState(false);
+    const { t } = useTranslation()
 
     return (
         <header className="header">
@@ -20,13 +23,13 @@ const Header = () => {
                 </MenuButtonContainer> */}
                 <HeaderContent>
                     <li>
-                        <Link to="/contacts" className="tertiaryButtonText" onClick={() => setIsChecked(false)}>Контакты</Link>
+                        <Link to="/contacts" className="tertiaryButtonText" onClick={() => setIsChecked(false)}>{t('contacts')}</Link>
                     </li>
                     <li>
-                        <Link to="/calculation" className="tertiaryButtonText" onClick={() => setIsChecked(false)}>Калькулятор</Link>
+                        <Link to="/calculation" className="tertiaryButtonText" onClick={() => setIsChecked(false)}>{t('calculator')}</Link>
                     </li>
                     <li style={{ border: "none" }}>
-                        <Link to="/about" className="tertiaryButtonText" onClick={() => setIsChecked(false)}>О нас</Link>
+                        <Link to="/about" className="tertiaryButtonText" onClick={() => setIsChecked(false)}>{t('about')}</Link>
                     </li>
                 </HeaderContent>
             </HeaderContainer>
