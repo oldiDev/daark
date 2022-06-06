@@ -5,10 +5,13 @@ import styled from "styled-components";
 import { usePersistentStore } from "../store";
 import Footer from "./footer";
 import FooterMobile from "./footerMobile";
+import i18next from 'i18next'
+import { useTranslation } from 'react-i18next'
 
 const About = () => {
 
     const { team } = usePersistentStore();
+    const { t } = useTranslation();
 
 
     // console.log(getSnapshot(team.team));
@@ -16,7 +19,7 @@ const About = () => {
     return (
         <>
             <AboutContainer>
-                <h1>Команда DAARK</h1>
+                <h1>{t('team')}</h1>
                 <AboutTeam>
                     {
                         team.team?.map((e, i) =>

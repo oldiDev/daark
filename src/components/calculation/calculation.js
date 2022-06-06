@@ -12,11 +12,14 @@ import {
 } from "../../data/calculationData";
 import { usePersistentStore } from "../../store";
 import CalculationFooter from "./calculationFooter";
+import i18next from 'i18next'
+import { useTranslation } from 'react-i18next'
 import '../../index.css'
 
 const Calculation = () => {
 
     const { calculation, setCalculation, removePojectTypeSelection } = usePersistentStore();
+    const { t } = useTranslation();
 
     let fullPrice = 0;
     let activeProjectType = false;
@@ -71,9 +74,9 @@ const Calculation = () => {
     return (
         <>
             <CalculationContainer>
-                <CalculationLabel>Рассчитайте стоимость разработки вашего приложения*</CalculationLabel>
+                <CalculationLabel>{t('cost_claculation')}*</CalculationLabel>
                 <CalculationSelection>
-                    <CalculationSelectionTitle>Для каких платформ вы хотите разработать продукт?</CalculationSelectionTitle>
+                    <CalculationSelectionTitle>{t('platform')}</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
                             calculation.appType?.map((e, i) =>
@@ -86,7 +89,7 @@ const Calculation = () => {
                     </CalculationSelectionContent>
                 </CalculationSelection>
                 <CalculationSelection style={activeProjectType ? enableStyle : disableStyle}>
-                    <CalculationSelectionTitle>Что вы хотите получить?</CalculationSelectionTitle>
+                    <CalculationSelectionTitle>{t('type')}</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
                             calculation.projectType?.map((e, i) =>
@@ -99,7 +102,7 @@ const Calculation = () => {
                     </CalculationSelectionContent>
                 </CalculationSelection>
                 <CalculationSelection style={activeUniqueScreen ? enableStyle : disableStyle}>
-                    <CalculationSelectionTitle>Какое количество уникальных экранов будет в приложении?</CalculationSelectionTitle>
+                    <CalculationSelectionTitle>{t('number_of_screens')}</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
                             calculation.uniqueScreen?.map((e, i) =>
@@ -112,7 +115,7 @@ const Calculation = () => {
                     </CalculationSelectionContent>
                 </CalculationSelection>
                 <CalculationSelection style={activeDegreeDevelopment ? enableStyle : disableStyle}>
-                    <CalculationSelectionTitle>Какая степень проработки интерфейса приложения?</CalculationSelectionTitle>
+                    <CalculationSelectionTitle>{t('interface')}</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
                             calculation.degreeDevelopment?.map((e, i) =>
@@ -125,7 +128,7 @@ const Calculation = () => {
                     </CalculationSelectionContent>
                 </CalculationSelection>
                 <CalculationSelection style={activeFunctions ? enableStyle : disableStyle}>
-                    <CalculationSelectionTitle>Какие функции вы хотите включить в приложение?</CalculationSelectionTitle>
+                    <CalculationSelectionTitle>{t('functions')}</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
                             calculation.functions?.map((e, i) =>
@@ -138,7 +141,7 @@ const Calculation = () => {
                     </CalculationSelectionContent>
                 </CalculationSelection>
                 <CalculationSelection style={activeFunctions ? enableStyle : disableStyle}>
-                    <CalculationSelectionTitle>С какими сторонними сервисами нужно взаимодействие?</CalculationSelectionTitle>
+                    <CalculationSelectionTitle>{t('other_services')}</CalculationSelectionTitle>
                     <CalculationSelectionContent>
                         {
                             calculation.services?.map((e, i) =>
@@ -150,7 +153,7 @@ const Calculation = () => {
                         }
                     </CalculationSelectionContent>
                 </CalculationSelection>
-                <CalculationDisclaimer>*Окончательная стоимость разработки приложения может отличаться от стоимости, указанной в калькуляторе</CalculationDisclaimer>
+                <CalculationDisclaimer>*{t('disclaimer')}</CalculationDisclaimer>
             </CalculationContainer>
             <CalculationFooter price={fullPrice} />
         </>

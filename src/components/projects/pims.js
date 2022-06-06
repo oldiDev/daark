@@ -120,7 +120,7 @@ const Pims = () => {
                 </About>
                 <Techonolgy>
                     <TechonologyTitle>
-                        <h2 style={{ margin: "unset" }}>{t('techology')}</h2>
+                        <h2 style={{ margin: "unset" }}>{t('technology')}</h2>
                     </TechonologyTitle>
                     {
                         pims.techology.map((e, i) =>

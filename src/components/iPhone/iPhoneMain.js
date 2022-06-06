@@ -13,7 +13,7 @@ const IphoneMain = () => {
             <IphoneMainTitle className="SF_h2">{t('our_projects')}</IphoneMainTitle>
             <AppContainer>
                 <AppInfo>
-                    <img src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653568134/daark/iPhoneImage/AppIcon/Pims_bd6jwn.svg" alt="pims"></img>
+                    <img src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654517761/daark/iPhoneImage/AppIcon/PIMS_adjqzt.svg" alt="pims"></img>
                     <AppName>
                         <div className="SF_h3">PIMS</div>
                         <div className="SF_body dark-grey">{t('pims_description')}</div>
@@ -27,7 +27,7 @@ const IphoneMain = () => {
             </AppContainer>
             <AppContainer>
                 <AppInfo>
-                    <img src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653568135/daark/iPhoneImage/AppIcon/Woodkoin_pjwmjc.svg" alt="woodkoin"></img>
+                    <img src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654517761/daark/iPhoneImage/AppIcon/WoodCoin_ux0sbp.svg" alt="woodkoin"></img>
                     <AppName>
                         <div className="SF_h3">Woodcoin Wallet</div>
                         <div className="SF_body dark-grey">{t('woodcoin_description')}</div>
@@ -41,7 +41,7 @@ const IphoneMain = () => {
             </AppContainer>
             <AppContainer>
                 <AppInfo>
-                    <img src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653568134/daark/iPhoneImage/AppIcon/VpnWorld_xp8ggz.svg" alt="VpnWorld"></img>
+                    <img src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654517761/daark/iPhoneImage/AppIcon/VPN_World_suu08e.svg" alt="VpnWorld"></img>
                     <AppName>
                         <div className="SF_h3">VPN World</div>
                         <div className="SF_body dark-grey">{t('vpn_description')}</div>
@@ -121,6 +121,10 @@ const OpenBtn = styled.button`
     border-radius: 24px;
     border: unset;
     cursor: pointer;
+
+    span {
+        text-transform: uppercase;
+    }
 `
 
 export default IphoneMain

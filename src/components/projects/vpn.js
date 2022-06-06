@@ -11,7 +11,8 @@ import { Image, ImageGroup } from 'react-fullscreen-image';
 import { usePersistentStore } from '../../store';
 import { getSnapshot } from 'mobx-state-tree';
 import { observer } from 'mobx-react-lite';
-
+import i18next from 'i18next'
+import { useTranslation } from 'react-i18next'
 
 
 const Pims = () => {
@@ -19,6 +20,7 @@ const Pims = () => {
     const { projects } = usePersistentStore();
 
     const vpnWorld = getSnapshot(projects.projects[1]);
+    const { t } = useTranslation();
 
     // console.log(pims)
 
@@ -109,9 +111,9 @@ const Pims = () => {
                 <Title>{vpnWorld.name}</Title>
                 <About>
                     <AboutTitle>VPN WORLD. JUST PULL DOWN!</AboutTitle>
-                    <AboutText>Актуальность VPN приложений растет с каждым днем. Мы подумали о том, что рядовому обывателю не нужна нагрузка в виде настроек сервера и другого функционала. Просто свайп вниз и Вы онлайн!</AboutText>
-                    <AboutText>Наш сервис прост в использовании и доступен на всех устройствах. Мы создали с нуля мобильное приложение под Android и iOS, также реализовали сборки под Windows, MacOs, Linux.</AboutText>
-                    <AboutText>Решение разрабатывалось нами в течение 22-ух календарных дней. Сейчас вы можете скачать результаты нашей работы в плэй-маркетах вашего телефона или на сайте: <a href='http://vpn.oldi.dev'>vpn.oldi.dev</a></AboutText>
+                    <AboutText>{t('vpn_1')}</AboutText>
+                    <AboutText>{t('vpn_2')}</AboutText>
+                    <AboutText>{t('vpn_3')}<a href='http://vpn.oldi.dev'>vpn.oldi.dev</a></AboutText>
                 </About>
                 <LinkContainer>
                     <a href='https://apps.apple.com/ru/app/vpnworld/id1624305127?l=ru'>
@@ -120,7 +122,7 @@ const Pims = () => {
                 </LinkContainer>
                 <Techonolgy>
                     <TechonologyTitle>
-                        <h2 style={{ margin: "unset" }}>Технологии</h2>
+                        <h2 style={{ margin: "unset" }}>{t('technology')}</h2>
                     </TechonologyTitle>
                     {
                         vpnWorld.techology.map((e, i) =>
@@ -135,8 +137,8 @@ const Pims = () => {
                 </Techonolgy>
 
                 <CostContainer>
-                    <CostTitle>Стоимость разработки: </CostTitle>
-                    <Cost>от {vpnWorld.cost.toString().split('').reverse().map((e, i) =>
+                    <CostTitle>{t('cost')} </CostTitle>
+                    <Cost>{t('from')} {vpnWorld.cost.toString().split('').reverse().map((e, i) =>
                         e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
                     ).reverse().join('')} &#8381;</Cost>
                 </CostContainer>

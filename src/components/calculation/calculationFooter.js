@@ -5,6 +5,8 @@ import { getSnapshot } from "mobx-state-tree";
 import styled from "styled-components";
 import { usePersistentStore } from "../../store";
 import CalculationPopUp from "./calculationPopUp";
+import i18next from 'i18next'
+import { useTranslation } from 'react-i18next'
 
 
 // let useClickOutside = (handler) => {
@@ -30,8 +32,10 @@ import CalculationPopUp from "./calculationPopUp";
 
 const CalculationFooter = ({ price }) => {
 
+
     const [show, setShow] = useState(false);
     const { removeAnySelection } = usePersistentStore();
+    const { t } = useTranslation();
 
     let handleDelete = () => {
         removeAnySelection();
@@ -54,20 +58,20 @@ const CalculationFooter = ({ price }) => {
             <CalculationFooterWrapper>
                 <CalculationFooterContainer>
                     <CalculationFooterLeft>
-                        <FooterTitle>Стоимость разработки вашего приложения</FooterTitle>
+                        <FooterTitle>{t('cost_footer')}</FooterTitle>
                         <Price>{price.toString().split('').reverse().map((e, i) =>
                             e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
                         ).reverse().join('')} &#8381;</Price>
                     </CalculationFooterLeft>
                     <CalculationFooterRight>
                         <FooterBtn className="primaryButtonText" disabled={price == 0} onClick={togglePopUp} style={price == 0 ? { backgroundColor: "var(--LightGrey)", color: "var(--MediumGrey)" } : { backgroundColor: "var(--Blue)" }}>
-                            <BigScreen>Получить рассчёт стоимости</BigScreen>
+                            <BigScreen>{t('get_price')}</BigScreen>
                             <MobileText>{price.toString().split('').reverse().map((e, i) =>
                                 e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
                             ).reverse().join('')} &#8381;</MobileText>
                         </FooterBtn>
                         <FooterBtnDelete className="tertiaryButtonText" disabled={price == 0} onClick={handleDelete} style={price == 0 ? { color: "var(--MediumGrey)" } : { color: "var(--Blue)" }}>
-                            <BigScreen>Очистить</BigScreen>
+                            <BigScreen>{t('delete')}</BigScreen>
                             <MobileImg src={price == 0 ? "/Calculation/delete-disabled.svg" : "/Calculation/delete.svg"} alt="delete-button"></MobileImg>
                         </FooterBtnDelete>
                     </CalculationFooterRight>

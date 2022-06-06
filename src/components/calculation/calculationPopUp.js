@@ -2,11 +2,14 @@ import React, { useEffect, useRef, useState } from "react";
 import { useDetectClickOutside } from "react-detect-click-outside";
 import styled from "styled-components";
 import OutsideAlerter from "../../hooks/OutsideClose";
+import i18next from 'i18next'
+import { useTranslation } from 'react-i18next'
 
 
 const CalculationPopUp = ({ closePopUp }) => {
 
     // const [open, setOpen] = useState(false);
+    const { t } = useTranslation();
 
 
     // setTimeout(() => {
@@ -40,12 +43,11 @@ const CalculationPopUp = ({ closePopUp }) => {
                         </CloseBtn>
                     </CloseBtnContainer>
                     <PopUpImg src="/Logo/logo-big.svg" alt="logo" />
-                    <PopUpInfo className="tertiaryButtonText">Пожалуйста, введите адрес электронной почты.
-                        На него мы вышлем расчет стоимости приложения.</PopUpInfo>
-                    <PopUpInput placeholder="Имя*" required></PopUpInput>
+                    <PopUpInfo className="tertiaryButtonText">{t('enter_email')}</PopUpInfo>
+                    <PopUpInput placeholder={`${t('name')}`} required></PopUpInput>
                     <PopUpInput placeholder="Email*" type="email" required></PopUpInput>
-                    <PopUpInput placeholder="Телефон (необязательно)"></PopUpInput>
-                    <PopUpBtn className="primaryButtonText" id="email">Отправить</PopUpBtn>
+                    <PopUpInput placeholder={`${t(`phone`)}`}></PopUpInput>
+                    <PopUpBtn className="primaryButtonText" id="email">{t('send')}</PopUpBtn>
                 </PopUpContainer>
             </PopUpWrapper>
 

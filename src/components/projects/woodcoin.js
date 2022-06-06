@@ -11,6 +11,8 @@ import { Image, ImageGroup } from 'react-fullscreen-image';
 import { usePersistentStore } from '../../store';
 import { getSnapshot } from 'mobx-state-tree';
 import { observer } from 'mobx-react-lite';
+import i18next from 'i18next'
+import { useTranslation } from 'react-i18next'
 
 
 
@@ -19,6 +21,7 @@ const Pims = () => {
     const { projects } = usePersistentStore();
 
     const woodcoin = getSnapshot(projects.projects[2]);
+    const { t } = useTranslation();
 
     // console.log(pims)
 
@@ -108,14 +111,14 @@ const Pims = () => {
             <Container>
                 <Title>{woodcoin.name}</Title>
                 <About>
-                    <AboutTitle>Woodcoin: Crypto Currency You Can Rely On</AboutTitle>
-                    <AboutText>Мультивалютный крипто-кошелек - это челендж, который приняла наша команда. Стояла задача написать кросс-платформенное решение для хранения монет LOG и других криптовалют. На выполнение задачи был отведен 1 месяц.</AboutText>
-                    <AboutText>Мы создали с нуля мобильное приложение под Android и iOS. Пользователи приложения могут хранить/отправлять/принимать криптовалюту LOG и другие валюты прямо на телефоне. В ходе работы разработчикам пришлось дописывать программный комплекс Woodcoin для интеграции с мобильным приложением.</AboutText>
-                    <AboutText>Решение разрабатывалось нами в течение 32-ух календарных дней. Сейчас вы можете скачать результаты нашей работы в плэй-маркетах вашего телефона.</AboutText>
+                    <AboutTitle>{t('woodcoin_title')}</AboutTitle>
+                    <AboutText>{t('woodcoin_1')}</AboutText>
+                    <AboutText>{t('woodcoin_2')}</AboutText>
+                    <AboutText>{t('woodcoin_3')}</AboutText>
                 </About>
                 <Techonolgy>
                     <TechonologyTitle>
-                        <h2 style={{ margin: "unset" }}>Технологии</h2>
+                        <h2 style={{ margin: "unset" }}>{t('technology')}</h2>
                     </TechonologyTitle>
                     {
                         woodcoin.techology.map((e, i) =>
@@ -129,8 +132,8 @@ const Pims = () => {
                     }
                 </Techonolgy>
                 <CostContainer>
-                    <CostTitle>Стоимость разработки: </CostTitle>
-                    <Cost>от {woodcoin.cost.toString().split('').reverse().map((e, i) =>
+                    <CostTitle>{t('cost')} </CostTitle>
+                    <Cost>{t('from')} {woodcoin.cost.toString().split('').reverse().map((e, i) =>
                         e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
                     ).reverse().join('')} &#8381;</Cost>
                 </CostContainer>
