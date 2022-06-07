@@ -26,7 +26,7 @@ const Pims = () => {
     const currentLanguageCode = cookies.get('i18next') || 'ru';
 
 
-    const price = (currentLanguageCode == 'ru') ? woodcoin.cost : woodcoin.costUSD ;
+    const price = (currentLanguageCode == 'ru') ? woodcoin.cost : woodcoin.costUSD;
     const money = (currentLanguageCode == 'ru') ? <>&#8381;</> : <>&#36;</>;
 
     // console.log(pims)
@@ -123,16 +123,30 @@ const Pims = () => {
                     <AboutText>{t('woodcoin_3')}</AboutText>
                 </About>
                 <LinkContainer>
-                {
-                    (currentLanguageCode == 'ru') ? 
                     <a href='https://apps.apple.com/ru/app/woodcoinwallet/id1618671502?l=ru' target="_blank">
-                        <LinkImage src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567044/daark/Projects/downloadAppStore_ymttuc.svg" />
-                    </a>
-                    : 
-                    <a href='https://apps.apple.com/ru/app/woodcoinwallet/id1618671502?l=ru' target="_blank">
-                        <LinkImage src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654602721/daark/Projects/Download_on_the_App_Store_US.svg" />
-                    </a>
-                }
+                    {
+                        (currentLanguageCode == 'ru') ?
+                            <>
+                                <a href='https://apps.apple.com/ru/app/woodcoinwallet/id1618671502?l=ru' target="_blank">
+                                    <LinkImage src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567044/daark/Projects/downloadAppStore_ymttuc.svg" />
+                                </a>
+                                {/* <a href='https://play.google.com/store/apps/details?id=com.hermesus.woodcoin' target="_blank">
+                                    <LinkImage src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654604363/daark/Projects/Google_Play-Badge-Logo.svg" />
+                                </a> */}
+                            </>
+
+                            :
+                            <>
+                                <a href='https://apps.apple.com/ru/app/woodcoinwallet/id1618671502?l=ru' target="_blank">
+                                    <LinkImage src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654602721/daark/Projects/Download_on_the_App_Store_US.svg" />
+                                </a>
+                                {/* <a href='https://play.google.com/store/apps/details?id=com.hermesus.woodcoin' target="_blank">
+                                    <LinkImageGoogle src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654604363/daark/Projects/Google_Play-Badge-Logo.svg" />
+                                </a> */}
+                            </>
+                    }
+
+
                 </LinkContainer>
                 <Techonolgy>
                     <TechonologyTitle>
@@ -340,4 +354,11 @@ const LinkImage = styled.img`
         width: 210px;
         height: 70px;
     }
+`
+
+const LinkImageGoogle = styled.img`
+    margin-top: 20px;
+    width: 75px;
+    height: 50px;
+
 `
