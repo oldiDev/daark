@@ -15,6 +15,8 @@ import { observer } from 'mobx-react-lite';
 
 import i18next from 'i18next'
 import { useTranslation } from 'react-i18next'
+import cookies from 'js-cookie'
+import { languages } from '../..';
 
 
 
@@ -24,8 +26,13 @@ const Pims = () => {
 
     const pims = getSnapshot(projects.projects[0]);
     const { t } = useTranslation();
+    const currentLanguageCode = cookies.get('i18next') || 'ru';
+    const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
 
     // console.log(pims)
+
+    const price = (currentLanguageCode == 'ru') ? pims.cost : pims.costUSD ;
+    const money = (currentLanguageCode == 'ru') ? <>&#8381;</> : <>&#36;</>;
 
 
     return (
@@ -137,9 +144,9 @@ const Pims = () => {
 
                 <CostContainer>
                     <CostTitle>{t('cost')}</CostTitle>
-                    <Cost>{t('from')} {pims.cost.toString().split('').reverse().map((e, i) =>
+                    <Cost>{t('from')} {price.toString().split('').reverse().map((e, i) =>
                         e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
-                    ).reverse().join('')} &#8381;</Cost>
+                    ).reverse().join('')} {money}</Cost>
                 </CostContainer>
             </Container>
             <Footer />

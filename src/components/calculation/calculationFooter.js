@@ -95,7 +95,7 @@ const CalculationFooter = ({ price }) => {
     // cost = (currentLanguageCode == 'en') ? Math.ceil(price / currency) : price;
     // console.log("=====", cost, "=====");
 
-    let money = (currentLanguageCode == 'ru') ? <>&#8381;</> : <>&#36;</>
+    const money = (currentLanguageCode == 'ru') ? <>&#8381;</> : <>&#36;</>
 
 
     return (

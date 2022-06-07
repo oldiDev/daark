@@ -16,7 +16,8 @@ const Projects = types
         name: types.string,
         swiper: types.optional(types.array(SwiperType), []),
         techology: types.optional(types.array(TechonolgyType), []),
-        cost: types.number
+        cost: types.number,
+        costUSD: types.number,
     })
 
 const ProjectsStore = types

@@ -15,8 +15,8 @@ const About = () => {
     const { team } = usePersistentStore();
     const { t } = useTranslation();
 
-    const currentLanguageCode = cookies.get('i18next') || 'ru'
-    const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
+    const currentLanguageCode = cookies.get('i18next') || 'ru';
+    const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
 
 
     // console.log(getSnapshot(team.team));
