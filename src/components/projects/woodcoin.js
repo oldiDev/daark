@@ -123,16 +123,15 @@ const Pims = () => {
                     <AboutText>{t('woodcoin_3')}</AboutText>
                 </About>
                 <LinkContainer>
-                    <a href='https://apps.apple.com/ru/app/woodcoinwallet/id1618671502?l=ru' target="_blank">
                     {
                         (currentLanguageCode == 'ru') ?
                             <>
                                 <a href='https://apps.apple.com/ru/app/woodcoinwallet/id1618671502?l=ru' target="_blank">
                                     <LinkImage src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567044/daark/Projects/downloadAppStore_ymttuc.svg" />
                                 </a>
-                                {/* <a href='https://play.google.com/store/apps/details?id=com.hermesus.woodcoin' target="_blank">
-                                    <LinkImage src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654604363/daark/Projects/Google_Play-Badge-Logo.svg" />
-                                </a> */}
+                                <a href='https://play.google.com/store/apps/details?id=com.hermesus.woodcoin' target="_blank">
+                                    <LinkImageGoogle src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654608306/daark/Projects/google-play-badge-ru_vr53it.svg" />
+                                </a>
                             </>
 
                             :
@@ -140,9 +139,9 @@ const Pims = () => {
                                 <a href='https://apps.apple.com/ru/app/woodcoinwallet/id1618671502?l=ru' target="_blank">
                                     <LinkImage src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654602721/daark/Projects/Download_on_the_App_Store_US.svg" />
                                 </a>
-                                {/* <a href='https://play.google.com/store/apps/details?id=com.hermesus.woodcoin' target="_blank">
-                                    <LinkImageGoogle src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654604363/daark/Projects/Google_Play-Badge-Logo.svg" />
-                                </a> */}
+                                <a href='https://play.google.com/store/apps/details?id=com.hermesus.woodcoin' target="_blank">
+                                    <LinkImageGoogle src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654608103/daark/Projects/google-play-badge_clmwsc.svg" />
+                                </a>
                             </>
                     }
 
@@ -346,7 +345,7 @@ const LinkContainer = styled.div`
 `
 
 const LinkImage = styled.img`
-    margin-top: 20px;
+    margin-top: 10px;
     width: 150px;
     height: 50px;
 
@@ -357,8 +356,13 @@ const LinkImage = styled.img`
 `
 
 const LinkImageGoogle = styled.img`
-    margin-top: 20px;
-    width: 75px;
-    height: 50px;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 165px;
+    height: 62px;
 
+    @media screen and (max-width: 767px){
+        width: 227px;
+        height: 85px;
+    }
 `
