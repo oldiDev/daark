@@ -1,6 +1,6 @@
+import React, { useEffect } from "react";
 import { observer } from "mobx-react-lite";
 import { getSnapshot } from "mobx-state-tree";
-import React, { useEffect } from "react";
 import styled from "styled-components";
 import {
     AppData,
@@ -14,12 +14,18 @@ import { usePersistentStore } from "../../store";
 import CalculationFooter from "./calculationFooter";
 import i18next from 'i18next'
 import { useTranslation } from 'react-i18next'
+import cookies from 'js-cookie'
+import { languages } from "../..";
 import '../../index.css'
 
 const Calculation = () => {
 
     const { calculation, setCalculation, removePojectTypeSelection } = usePersistentStore();
     const { t } = useTranslation();
+    
+    const currentLanguageCode = cookies.get('i18next') || 'ru'
+    const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
+
 
     let fullPrice = 0;
     let activeProjectType = false;
@@ -95,7 +101,7 @@ const Calculation = () => {
                             calculation.projectType?.map((e, i) =>
                                 <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeProjectType ? e.togle : null}>
                                     <CalculationImage src={e.isSelected ? e.ProjectTypeIcon.split('.')[0] + '-blue.svg' : e.ProjectTypeIcon} alt="logo" />
-                                    <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{e.ProjectTypeName}</CalculationInputTitle>
+                                    <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{currentLanguageCode == "ru" ? e.ProjectTypeName :  e.ProjectTypeNameENG}</CalculationInputTitle>
                                 </CalculationInput>
                             )
                         }
@@ -108,7 +114,7 @@ const Calculation = () => {
                             calculation.uniqueScreen?.map((e, i) =>
                                 <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeUniqueScreen ? e.togle : null}>
                                     <CalculationImage src={e.isSelected ? e.UniqueScreenIcon.split('.')[0] + '-blue.svg' : e.UniqueScreenIcon} alt="logo" />
-                                    <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{e.UniqueScreenName}</CalculationInputTitle>
+                                    <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{currentLanguageCode == "ru" ? e.UniqueScreenName : e.UniqueScreenNameENG}</CalculationInputTitle>
                                 </CalculationInput>
                             )
                         }
@@ -121,7 +127,7 @@ const Calculation = () => {
                             calculation.degreeDevelopment?.map((e, i) =>
                                 <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeDegreeDevelopment ? e.togle : null}>
                                     <CalculationImage src={e.isSelected ? e.DegreeDevelopmentIcon.split('.')[0] + '-blue.svg' : e.DegreeDevelopmentIcon} alt="logo" />
-                                    <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{e.DegreeDevelopmentName}</CalculationInputTitle>
+                                    <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{currentLanguageCode == "ru" ? e.DegreeDevelopmentName : e.DegreeDevelopmentNameENG}</CalculationInputTitle>
                                 </CalculationInput>
                             )
                         }
@@ -134,7 +140,7 @@ const Calculation = () => {
                             calculation.functions?.map((e, i) =>
                                 <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeFunctions ? e.togle : null}>
                                     <CalculationImage src={e.isSelected ? e.FunctionsIcon.split('.')[0] + '-blue.svg' : e.FunctionsIcon} alt="logo" />
-                                    <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{e.FunctionsName}</CalculationInputTitle>
+                                    <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{currentLanguageCode == "ru" ? e.FunctionsName : e.FunctionsNameENG}</CalculationInputTitle>
                                 </CalculationInput>
                             )
                         }
@@ -147,7 +153,7 @@ const Calculation = () => {
                             calculation.services?.map((e, i) =>
                                 <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeFunctions ? e.togle : removePojectTypeSelection}>
                                     <CalculationImage src={e.isSelected ? e.ServicesIcon.split('.')[0] + '-blue.svg' : e.ServicesIcon} alt="logo" />
-                                    <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{e.ServicesName}</CalculationInputTitle>
+                                    <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{currentLanguageCode == "ru" ? e.ServicesName : e.ServicesNameENG}</CalculationInputTitle>
                                 </CalculationInput>
                             )
                         }
