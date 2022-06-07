@@ -5,8 +5,11 @@ import { getSnapshot } from "mobx-state-tree";
 import styled from "styled-components";
 import { usePersistentStore } from "../../store";
 import CalculationPopUp from "./calculationPopUp";
-import i18next from 'i18next'
-import { useTranslation } from 'react-i18next'
+import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
+import axios from "axios";
+import cookies from 'js-cookie'
+import { languages } from "../..";
 
 
 // let useClickOutside = (handler) => {
@@ -36,6 +39,7 @@ const CalculationFooter = ({ price }) => {
     const [show, setShow] = useState(false);
     const { removeAnySelection } = usePersistentStore();
     const { t } = useTranslation();
+    const [cost, setCost] = useState(price);
 
     let handleDelete = () => {
         removeAnySelection();
@@ -53,22 +57,79 @@ const CalculationFooter = ({ price }) => {
         setShow(!show);
     }
 
+    const currentLanguageCode = cookies.get('i18next') || 'ru'
+    const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
+
+    let currency = 0;
+    // let cost = 0;
+
+    if (currentLanguageCode == 'en') {
+        const axios = require("axios");
+
+        const options = {
+            method: 'GET',
+            url: 'https://www.cbr-xml-daily.ru/daily_json.js',
+        };
+
+        axios
+            .request(options)
+            .then(function (response) {
+                // console.log(response.data);
+                currency = Math.ceil(Math.ceil(response.data.Valute.USD.Value) / 10) * 10;
+                console.log(currency);
+            })
+            .then(() => {
+                // let cost = price;
+                // console.log(cost);
+                setCost((currentLanguageCode == 'en') ? Math.ceil(price / currency) : price);
+                // console.log("=====", cost, "=====");
+
+            })
+            .catch(function (error) {
+                console.error(error);
+            });
+    }
+
+    // let cost = price;
+    // console.log(cost);
+    // cost = (currentLanguageCode == 'en') ? Math.ceil(price / currency) : price;
+    // console.log("=====", cost, "=====");
+
+    let money = (currentLanguageCode == 'ru') ? <>&#8381;</> : <>&#36;</>
+
+
     return (
         <>
             <CalculationFooterWrapper>
                 <CalculationFooterContainer>
                     <CalculationFooterLeft>
                         <FooterTitle>{t('cost_footer')}</FooterTitle>
-                        <Price>{price.toString().split('').reverse().map((e, i) =>
-                            e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
-                        ).reverse().join('')} &#8381;</Price>
+                        <Price>
+                            {
+                                (currentLanguageCode == 'ru') ?
+                                    price.toString().split('').reverse().map((e, i) =>
+                                        e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
+                                    ).reverse().join('') :
+                                    cost.toString().split('').reverse().map((e, i) =>
+                                        e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
+                                    ).reverse().join('')
+                            } {money}
+                        </Price>
                     </CalculationFooterLeft>
                     <CalculationFooterRight>
                         <FooterBtn className="primaryButtonText" disabled={price == 0} onClick={togglePopUp} style={price == 0 ? { backgroundColor: "var(--LightGrey)", color: "var(--MediumGrey)" } : { backgroundColor: "var(--Blue)" }}>
                             <BigScreen>{t('get_price')}</BigScreen>
-                            <MobileText>{price.toString().split('').reverse().map((e, i) =>
-                                e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
-                            ).reverse().join('')} &#8381;</MobileText>
+                            <MobileText>
+                                {
+                                    (currentLanguageCode == 'ru') ?
+                                        price.toString().split('').reverse().map((e, i) =>
+                                            e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
+                                        ).reverse().join('') :
+                                        cost.toString().split('').reverse().map((e, i) =>
+                                            e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
+                                        ).reverse().join('')
+                                } {money}
+                            </MobileText>
                         </FooterBtn>
                         <FooterBtnDelete className="tertiaryButtonText" disabled={price == 0} onClick={handleDelete} style={price == 0 ? { color: "var(--MediumGrey)" } : { color: "var(--Blue)" }}>
                             <BigScreen>{t('delete')}</BigScreen>

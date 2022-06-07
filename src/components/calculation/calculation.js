@@ -22,7 +22,7 @@ const Calculation = () => {
 
     const { calculation, setCalculation, removePojectTypeSelection } = usePersistentStore();
     const { t } = useTranslation();
-    
+
     const currentLanguageCode = cookies.get('i18next') || 'ru'
     const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
 
@@ -101,7 +101,7 @@ const Calculation = () => {
                             calculation.projectType?.map((e, i) =>
                                 <CalculationInput key={i} style={e.isSelected ? { borderColor: "#007AFF" } : { borderColor: "white" }} onClick={activeProjectType ? e.togle : null}>
                                     <CalculationImage src={e.isSelected ? e.ProjectTypeIcon.split('.')[0] + '-blue.svg' : e.ProjectTypeIcon} alt="logo" />
-                                    <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{currentLanguageCode == "ru" ? e.ProjectTypeName :  e.ProjectTypeNameENG}</CalculationInputTitle>
+                                    <CalculationInputTitle className="primaryButtonText" style={e.isSelected ? { color: "#007AFF" } : { color: "var(--DarkGrey)" }}>{currentLanguageCode == "ru" ? e.ProjectTypeName : e.ProjectTypeNameENG}</CalculationInputTitle>
                                 </CalculationInput>
                             )
                         }
