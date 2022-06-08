@@ -1,0 +1,20 @@
+version: '3.3'
+services:
+   daark:
+      container_name: oldi_stat_server
+      image: oldi_stat_server:1.0.1
+      build:
+          context: .
+          # target: development
+          dockerfile: ./Dockerfile
+      # command: npm run start
+      ports:
+          - 3080:3000
+      env_file:
+        - .env
+      environment:
+        - IS_DOCKER=true
+      volumes:
+          - .:/usr/src/app
+          - /usr/src/app/node_modules
+      restart: unless-stopped
