@@ -1,10 +1,13 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
+import i18next from 'i18next'
+import { useTranslation } from 'react-i18next'
 
 const FooterMobile = () => {
 
     let location = useLocation();
+    const { t } = useTranslation();
 
     return (
         <ContactsFooter>
@@ -15,12 +18,12 @@ const FooterMobile = () => {
                             (location.pathname == '/' || location.pathname == '/pims' || location.pathname == '/vpn' || location.pathname == '/woodcoin' || location.pathname == '/fs')  ?
                                 <>
                                     <TabImg src="/iPhoneImage/TabBar/projects-blue.svg" alt="projects"></TabImg>
-                                    <TabLabel className="labelSmall blue">Наши проекты</TabLabel>
+                                    <TabLabel className="labelSmall blue">{t('our_projects')}</TabLabel>
                                 </>
                                 :
                                 <>
                                     <TabImg src="/iPhoneImage/TabBar/projects.svg" alt="projects"></TabImg>
-                                    <TabLabel className="labelSmall">Наши проекты</TabLabel>
+                                    <TabLabel className="labelSmall">{t('our_projects')}</TabLabel>
                                 </>
                         }
                     </IosTab>
@@ -31,12 +34,12 @@ const FooterMobile = () => {
                             (location.pathname == '/contacts') ?
                                 <>
                                     <TabImg src="/iPhoneImage/TabBar/contacts-blue.svg" alt="projects"></TabImg>
-                                    <TabLabel className="labelSmall blue">Контакты</TabLabel>
+                                    <TabLabel className="labelSmall blue">{t('contacts')}</TabLabel>
                                 </>
                                 :
                                 <>
                                     <TabImg src="/iPhoneImage/TabBar/contacts.svg" alt="projects"></TabImg>
-                                    <TabLabel className="labelSmall">Контакты</TabLabel>
+                                    <TabLabel className="labelSmall">{t('contacts')}</TabLabel>
                                 </>
                         }
                     </IosTab>
@@ -47,12 +50,12 @@ const FooterMobile = () => {
                             location.pathname == '/calculation' ?
                                 <>
                                     <TabImg src="/iPhoneImage/TabBar/calculation-blue.svg" alt="projects"></TabImg>
-                                    <TabLabel className="labelSmall blue">Калькулятор</TabLabel>
+                                    <TabLabel className="labelSmall blue">{t('calculator')}</TabLabel>
                                 </>
                                 :
                                 <>
                                     <TabImg src="/iPhoneImage/TabBar/calculation.svg" alt="projects"></TabImg>
-                                    <TabLabel className="labelSmall">Калькулятор</TabLabel>
+                                    <TabLabel className="labelSmall">{t('calculator')}</TabLabel>
                                 </>
 
                         }
@@ -64,12 +67,12 @@ const FooterMobile = () => {
                             location.pathname == '/about' ?
                                 <>
                                     <TabImg src="/iPhoneImage/TabBar/about-blue.svg" alt="projects"></TabImg>
-                                    <TabLabel className="labelSmall blue">О нас</TabLabel>
+                                    <TabLabel className="labelSmall blue">{t('about')}</TabLabel>
                                 </>
                                 :
                                 <>
                                     <TabImg src="/iPhoneImage/TabBar/about.svg" alt="projects"></TabImg>
-                                    <TabLabel className="labelSmall">О нас</TabLabel>
+                                    <TabLabel className="labelSmall">{t('about')}</TabLabel>
                                 </>
                         }
 

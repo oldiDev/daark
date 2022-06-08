@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import IphoneContact from "./iPhoneContact";
 import IphoneMain from "./iPhoneMain";
-import IphonePims from "./IPhonePims";
-import IphoneVPN from "./iPhoneVPN";
-import IphoneWoodcoin from "./iPhoneWoodcoin";
+import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 const IPhone = ({ bgcolor }) => {
 
     let location = useLocation();
+    const { t } = useTranslation()
 
     const [time, setTime] = React.useState(new Date());
 
@@ -20,21 +20,9 @@ const IPhone = ({ bgcolor }) => {
                 return <IphoneMain />;
             case '/contacts':
                 return <IphoneContact />;
-            // case '/pims':
-            //     return <IphonePims />;
-            case '/woodcoin':
-                return <IphoneWoodcoin />;
-            case '/vpn':
-                return <IphoneVPN />;
         }
     }
 
-    let renderApps = (param) => {
-        switch (param) {
-            case '/pims':
-                return <IphonePims />;
-        }
-    }
 
     React.useEffect(() => {
         setInterval(() => {
@@ -71,12 +59,12 @@ const IPhone = ({ bgcolor }) => {
                                                 (location.pathname == '/') ?
                                                     <>
                                                         <img src="/iPhoneImage/TabBar/projects-blue.svg" alt="projects"></img>
-                                                        <span className="labelSmall blue">Наши проекты</span>
+                                                        <span className="labelSmall blue">{t('our_projects')}</span>
                                                     </>
                                                     :
                                                     <>
                                                         <img src="/iPhoneImage/TabBar/projects.svg" alt="projects"></img>
-                                                        <span className="labelSmall">Наши проекты</span>
+                                                        <span className="labelSmall">{t('our_projects')}</span>
                                                     </>
                                             }
                                         </IosTab>
@@ -87,12 +75,12 @@ const IPhone = ({ bgcolor }) => {
                                                 (location.pathname == '/contacts') ?
                                                     <>
                                                         <img src="/iPhoneImage/TabBar/contacts-blue.svg" alt="projects"></img>
-                                                        <span className="labelSmall blue">Контакты</span>
+                                                        <span className="labelSmall blue">{t('contacts')}</span>
                                                     </>
                                                     :
                                                     <>
                                                         <img src="/iPhoneImage/TabBar/contacts.svg" alt="projects"></img>
-                                                        <span className="labelSmall">Контакты</span>
+                                                        <span className="labelSmall">{t('contacts')}</span>
                                                     </>
                                             }
                                         </IosTab>
@@ -100,13 +88,13 @@ const IPhone = ({ bgcolor }) => {
                                     <Link to="/calculation">
                                         <IosTab>
                                             <img src="/iPhoneImage/TabBar/calculation.svg" alt="projects"></img>
-                                            <span className="labelSmall">Калькулятор</span>
+                                            <span className="labelSmall">{t('calculator')}</span>
                                         </IosTab>
                                     </Link>
                                     <Link to="/about">
                                         <IosTab>
                                             <img src="/iPhoneImage/TabBar/about.svg" alt="projects"></img>
-                                            <span className="labelSmall">О нас</span>
+                                            <span className="labelSmall">{t('about')}</span>
                                         </IosTab>
                                     </Link>
                                 </Tabs>

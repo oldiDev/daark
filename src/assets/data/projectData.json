@@ -55,7 +55,8 @@
           "name": "Cloudinary"
         }
       ],
-      "cost": 7000000
+      "cost": 7000000,
+      "costUSD": 100000
     },
     {
       "name": "VPN World",
@@ -79,8 +80,8 @@
           "name": "TypeScript"
         },
         {
-          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566643/daark/Projects/technology/swift_dsfbkk.svg",
-          "name": "Swift"
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1654516246/daark/Projects/technology/obj-c_btj7po.svg",
+          "name": "Objective-C"
         },
         {
           "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566641/daark/Projects/technology/java_mmq165.svg",
@@ -91,7 +92,7 @@
           "name": "React Native"
         },
         {
-          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566643/daark/Projects/technology/swift_dsfbkk.svg",
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566641/daark/Projects/technology/rust_tlxmco.svg",
           "name": "Rust"
         },
         {
@@ -111,7 +112,8 @@
           "name": "Figma"
         }
       ],
-      "cost": 1000000
+      "cost": 1000000,
+      "costUSD": 15000
     },
     {
       "name": "Woodcoin Wallet",
@@ -164,7 +166,8 @@
           "name": "Figma"
         }
       ],
-      "cost": 3500000
+      "cost": 3500000,
+      "costUSD": 50000
     },
     {
       "name": "FootSkill",
@@ -197,7 +200,8 @@
           "name": "Axios"
         }
       ],
-      "cost": 10000
+      "cost": 10000,
+      "costUSD": 2000
     }
   ]
 }

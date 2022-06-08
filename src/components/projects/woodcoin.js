@@ -11,6 +11,9 @@ import { Image, ImageGroup } from 'react-fullscreen-image';
 import { usePersistentStore } from '../../store';
 import { getSnapshot } from 'mobx-state-tree';
 import { observer } from 'mobx-react-lite';
+import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
+import cookies from 'js-cookie';
 
 
 
@@ -19,6 +22,12 @@ const Pims = () => {
     const { projects } = usePersistentStore();
 
     const woodcoin = getSnapshot(projects.projects[2]);
+    const { t } = useTranslation();
+    const currentLanguageCode = cookies.get('i18next') || 'ru';
+
+
+    const price = (currentLanguageCode == 'ru') ? woodcoin.cost : woodcoin.costUSD;
+    const money = (currentLanguageCode == 'ru') ? <>&#8381;</> : <>&#36;</>;
 
     // console.log(pims)
 
@@ -108,14 +117,39 @@ const Pims = () => {
             <Container>
                 <Title>{woodcoin.name}</Title>
                 <About>
-                    <AboutTitle>Woodcoin: Crypto Currency You Can Rely On</AboutTitle>
-                    <AboutText>Мультивалютный крипто-кошелек - это челендж, который приняла наша команда. Стояла задача написать кросс-платформенное решение для хранения монет LOG и других криптовалют. На выполнение задачи был отведен 1 месяц.</AboutText>
-                    <AboutText>Мы создали с нуля мобильное приложение под Android и iOS. Пользователи приложения могут хранить/отправлять/принимать криптовалюту LOG и другие валюты прямо на телефоне. В ходе работы разработчикам пришлось дописывать программный комплекс Woodcoin для интеграции с мобильным приложением.</AboutText>
-                    <AboutText>Решение разрабатывалось нами в течение 32-ух календарных дней. Сейчас вы можете скачать результаты нашей работы в плэй-маркетах вашего телефона.</AboutText>
+                    <AboutTitle>{t('woodcoin_title')}</AboutTitle>
+                    <AboutText>{t('woodcoin_1')}</AboutText>
+                    <AboutText>{t('woodcoin_2')}</AboutText>
+                    <AboutText>{t('woodcoin_3')}</AboutText>
                 </About>
+                <LinkContainer>
+                    {
+                        (currentLanguageCode == 'ru') ?
+                            <>
+                                <a href='https://apps.apple.com/ru/app/woodcoinwallet/id1618671502?l=ru' target="_blank">
+                                    <LinkImage src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567044/daark/Projects/downloadAppStore_ymttuc.svg" />
+                                </a>
+                                <a href='https://play.google.com/store/apps/details?id=com.hermesus.woodcoin' target="_blank">
+                                    <LinkImageGoogle src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654608306/daark/Projects/google-play-badge-ru_vr53it.svg" />
+                                </a>
+                            </>
+
+                            :
+                            <>
+                                <a href='https://apps.apple.com/ru/app/woodcoinwallet/id1618671502?l=ru' target="_blank">
+                                    <LinkImage src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654602721/daark/Projects/Download_on_the_App_Store_US.svg" />
+                                </a>
+                                <a href='https://play.google.com/store/apps/details?id=com.hermesus.woodcoin' target="_blank">
+                                    <LinkImageGoogle src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654608103/daark/Projects/google-play-badge_clmwsc.svg" />
+                                </a>
+                            </>
+                    }
+
+
+                </LinkContainer>
                 <Techonolgy>
                     <TechonologyTitle>
-                        <h2 style={{ margin: "unset" }}>Технологии</h2>
+                        <h2 style={{ margin: "unset" }}>{t('technology')}</h2>
                     </TechonologyTitle>
                     {
                         woodcoin.techology.map((e, i) =>
@@ -129,10 +163,10 @@ const Pims = () => {
                     }
                 </Techonolgy>
                 <CostContainer>
-                    <CostTitle>Стоимость разработки: </CostTitle>
-                    <Cost>от {woodcoin.cost.toString().split('').reverse().map((e, i) =>
+                    <CostTitle>{t('cost')} </CostTitle>
+                    <Cost>{t('from')} {price.toString().split('').reverse().map((e, i) =>
                         e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
-                    ).reverse().join('')} &#8381;</Cost>
+                    ).reverse().join('')} {money}</Cost>
                 </CostContainer>
             </Container>
             <Footer />
@@ -302,4 +336,33 @@ const ProjectImg = styled.img`
     height: 700px;
     border-radius: 24px;
     box-shadow: 8px 10px 20px 4px rgba(0, 0, 0, 0.15);
+`
+const LinkContainer = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+`
+
+const LinkImage = styled.img`
+    margin-top: 10px;
+    width: 150px;
+    height: 50px;
+
+    @media screen and (max-width: 767px){
+        width: 210px;
+        height: 70px;
+    }
+`
+
+const LinkImageGoogle = styled.img`
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 165px;
+    height: 62px;
+
+    @media screen and (max-width: 767px){
+        width: 227px;
+        height: 85px;
+    }
 `

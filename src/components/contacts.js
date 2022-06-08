@@ -4,10 +4,15 @@ import styled from "styled-components";
 import FooterMobile from "./footerMobile";
 import Footer from "./footer";
 import IPhone from "./iPhone/iPhone";
+import i18next from 'i18next'
+import { useTranslation } from 'react-i18next'
+
+
 
 const Contacts = () => {
 
     let location = useLocation();
+    const { t } = useTranslation();
 
     return (
         <>
@@ -17,9 +22,9 @@ const Contacts = () => {
                 </ContactsLaptop>
                 <IphoneContactsContainer>
                     <MobileImg src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653568463/daark/iPhoneImage/Contacts/avatar_gel4a1.svg"></MobileImg>
-                    <h1 className="SF_h1">Данила Ворновицкий</h1>
+                    <h1 className="SF_h1">{t('Dan')}</h1>
                     <Mobile>
-                        <MobileTitle className="SF_bodySmall">мобильный</MobileTitle>
+                        <MobileTitle className="SF_bodySmall">{t('mobile')}</MobileTitle>
                         <MobileLink className="SF_body" href="tel:+79999797515">
                             +7 (999) 979-75-15
                         </MobileLink>
@@ -32,11 +37,10 @@ const Contacts = () => {
                     </Email>
                     <Address>
                         <AddressLeftSide>
-                            <MobileTitle className="SF_bodySmall">адрес</MobileTitle>
+                            <MobileTitle className="SF_bodySmall">{t('address_iPhone')}</MobileTitle>
                             <AddressContent className="SF_body">
-                                <span>Москва,</span>
-                                <span>ул. Малышева 20,</span>
-                                <span>109390</span>
+                                <span>{t('city')}</span>
+                                <span>{t('street')}</span>
                             </AddressContent>
                         </AddressLeftSide>
                         <AddressRightSide>

@@ -4,68 +4,71 @@ import styled from "styled-components";
 import FooterMobile from "./footerMobile";
 import Footer from "./footer";
 import IPhone from "./iPhone/iPhone";
+import i18next from 'i18next'
+import { useTranslation } from 'react-i18next'
 
 const Main = () => {
+    const { t } = useTranslation()
 
     return (
         <>
             <MainContainer>
                 <MainLeftSide>
                     <LeftSideSwap>
-                        <FirstString>Цифровое решение для вашего бизнеса</FirstString>
-                        <SecondString>Полный цикл разработки</SecondString>
-                        <ThirdString>Уникальные решения</ThirdString>
+                        <FirstString>{t('digital_solution')}</FirstString>
+                        <SecondString>{t('development_cycle')}</SecondString>
+                        <ThirdString>{t('unique_solutions')}</ThirdString>
                     </LeftSideSwap>
 
                     <OurProjects>
                         <BigScreen>
-                            <div>Наши проекты</div>
+                            <div>{t('our_projects')}</div>
                             <img src="Main/Arrow.svg" alt="arrow"></img>
                         </BigScreen>
                     </OurProjects>
                     <MobileScreen>
                         {/* <IPhone bgcolor={'white'} /> */}
                         {/* <IphoneMainContainer> */}
-                        <IphoneMainTitle className="SF_h2">Наши проекты</IphoneMainTitle>
+                        <IphoneMainTitle className="SF_h2">{t('our_projects')}</IphoneMainTitle>
                         <AppContainer>
                             <AppInfo>
-                                <AppImg src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653568134/daark/iPhoneImage/AppIcon/Pims_bd6jwn.svg" alt="pims"></AppImg>
+                                <AppImg src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654517761/daark/iPhoneImage/AppIcon/PIMS_adjqzt.svg" alt="pims"></AppImg>
                                 <AppName>
                                     <div className="SF_h3">PIMS</div>
-                                    <div className="SF_body dark-grey">Доставка еды</div>
+                                    <div className="SF_body dark-grey">{t('pims_description')}</div>
                                 </AppName>
                             </AppInfo>
                             <Link to="pims">
                                 <OpenBtn>
-                                    <span className="buttonText">Открыть</span>
+                                    <span className="buttonText">{t('open')}</span>
                                 </OpenBtn>
                             </Link>
                         </AppContainer>
                         <AppContainer>
                             <AppInfo>
-                                <AppImg src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653568135/daark/iPhoneImage/AppIcon/Woodkoin_pjwmjc.svg" alt="woodkoin"></AppImg>
+                                <AppImg src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654517761/daark/iPhoneImage/AppIcon/WoodCoin_ux0sbp.svg" alt="woodkoin"></AppImg>
                                 <AppName>
                                     <div className="SF_h3">Woodcoin Wallet</div>
-                                    <div className="SF_body dark-grey">Крипто-кошелёк</div>
+                                    <div className="SF_body dark-grey">{t('woodcoin_description')}</div>
                                 </AppName>
                             </AppInfo>
                             <Link to="woodcoin">
                                 <OpenBtn>
-                                    <span className="buttonText">Открыть</span>
+                                    <span className="buttonText">{t('open')}</span>
                                 </OpenBtn>
                             </Link>
                         </AppContainer>
                         <AppContainer>
                             <AppInfo>
-                                <AppImg src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653568134/daark/iPhoneImage/AppIcon/VpnWorld_xp8ggz.svg" alt="VpnWorld"></AppImg>
+                                <AppImg src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654517761/daark/iPhoneImage/AppIcon/VPN_World_suu08e.svg" alt="VpnWorld"></AppImg>
                                 <AppName>
                                     <div className="SF_h3">VPN World</div>
-                                    <div className="SF_body dark-grey">Безопасное подключение</div>
+                                    <div className="SF_body dark-grey">{t('vpn_description')}</div>
                                 </AppName>
                             </AppInfo>
                             <Link to="vpn">
                                 <OpenBtn>
-                                    <span className="buttonText">Открыть</span>
+                                    <span className="buttonText">{t('open')}</span>
                                 </OpenBtn>
                             </Link>
                         </AppContainer>
@@ -79,7 +82,7 @@ const Main = () => {
                             </AppInfo>
                             <Link to="fs">
                                 <OpenBtn>
-                                    <span className="buttonText">Открыть</span>
+                                    <span className="buttonText">{t('open')}</span>
                                 </OpenBtn>
                             </Link>
                         </AppContainer> */}
@@ -257,6 +260,10 @@ const OpenBtn = styled.button`
     border-radius: 24px;
     border: unset;
     cursor: pointer;
+
+    span{
+        text-transform: uppercase;
+    }
 `
 
 export default Main

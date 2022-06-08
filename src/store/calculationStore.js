@@ -22,6 +22,7 @@ const ProjectType = types
     .model('ProjectType', {
         ProjectTypeIcon: types.string,
         ProjectTypeName: types.string,
+        ProjectTypeNameENG: types.string,
         price: types.number,
         isSelected: types.boolean
     })
@@ -38,6 +39,7 @@ const UniqueScreen = types
     .model('UniqueScreen', {
         UniqueScreenIcon: types.string,
         UniqueScreenName: types.string,
+        UniqueScreenNameENG: types.string,
         price: types.number,
         isSelected: types.boolean
     })
@@ -54,6 +56,7 @@ const DegreeDevelopment = types
     .model('DegreeDevelopment', {
         DegreeDevelopmentIcon: types.string,
         DegreeDevelopmentName: types.string,
+        DegreeDevelopmentNameENG: types.string,
         price: types.number,
         isSelected: types.boolean
     })
@@ -70,6 +73,7 @@ const Functions = types
     .model('Functions', {
         FunctionsIcon: types.string,
         FunctionsName: types.string,
+        FunctionsNameENG: types.string,
         price: types.number,
         isSelected: types.boolean
     })
@@ -86,6 +90,7 @@ const Services = types
     .model('Services', {
         ServicesIcon: types.string,
         ServicesName: types.string,
+        ServicesNameENG: types.string,
         price: types.number,
         isSelected: types.boolean
     })

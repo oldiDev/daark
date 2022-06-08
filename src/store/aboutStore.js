@@ -9,6 +9,7 @@ const Team = types
     .model({
         avatar: types.string,
         name: types.string,
+        nameENG: types.string,
         position: types.string,
         stack: types.optional(types.array(StackImg), []),
     })

@@ -13,6 +13,11 @@ import { usePersistentStore } from '../../store';
 import { getSnapshot } from 'mobx-state-tree';
 import { observer } from 'mobx-react-lite';
 
+import i18next from 'i18next'
+import { useTranslation } from 'react-i18next'
+import cookies from 'js-cookie'
+import { languages } from '../..';
+
 
 
 const Pims = () => {
@@ -20,8 +25,14 @@ const Pims = () => {
     const { projects } = usePersistentStore();
 
     const pims = getSnapshot(projects.projects[0]);
+    const { t } = useTranslation();
+    const currentLanguageCode = cookies.get('i18next') || 'ru';
+    const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
 
     // console.log(pims)
+
+    const price = (currentLanguageCode == 'ru') ? pims.cost : pims.costUSD ;
+    const money = (currentLanguageCode == 'ru') ? <>&#8381;</> : <>&#36;</>;
 
 
     return (
@@ -109,14 +120,14 @@ const Pims = () => {
             <Container>
                 <Title>{pims.name}</Title>
                 <About>
-                    <AboutTitle>PIMS – это напиток на основе чая, который перевернет твое сознание, даст природную энергию и прокачает твои вкусовые рецепторы</AboutTitle>
-                    <AboutText>Приложение для доставки напитков PIMS - один из самых интересных проектов, которые создавала наша команда. Стояла задача написать кросс-платформенное решение для клиентов PIMS, которое поможет избежать очередей на кассах и снизить расходы на доставку продукции.</AboutText>
-                    <AboutText>Мы создали с нуля мобильное приложение под Android и iOS, связанное со своей панелью администратора. Через админ-панель сотрудники ресторана редактируют позиции меню, следят за статусами заказа и контролируют доставку напитков. Для оформление доставки мы интегрировали сервисы Яндекса, а для приема оплат была проведена интеграция мобильного SDK банка.</AboutText>
-                    <AboutText>Программный комплекс разрабатывался нами в течение 7-ми месяцев. Сейчас вы можете скачать результаты нашей работы в плэй-маркетах вашего смартфона.</AboutText>
+                    <AboutTitle>{t('pims_title')}</AboutTitle>
+                    <AboutText>{t('pims_1')}</AboutText>
+                    <AboutText>{t('pims_2')}</AboutText>
+                    <AboutText>{t('pims_3')}</AboutText>
                 </About>
                 <Techonolgy>
                     <TechonologyTitle>
-                        <h2 style={{ margin: "unset" }}>Технологии</h2>
+                        <h2 style={{ margin: "unset" }}>{t('technology')}</h2>
                     </TechonologyTitle>
                     {
                         pims.techology.map((e, i) =>
@@ -132,10 +143,10 @@ const Pims = () => {
                 </Techonolgy>
 
                 <CostContainer>
-                    <CostTitle>Стоимость разработки: </CostTitle>
-                    <Cost>от {pims.cost.toString().split('').reverse().map((e, i) =>
+                    <CostTitle>{t('cost')}</CostTitle>
+                    <Cost>{t('from')} {price.toString().split('').reverse().map((e, i) =>
                         e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
-                    ).reverse().join('')} &#8381;</Cost>
+                    ).reverse().join('')} {money}</Cost>
                 </CostContainer>
             </Container>
             <Footer />

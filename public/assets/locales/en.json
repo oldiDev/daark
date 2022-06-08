@@ -1,0 +1,60 @@
+{
+    "main": "Main",
+    "contacts": "Contacts",
+    "calculator": "Calculator",
+    "about": "About",
+    "open": "Open",
+
+    "digital_solution": "A digital solution for your business",
+    "development_cycle" : "Full development cycle",
+    "unique_solutions": "Unique solutions",
+    "our_projects": "Our projects",
+
+    "pims_description": "Food delivery",
+    "pims_title": "PIMS is a tea–based drink that will turn your mind around, give you natural energy and pump your taste buds",
+    "pims_1": "The PIMS beverage delivery app is one of the most interesting projects that our team has created. The task was to write a cross-platform solution for PIMS customers that would help avoid queues at the checkout and reduce the cost of product delivery.",
+    "pims_2": "We have created a mobile application for Android and iOS from scratch, connected to our admin panel. Through the admin panel, restaurant employees edit menu items, monitor order statuses and control the delivery of drinks. We integrated Yandex services for the delivery process, and the bank's mobile SDK was integrated for accepting payments.",
+    "pims_3": "The software package was developed by us for 7 months. Now you can download the results of our work in the play-markets of your smartphone.",
+
+    "woodcoin_description": "Crypto Wallet",
+    "woodcoin_title": "Woodcoin: Crypto Currency You Can Rely On",
+    "woodcoin_1": "A multi-currency crypto wallet is a challenge that our team has accepted. The task was to write a cross-platform solution for storing LOG coins and other cryptocurrencies. 1 month was allotted for the task.",
+    "woodcoin_2": "We have created a mobile application for Android and iOS from scratch. Users of the application can store/send/receive cryptocurrency LOG and other currencies directly on the phone. During the work, the developers had to add the Woodcoin software package for integration with the mobile application.",
+    "woodcoin_3": "The solution was developed by us within 32 calendar days. Now you can download the results of our work in the play store of your phone.",
+
+    "vpn_description": "Secure connection",
+    "vpn_1": "The relevance of VPN applications is growing every day. We thought that the average man in the street does not need a load in the form of server settings and other functionality. Just swipe down and you're online!",
+    "vpn_2": "Our service is easy to use and available on all devices. We created a mobile application for Android and iOS from scratch, and also implemented builds for Windows, macOS, Linux.",
+    "vpn_3": "The solution was developed by us within 22 calendar days. Now you can download the results of our work in the play store of your phone or on the website: ",
+
+    "technology": "Technologies",
+    "cost": "Development cost:",
+    "from": "from",
+    
+    "navigation": "Navigation",
+    "address": "Address",
+    "city": "Moscow",
+    "street": "Malysheva str., 20, 109390",
+
+    "Dan": "Dan Vornovitskii",
+    "mobile": "phone",
+    "address_iPhone": "address",
+
+    "cost_claculation": "Calculate the cost of developing your application",
+    "platform": "What platforms do you want to develop a product for?",
+    "type": "What do you want to get?",
+    "number_of_screens": "How many unique screens will there be in the app?",
+    "interface": "What is the degree of development of the application interface?",
+    "functions": "What features do you want to include in the app?",
+    "other_services": "Which third-party services do you need to interact with?",
+    "disclaimer": "The final cost of application development may differ from the cost indicated in the calculator.",
+    "cost_footer": "The cost of developing your application",
+    "get_price": "Get the cost calculation",
+    "delete": "Clear",
+    "enter_email": "Please enter your email address. We will send you a calculation of the cost of the application.",
+    "name": "Name*",
+    "phone": "Phone number (optional)",
+    "send": "Send",
+
+    "team": "Team DAARK  "
+}

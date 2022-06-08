@@ -3,6 +3,7 @@
     {
       "avatar": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567197/daark/About/avatars/Tema_jugzdq.png",
       "name": "Артём Семёнов",
+      "nameENG": "Artem Semenov",
       "position": "Product manager",
       "stack": [
         {
@@ -46,6 +47,7 @@
     {
       "avatar": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567197/daark/About/avatars/Dan_ffynvn.png",
       "name": "Данила Ворновицкий",
+      "nameENG": "Dan Vornovitskii",
       "position": "UI/UX",
       "stack": [
         {
@@ -80,6 +82,7 @@
     {
       "avatar": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567197/daark/About/avatars/Slava_ggj2al.png",
       "name": "Вячеслав Нестерцев",
+      "nameENG": "Slava Nestertsev",
       "position": "Front-end developer",
       "stack": [
         {
@@ -114,6 +117,7 @@
     {
       "avatar": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567197/daark/About/avatars/Karim_wcc6on.png",
       "name": "Ouazmir Abdelkarim",
+      "nameENG": "Ouazmir Abdelkarim",
       "position": "DevOps engineer",
       "stack": [
         {
@@ -157,6 +161,7 @@
     {
       "avatar": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567197/daark/About/avatars/Kirill_z9eryj.png",
       "name": "Кирилл Алекcеев",
+      "nameENG": "Kirill Alekseev",
       "position": "Fullstack developer",
       "stack": [
         {
@@ -194,6 +199,7 @@
     {
       "avatar": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567197/daark/About/avatars/Shoma_bal70f.png",
       "name": "Шамиль Махмудов",
+      "nameENG": "Shamil Mahmudov",
       "position": "Fullstack developer",
       "stack": [
         {
