@@ -5,6 +5,7 @@ import data from "../assets/data/teamData.json";
 import projectData from '../assets/data/projectData.json'
 import TeamStore from "./aboutStore";
 import ProjectsStore from "./projectStore";
+import calculationData from '../assets/data/calculationData.json'
 
 
 export const RootStore = types.model('RootStore', {
@@ -13,14 +14,6 @@ export const RootStore = types.model('RootStore', {
     projects: types.optional(ProjectsStore, {})
 })
     .actions((self) => ({
-        setCalculation: (appType, projectType, uniqueScreen, degreeDevelopment, functions, services) => {
-            self.calculation.appType = appType;
-            self.calculation.projectType = projectType;
-            self.calculation.uniqueScreen = uniqueScreen;
-            self.calculation.degreeDevelopment = degreeDevelopment;
-            self.calculation.functions = functions;
-            self.calculation.services = services;
-        },
         removeAnySelection: () => {
             self.calculation.appType?.forEach((e) => e.removeSelection());
             self.calculation.projectType?.forEach((e) => e.removeSelection());
@@ -39,7 +32,7 @@ export const [PersistentStoreProvider, usePersistentStore] = createPersistentSto
     RootStore,
     {
         team: data,
-        calculation: {},
+        calculation: calculationData,
         projects: projectData,
     },
 )

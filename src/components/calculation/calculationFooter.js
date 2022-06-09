@@ -74,26 +74,15 @@ const CalculationFooter = ({ price }) => {
         axios
             .request(options)
             .then(function (response) {
-                // console.log(response.data);
                 currency = Math.ceil(Math.ceil(response.data.Valute.USD.Value) / 10) * 10;
-                console.log(currency);
             })
             .then(() => {
-                // let cost = price;
-                // console.log(cost);
                 setCost((currentLanguageCode == 'en') ? Math.ceil(price / currency) : price);
-                // console.log("=====", cost, "=====");
-
             })
             .catch(function (error) {
                 console.error(error);
             });
     }
-
-    // let cost = price;
-    // console.log(cost);
-    // cost = (currentLanguageCode == 'en') ? Math.ceil(price / currency) : price;
-    // console.log("=====", cost, "=====");
 
     const money = (currentLanguageCode == 'ru') ? <>&#8381;</> : <>&#36;</>
 

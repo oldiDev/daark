@@ -36,15 +36,6 @@ const Calculation = () => {
     const enableStyle = { opacituy: "100%", transition: "opacity .15s ease-in-out" }
     const disableStyle = { opacity: "30%", transition: "opacity .15s ease-in-out" }
 
-    useEffect(() => {
-        setCalculation(AppData,
-            ProjectData,
-            UniqueScreenData,
-            DegreeDevelopmentData,
-            FunctionsData,
-            ServicesData);
-    }, [])
-
     let test = (active) => {
         activeProjectType = (activeProjectType) ? true : active;
         removePojectTypeSelection();
@@ -75,7 +66,7 @@ const Calculation = () => {
         fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
     })
 
-    // console.log(active);
+    // console.log(getSnapshot(calculation));
 
     return (
         <>
