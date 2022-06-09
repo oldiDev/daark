@@ -2,14 +2,6 @@ import React, { useEffect } from "react";
 import { observer } from "mobx-react-lite";
 import { getSnapshot } from "mobx-state-tree";
 import styled from "styled-components";
-import {
-    AppData,
-    ProjectData,
-    UniqueScreenData,
-    DegreeDevelopmentData,
-    FunctionsData,
-    ServicesData
-} from "../../data/calculationData";
 import { usePersistentStore } from "../../store";
 import CalculationFooter from "./calculationFooter";
 import i18next from 'i18next'
