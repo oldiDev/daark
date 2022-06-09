@@ -12,7 +12,7 @@ import '../../index.css'
 
 const Calculation = () => {
 
-    const { calculation, setCalculation, removePojectTypeSelection } = usePersistentStore();
+    const { calculation, removePojectTypeSelection } = usePersistentStore();
     const { t } = useTranslation();
 
     const currentLanguageCode = cookies.get('i18next') || 'ru'

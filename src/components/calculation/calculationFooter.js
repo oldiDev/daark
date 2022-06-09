@@ -128,7 +128,7 @@ const CalculationFooter = ({ price }) => {
                 </CalculationFooterContainer>
             </CalculationFooterWrapper>
             {
-                show ? <CalculationPopUp closePopUp={togglePopUp} /> : null
+                show ? <CalculationPopUp closePopUp={togglePopUp} price={(currentLanguageCode == 'ru')? price : cost} /> : null
             }
             {/* {
                 show ?
