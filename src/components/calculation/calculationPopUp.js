@@ -7,11 +7,11 @@ import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 import { usePersistentStore } from "../../store";
 import { getSnapshot } from "mobx-state-tree";
+import AfterPopUp from "./afterPopUp";
 
 
-const CalculationPopUp = ({ closePopUp, price }) => {
+const CalculationPopUp = ({ closePopUp, price, openAfter }) => {
 
-    // const [open, setOpen] = useState(false);
     const { calculation } = usePersistentStore();
     const { t } = useTranslation();
 
@@ -22,11 +22,8 @@ const CalculationPopUp = ({ closePopUp, price }) => {
 
         emailjs.sendForm('service_5sk3e0o', 'template_g533gjq', e.target, 'OJENSqLL1MSqI7wvN');
         closePopUp();
+        openAfter();
     }
-
-    // setTimeout(() => {
-    //     setOpen(show);
-    // }, 100);
 
     // const ref = useDetectClickOutside({ onTriggered: show });
 
@@ -44,7 +41,6 @@ const CalculationPopUp = ({ closePopUp, price }) => {
     //     };
     // }, []);
 
-    // if (open) {
     return (
         <>
             <PopUpWrapper>
@@ -64,12 +60,8 @@ const CalculationPopUp = ({ closePopUp, price }) => {
                     <PopUpBtn className="primaryButtonText" id="email">{t('send')}</PopUpBtn>
                 </PopUpContainer>
             </PopUpWrapper>
-
         </>
     )
-    // } else {
-    //     return (<></>)
-    // }
 }
 
 export default CalculationPopUp;

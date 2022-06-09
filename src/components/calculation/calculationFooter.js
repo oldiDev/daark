@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 import axios from "axios";
 import cookies from 'js-cookie'
 import { languages } from "../..";
+import AfterPopUp from "./afterPopUp";
 
 
 // let useClickOutside = (handler) => {
@@ -37,6 +38,7 @@ const CalculationFooter = ({ price }) => {
 
 
     const [show, setShow] = useState(false);
+    const [openAfter, setOpenAfter] = useState(false);
     const { removeAnySelection } = usePersistentStore();
     const { t } = useTranslation();
     const [cost, setCost] = useState(price);
@@ -55,6 +57,10 @@ const CalculationFooter = ({ price }) => {
 
     let togglePopUp = () => {
         setShow(!show);
+    }
+
+    function toggleAfter(){
+        setOpenAfter(!openAfter);
     }
 
     const currentLanguageCode = cookies.get('i18next') || 'ru'
@@ -128,7 +134,10 @@ const CalculationFooter = ({ price }) => {
                 </CalculationFooterContainer>
             </CalculationFooterWrapper>
             {
-                show ? <CalculationPopUp closePopUp={togglePopUp} price={(currentLanguageCode == 'ru')? price : cost} /> : null
+                show ? <CalculationPopUp closePopUp={togglePopUp} openAfter={toggleAfter} price={(currentLanguageCode == 'ru')? price : cost} /> : null
+            }
+            {
+                openAfter ? <AfterPopUp closeAfter={toggleAfter}/> : null
             }
             {/* {
                 show ?

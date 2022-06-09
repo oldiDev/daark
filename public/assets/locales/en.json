@@ -55,6 +55,8 @@
     "name": "Name*",
     "phone": "Phone number (optional)",
     "send": "Send",
+    "thanks": "Thank you for your interest!",
+    "will_connect": "We will contact you within 48 hours.",   
 
-    "team": "Team DAARK  "
+    "team": "Team DAARK"
 }
