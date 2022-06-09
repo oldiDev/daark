@@ -58,7 +58,7 @@ const CalculationPopUp = ({ closePopUp, price }) => {
                     <PopUpInfo className="tertiaryButtonText">{t('enter_email')}</PopUpInfo>
                     <PopUpInput placeholder={`${t('name')}`} name="from_name" required></PopUpInput>
                     <PopUpInput placeholder="Email*" type="email" name="from_email" required></PopUpInput>
-                    <PopUpInput placeholder={`${t(`phone`)}`}></PopUpInput>
+                    <PopUpInput placeholder={`${t(`phone`)}`} name="phone"></PopUpInput>
                     <textarea style={{display: "none"}} name="data">{JSON.stringify(calculation)}</textarea>
                     <textarea style={{display: "none"}} name="price">{price}</textarea>
                     <PopUpBtn className="primaryButtonText" id="email">{t('send')}</PopUpBtn>
