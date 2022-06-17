@@ -2,14 +2,6 @@ import React, { useEffect } from "react";
 import { observer } from "mobx-react-lite";
 import { getSnapshot } from "mobx-state-tree";
 import styled from "styled-components";
-import {
-    AppData,
-    ProjectData,
-    UniqueScreenData,
-    DegreeDevelopmentData,
-    FunctionsData,
-    ServicesData
-} from "../../data/calculationData";
 import { usePersistentStore } from "../../store";
 import CalculationFooter from "./calculationFooter";
 import i18next from 'i18next'
@@ -20,7 +12,7 @@ import '../../index.css'
 
 const Calculation = () => {
 
-    const { calculation, setCalculation, removePojectTypeSelection } = usePersistentStore();
+    const { calculation, removePojectTypeSelection } = usePersistentStore();
     const { t } = useTranslation();
 
     const currentLanguageCode = cookies.get('i18next') || 'ru'
@@ -35,15 +27,6 @@ const Calculation = () => {
 
     const enableStyle = { opacituy: "100%", transition: "opacity .15s ease-in-out" }
     const disableStyle = { opacity: "30%", transition: "opacity .15s ease-in-out" }
-
-    useEffect(() => {
-        setCalculation(AppData,
-            ProjectData,
-            UniqueScreenData,
-            DegreeDevelopmentData,
-            FunctionsData,
-            ServicesData);
-    }, [])
 
     let test = (active) => {
         activeProjectType = (activeProjectType) ? true : active;
@@ -75,7 +58,7 @@ const Calculation = () => {
         fullPrice = (e.isSelected) ? fullPrice += e.price : fullPrice;
     })
 
-    // console.log(active);
+    // console.log(getSnapshot(calculation));
 
     return (
         <>

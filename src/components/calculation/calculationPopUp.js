@@ -2,19 +2,28 @@ import React, { useEffect, useRef, useState } from "react";
 import { useDetectClickOutside } from "react-detect-click-outside";
 import styled from "styled-components";
 import OutsideAlerter from "../../hooks/OutsideClose";
-import i18next from 'i18next'
-import { useTranslation } from 'react-i18next'
+import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
+import emailjs from '@emailjs/browser';
+import { usePersistentStore } from "../../store";
+import { getSnapshot } from "mobx-state-tree";
+import AfterPopUp from "./afterPopUp";
 
 
-const CalculationPopUp = ({ closePopUp }) => {
+const CalculationPopUp = ({ closePopUp, price, openAfter }) => {
 
-    // const [open, setOpen] = useState(false);
+    const { calculation } = usePersistentStore();
     const { t } = useTranslation();
 
+    let data = calculation;
 
-    // setTimeout(() => {
-    //     setOpen(show);
-    // }, 100);
+    function sendEmail(e){
+        e.preventDefault();
+
+        emailjs.sendForm('service_5sk3e0o', 'template_g533gjq', e.target, 'OJENSqLL1MSqI7wvN');
+        closePopUp();
+        openAfter();
+    }
 
     // const ref = useDetectClickOutside({ onTriggered: show });
 
@@ -32,11 +41,10 @@ const CalculationPopUp = ({ closePopUp }) => {
     //     };
     // }, []);
 
-    // if (open) {
     return (
         <>
             <PopUpWrapper>
-                <PopUpContainer>
+                <PopUpContainer onSubmit={sendEmail}>
                     <CloseBtnContainer>
                         <CloseBtn onClick={() => closePopUp()}>
                             <img src="/Calculation/delete-disabled.svg"></img>
@@ -44,18 +52,16 @@ const CalculationPopUp = ({ closePopUp }) => {
                     </CloseBtnContainer>
                     <PopUpImg src="/Logo/logo-big.svg" alt="logo" />
                     <PopUpInfo className="tertiaryButtonText">{t('enter_email')}</PopUpInfo>
-                    <PopUpInput placeholder={`${t('name')}`} required></PopUpInput>
-                    <PopUpInput placeholder="Email*" type="email" required></PopUpInput>
-                    <PopUpInput placeholder={`${t(`phone`)}`}></PopUpInput>
+                    <PopUpInput placeholder={`${t('name')}`} name="from_name" required></PopUpInput>
+                    <PopUpInput placeholder="Email*" type="email" name="from_email" required></PopUpInput>
+                    <PopUpInput placeholder={`${t(`phone`)}`} name="phone"></PopUpInput>
+                    <textarea style={{display: "none"}} name="data">{JSON.stringify(calculation)}</textarea>
+                    <textarea style={{display: "none"}} name="price">{price}</textarea>
                     <PopUpBtn className="primaryButtonText" id="email">{t('send')}</PopUpBtn>
                 </PopUpContainer>
             </PopUpWrapper>
-
         </>
     )
-    // } else {
-    //     return (<></>)
-    // }
 }
 
 export default CalculationPopUp;

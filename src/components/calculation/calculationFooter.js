@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 import axios from "axios";
 import cookies from 'js-cookie'
 import { languages } from "../..";
+import AfterPopUp from "./afterPopUp";
 
 
 // let useClickOutside = (handler) => {
@@ -37,6 +38,7 @@ const CalculationFooter = ({ price }) => {
 
 
     const [show, setShow] = useState(false);
+    const [openAfter, setOpenAfter] = useState(false);
     const { removeAnySelection } = usePersistentStore();
     const { t } = useTranslation();
     const [cost, setCost] = useState(price);
@@ -57,6 +59,10 @@ const CalculationFooter = ({ price }) => {
         setShow(!show);
     }
 
+    function toggleAfter(){
+        setOpenAfter(!openAfter);
+    }
+
     const currentLanguageCode = cookies.get('i18next') || 'ru'
     const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
 
@@ -74,26 +80,15 @@ const CalculationFooter = ({ price }) => {
         axios
             .request(options)
             .then(function (response) {
-                // console.log(response.data);
                 currency = Math.ceil(Math.ceil(response.data.Valute.USD.Value) / 10) * 10;
-                console.log(currency);
             })
             .then(() => {
-                // let cost = price;
-                // console.log(cost);
                 setCost((currentLanguageCode == 'en') ? Math.ceil(price / currency) : price);
-                // console.log("=====", cost, "=====");
-
             })
             .catch(function (error) {
                 console.error(error);
             });
     }
-
-    // let cost = price;
-    // console.log(cost);
-    // cost = (currentLanguageCode == 'en') ? Math.ceil(price / currency) : price;
-    // console.log("=====", cost, "=====");
 
     const money = (currentLanguageCode == 'ru') ? <>&#8381;</> : <>&#36;</>
 
@@ -139,7 +134,10 @@ const CalculationFooter = ({ price }) => {
                 </CalculationFooterContainer>
             </CalculationFooterWrapper>
             {
-                show ? <CalculationPopUp closePopUp={togglePopUp} /> : null
+                show ? <CalculationPopUp closePopUp={togglePopUp} openAfter={toggleAfter} price={(currentLanguageCode == 'ru')? price : cost} /> : null
+            }
+            {
+                openAfter ? <AfterPopUp closeAfter={toggleAfter}/> : null
             }
             {/* {
                 show ?
