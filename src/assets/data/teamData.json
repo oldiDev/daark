@@ -227,6 +227,29 @@
           "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567174/daark/About/bootstrap_zzgmva.svg"
         }
       ]
+    },
+    {
+      "avatar": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1655806169/daark/About/avatars/Iluha.png",
+      "name": "Илья Ажбекберов",
+      "nameENG": "Ilya Azhbekberov",
+      "position": "Web Designer",
+      "stack": [
+        {
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567176/daark/About/figma_fbxrui.svg"
+        },
+        {
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567174/daark/About/ai_sktnjj.svg"
+        },
+        {
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567180/daark/About/ps_zfygvn.svg"
+        },
+        {
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567182/daark/About/xd_uiaa0j.svg"
+        },
+        {
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567176/daark/About/flutter_dvhrbw.svg"
+        }
+      ]
     }
   ]
 }

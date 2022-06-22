@@ -76,7 +76,7 @@ const AboutTeam = styled.div`
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 
     @media screen and (max-width: 767px){
