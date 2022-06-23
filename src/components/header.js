@@ -24,12 +24,12 @@ const Header = () => {
         <header className="header">
             <HeaderContainer>
                 <Link to="/" className="mobile-logo" >
-                    <LogoMobile src="/Logo/logo.svg" alt="logo"></LogoMobile>
+                    <LogoMobile src="/Logo/logo_new3.svg" alt="logo"></LogoMobile>
                 </Link>
                 <HeaderContent>
                     <li>
-                        <Link to="/" className="mobile-logo">
-                            <Logo src="/Logo/logo.svg" alt="logo"></Logo>
+                        <Link to="/" className="logo">
+                            <Logo src="/Logo/logo_new3.svg" alt="logo"></Logo>
                         </Link>
                     </li>
                     <li>
@@ -115,7 +115,7 @@ const HeaderContainer = styled.div`
     z-index: 2;
 
     @media screen and (max-width: 767px){
-        height: 64px;
+        height: 65px;
         width: 100%;
         justify-content: center;
     }
@@ -200,7 +200,7 @@ const HeaderContent = styled.ul`
 `;
 
 const Logo = styled.img`
-    width: 74px;
+    width: 162px;
     height: 20px;
 
     @media screen and (max-width: 767px){
@@ -214,8 +214,8 @@ const LogoMobile = styled.img`
 
     @media screen and (max-width: 767px){
         display: block;
-        height: 32px;
-        width: 112px;
+        height: 62px;
+        width: 200px;
     }
 `
 

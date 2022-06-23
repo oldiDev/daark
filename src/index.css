@@ -293,6 +293,14 @@ h4{
     line-height: 19px;
 }
 
+.mobile-logo{
+    display: none;
+}
+
+.logo{
+    height: fit-content;
+}
+
 @media screen and (max-width: 767px){
     h1{
         font-size: 55px;
