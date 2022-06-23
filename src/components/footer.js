@@ -12,7 +12,7 @@ const Footer = ({ height }) => {
         <footer style={{ height: `${height}` }}>
             <Container>
                 <Link to="/">
-                    <Logo src="/Logo/logo-white.svg" alt="logo-white"></Logo>
+                    <Logo src="/Logo/logo_new3_white.svg" alt="logo-white"></Logo>
                 </Link>
 
                 <Navigation>
@@ -62,10 +62,12 @@ const Container = styled.div`
 
 const Logo = styled.img`
     margin: 10px 0px;
+    height: 20px;
+    width: 162px;
 
     @media screen and (max-width: 767px){
-        height: 32px;
-        width: 112px;
+        height: 62px;
+        width: 200px;
     }
 `
 
@@ -107,7 +109,7 @@ const Title = styled.h4`
 const Contacts = styled.div`
     width: fit-content;
     height: fit-content;
-    margin: 12px 0px;
+    margin: 10px 0px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -122,7 +124,7 @@ const MobileLink = styled.a`
 const Address = styled.div`
     width: fit-content;
     height: fit-content;
-    margin: 12px 0px;
+    margin: 10px 0px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
