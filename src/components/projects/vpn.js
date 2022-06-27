@@ -119,7 +119,7 @@ const Pims = () => {
                     <AboutTitle>VPN WORLD. JUST PULL DOWN!</AboutTitle>
                     <AboutText>{t('vpn_1')}</AboutText>
                     <AboutText>{t('vpn_2')}</AboutText>
-                    <AboutText>{t('vpn_3')}<a href='http://vpn.oldi.dev'>vpn.oldi.dev</a></AboutText>
+                    <AboutText>{t('vpn_3')}<a href='http://vpn.oldi.dev' target="_blank">vpn.oldi.dev</a></AboutText>
                 </About>
                 <LinkContainer>
                     {
