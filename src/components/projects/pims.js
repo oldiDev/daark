@@ -125,6 +125,15 @@ const Pims = () => {
                     <AboutText>{t('pims_2')}</AboutText>
                     <AboutText>{t('pims_3')}</AboutText>
                 </About>
+                <LinkContainer>
+                    <a href='/projects/Итог1.pdf' download="pims">
+                        <PdfImg src='https://res.cloudinary.com/dxjubrqnd/image/upload/v1656403710/daark/Projects/pdf-svgrepo-com_de5k7n.svg' />
+                        
+                    </a>
+                    <a href='/projects/Итог1.pdf' download="pims">
+                        <PdfText style={{fontWeight: "400"}}>Загрузить презентацию проекта</PdfText>
+                    </a>
+                </LinkContainer>
                 <Techonolgy>
                     <TechonologyTitle>
                         <h2 style={{ margin: "unset" }}>{t('technology')}</h2>
@@ -322,5 +331,16 @@ const LinkContainer = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    margin-top: 20px;
+`
+
+const PdfImg = styled.img`
+    width: 60px;
+    height: 60px;
+`
+
+const PdfText = styled.h4`
+    font-weight: 400;
+    margin-left: 5px;
 `
