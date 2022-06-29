@@ -58,8 +58,8 @@ const Header = () => {
                                                 style={{
                                                     opacity: currentLanguageCode === code ? 0.5 : 1,
                                                 }}
-                                            ></span>
-                                            {name}
+                                            >{name}</span>
+                                            
                                         </a>
                                     </li>
                                 ))
@@ -89,8 +89,7 @@ const Header = () => {
                                         style={{
                                             opacity: currentLanguageCode === e.code ? 0.5 : 1,
                                         }}
-                                    ></span>
-                                    {e.name}
+                                    >{e.name}</span>
                                 </a></li>
                         ))
                     }
