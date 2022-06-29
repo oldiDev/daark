@@ -147,6 +147,15 @@ const Pims = () => {
 
 
                 </LinkContainer>
+                <LinkContainer>
+                    <a href='/projects/woodcoin.pdf' download="WoodCoin">
+                        <PdfImg src='https://res.cloudinary.com/dxjubrqnd/image/upload/v1656403710/daark/Projects/pdf-svgrepo-com_de5k7n.svg' />
+                        
+                    </a>
+                    <a href='/projects/woodcoin.pdf' download="WoodCoin">
+                        <PdfText style={{fontWeight: "400"}}>{t('download')}</PdfText>
+                    </a>
+                </LinkContainer>
                 <Techonolgy>
                     <TechonologyTitle>
                         <h2 style={{ margin: "unset" }}>{t('technology')}</h2>
@@ -338,6 +347,7 @@ const ProjectImg = styled.img`
     box-shadow: 8px 10px 20px 4px rgba(0, 0, 0, 0.15);
 `
 const LinkContainer = styled.div`
+    margin-top: 20px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -345,7 +355,7 @@ const LinkContainer = styled.div`
 `
 
 const LinkImage = styled.img`
-    margin-top: 10px;
+    /* margin-top: 10px; */
     width: 150px;
     height: 50px;
 
@@ -356,7 +366,7 @@ const LinkImage = styled.img`
 `
 
 const LinkImageGoogle = styled.img`
-    margin-top: 10px;
+    /* margin-top: 10px; */
     margin-left: 20px;
     width: 165px;
     height: 62px;
@@ -364,5 +374,19 @@ const LinkImageGoogle = styled.img`
     @media screen and (max-width: 767px){
         width: 227px;
         height: 85px;
+    }
+`
+
+const PdfImg = styled.img`
+    width: 60px;
+    height: 60px;
+`
+
+const PdfText = styled.h4`
+    font-weight: 400;
+    margin-left: 5px;
+
+    @media screen and (max-width: 767px){
+        font-size: 20px;
     }
 `

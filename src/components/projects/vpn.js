@@ -132,6 +132,16 @@ const Pims = () => {
                                 <LinkImage src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654602721/daark/Projects/Download_on_the_App_Store_US.svg" />
                             </a>
                     }
+
+                </LinkContainer>
+                <LinkContainer>
+                    <a href='/projects/vpn.pdf' download="VpnWorld">
+                        <PdfImg src='https://res.cloudinary.com/dxjubrqnd/image/upload/v1656403710/daark/Projects/pdf-svgrepo-com_de5k7n.svg' />
+
+                    </a>
+                    <a href='/projects/vpn.pdf' download="VpnWorld">
+                        <PdfText>{t('download')}</PdfText>
+                    </a>
                 </LinkContainer>
                 <Techonolgy>
                     <TechonologyTitle>
@@ -326,6 +336,7 @@ const ProjectImg = styled.img`
 `
 
 const LinkContainer = styled.div`
+    margin-top: 20px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -333,12 +344,25 @@ const LinkContainer = styled.div`
 `
 
 const LinkImage = styled.img`
-    margin-top: 20px;
     width: 150px;
     height: 50px;
 
     @media screen and (max-width: 767px){
         width: 210px;
         height: 70px;
+    }
+`
+
+const PdfImg = styled.img`
+    width: 60px;
+    height: 60px;
+`
+
+const PdfText = styled.h4`
+    font-weight: 400;
+    margin-left: 5px;
+
+    @media screen and (max-width: 767px){
+        font-size: 20px;
     }
 `

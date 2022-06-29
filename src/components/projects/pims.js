@@ -328,6 +328,7 @@ const ProjectImg = styled.img`
 `
 
 const LinkContainer = styled.div`
+    margin-top: 20px;
     width: 100%;
     display: flex;
     align-items: center;
