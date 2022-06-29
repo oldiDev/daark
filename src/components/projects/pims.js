@@ -131,7 +131,7 @@ const Pims = () => {
                         
                     </a>
                     <a href='/projects/Итог1.pdf' download="pims">
-                        <PdfText style={{fontWeight: "400"}}>Загрузить презентацию проекта</PdfText>
+                        <PdfText style={{fontWeight: "400"}}>{t('download')}</PdfText>
                     </a>
                 </LinkContainer>
                 <Techonolgy>
@@ -343,4 +343,8 @@ const PdfImg = styled.img`
 const PdfText = styled.h4`
     font-weight: 400;
     margin-left: 5px;
+
+    @media screen and (max-width: 767px){
+        font-size: 20px;
+    }
 `

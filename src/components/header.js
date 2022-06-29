@@ -58,8 +58,8 @@ const Header = () => {
                                                 style={{
                                                     opacity: currentLanguageCode === code ? 0.5 : 1,
                                                 }}
-                                            ></span>
-                                            {name}
+                                            >{name}</span>
+                                            
                                         </a>
                                     </li>
                                 ))
@@ -68,7 +68,7 @@ const Header = () => {
                         </ul>
                     </li>
                 </HeaderContent>
-                <MenuToggle id="menu-toggle" checked={isChecked} type="checkbox" onChange={() => setIsChecked(!isChecked)}/>
+                <MenuToggle id="menu-toggle" checked={isChecked} type="checkbox" onChange={() => setIsChecked(!isChecked)} />
                 <MenuButtonContainer class='menu-button-container' for="menu-toggle">
                     <div class='menu-button'>
                         <LangIcon src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654690002/daark/language-svgrepo-com_1_m9lhvo.svg" />
@@ -87,10 +87,9 @@ const Header = () => {
                                 >
                                     <span
                                         style={{
-                                            opacity: currentLanguageCode === e.code ? 0.5 : 1,
+                                            opacity: currentLanguageCode == e.code ? 0.5 : 1,
                                         }}
-                                    ></span>
-                                    {e.name}
+                                    >{e.name}</span>
                                 </a></li>
                         ))
                     }
