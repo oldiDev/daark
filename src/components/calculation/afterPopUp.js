@@ -16,7 +16,7 @@ const AfterPopUp = ({ closeAfter }) => {
     return (
         <Wrapper>
             <Container>
-                <PopUpImg src="/Logo/logo_new3.svg" alt="logo" />
+                <PopUpImg src="/Logo/logo.svg" alt="logo" />
                 <PopUpInfo className="tertiaryButtonText">{t('thanks')}<p>{t('will_connect')}</p></PopUpInfo>
             </Container>
         </Wrapper>

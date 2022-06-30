@@ -50,7 +50,7 @@ const CalculationPopUp = ({ closePopUp, price, openAfter }) => {
                             <img src="/Calculation/delete-disabled.svg"></img>
                         </CloseBtn>
                     </CloseBtnContainer>
-                    <PopUpImg src="/Logo/logo_new3.svg" alt="logo" />
+                    <PopUpImg src="/Logo/logo.svg" alt="logo" />
                     <PopUpInfo className="tertiaryButtonText">{t('enter_email')}</PopUpInfo>
                     <PopUpInput placeholder={`${t('name')}`} name="from_name" required></PopUpInput>
                     <PopUpInput placeholder="Email*" type="email" name="from_email" required></PopUpInput>
