@@ -12,7 +12,7 @@ const Footer = ({ height }) => {
         <footer style={{ height: `${height}` }}>
             <Container>
                 <Link to="/">
-                    <Logo src="/Logo/logo_new3_white.svg" alt="logo-white"></Logo>
+                    <Logo src="/Logo/logo_white.svg" alt="logo-white"></Logo>
                 </Link>
 
                 <Navigation>
@@ -61,9 +61,9 @@ const Container = styled.div`
 `
 
 const Logo = styled.img`
-    margin: 10px 0px;
+    margin: 15px 0px;
+    width: 74px;
     height: 20px;
-    width: 162px;
 
     @media screen and (max-width: 767px){
         height: 62px;

@@ -24,12 +24,12 @@ const Header = () => {
         <header className="header">
             <HeaderContainer>
                 <Link to="/" className="mobile-logo" >
-                    <LogoMobile src="/Logo/logo_new3.svg" alt="logo"></LogoMobile>
+                    <LogoMobile src="/Logo/logo.svg" alt="logo"></LogoMobile>
                 </Link>
                 <HeaderContent>
                     <li>
                         <Link to="/" className="logo">
-                            <Logo src="/Logo/logo_new3.svg" alt="logo"></Logo>
+                            <Logo src="/Logo/logo.svg" alt="logo"></Logo>
                         </Link>
                     </li>
                     <li>
@@ -199,7 +199,7 @@ const HeaderContent = styled.ul`
 `;
 
 const Logo = styled.img`
-    width: 162px;
+    width: 74px;
     height: 20px;
 
     @media screen and (max-width: 767px){
