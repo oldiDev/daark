@@ -213,8 +213,8 @@ const LogoMobile = styled.img`
 
     @media screen and (max-width: 767px){
         display: block;
-        height: 62px;
-        width: 200px;
+        height: 40px;
+        width: 120px;
     }
 `
 
