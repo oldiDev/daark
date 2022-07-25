@@ -66,8 +66,8 @@ const Logo = styled.img`
     height: 20px;
 
     @media screen and (max-width: 767px){
-        height: 62px;
-        width: 200px;
+        height: 40px;
+        width: 120px;
     }
 `
 

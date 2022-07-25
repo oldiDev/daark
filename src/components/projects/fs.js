@@ -11,12 +11,19 @@ import { Image, ImageGroup } from 'react-fullscreen-image';
 import { usePersistentStore } from '../../store';
 import { getSnapshot } from 'mobx-state-tree';
 import { observer } from 'mobx-react-lite';
+import cookies from 'js-cookie';
+import { useTranslation } from "react-i18next";
 
 
 const FootSkill = () => {
     const { projects } = usePersistentStore();
+    const { t } = useTranslation();
+    const currentLanguageCode = cookies.get('i18next') || 'ru';
+
 
     const fs = getSnapshot(projects.projects[3]);
+    const price = (currentLanguageCode == 'ru') ? fs.cost : fs.costUSD;
+    const money = (currentLanguageCode == 'ru') ? <>&#8381;</> : <>&#36;</>;
 
     // console.log(pims)
 
@@ -25,24 +32,21 @@ const FootSkill = () => {
         <>
             <Swiper
                 slidesPerView={2}
-                spaceBetween={280}
-                modules={[Autoplay, Pagination]}
+                spaceBetween={80}
+                modules={[Autoplay]}
                 autoplay={true}
-                pagination={{
-                    clickable: true,
-                }}
                 loop={true}
                 updateOnWindowResize
                 observer
                 observerParents
                 centeredSlides={true}
                 // initialSlide={1}
-                className="for-mobile for-websites"
+                className="for-mobile"
             >
                 {/* <ImageGroup> */}
                 {
-                    fs.swiper?.map((i) =>
-                        <SwiperSlide key={i}>
+                    fs.swiper?.map((i, e) =>
+                        <SwiperSlide key={e}>
                             <ProjectImg src={i.img} />
                         </SwiperSlide>
                     )
@@ -51,13 +55,10 @@ const FootSkill = () => {
                 {/* </ImageGroup> */}
             </Swiper>
             <Swiper
-                slidesPerView={2}
-                spaceBetween={500}
-                modules={[Autoplay, Pagination]}
+                slidesPerView={3}
+                spaceBetween={50}
+                modules={[Autoplay]}
                 autoplay={true}
-                pagination={{
-                    clickable: true,
-                }}
                 loop={true}
                 updateOnWindowResize
                 observer
@@ -68,8 +69,8 @@ const FootSkill = () => {
             >
                 {/* <ImageGroup> */}
                 {
-                    fs.swiper?.map((i) =>
-                        <SwiperSlide key={i}>
+                    fs.swiper?.map((i, e) =>
+                        <SwiperSlide key={e}>
                             <ProjectImg src={i.img} />
                         </SwiperSlide>
                     )
@@ -80,15 +81,12 @@ const FootSkill = () => {
 
             <ImageGroup>
                 <Swiper
-                    slidesPerView={2}
-                    spaceBetween={500}
+                    slidesPerView={5}
+                    spaceBetween={30}
                     loop={true}
-                    // navigation={true}
-                    modules={[Autoplay, Pagination]}
+                    navigation={true}
+                    modules={[Navigation, Autoplay]}
                     autoplay={true}
-                    pagination={{
-                        clickable: true,
-                    }}
                     updateOnWindowResize
                     observer
                     centeredSlides={true}
@@ -98,8 +96,8 @@ const FootSkill = () => {
                 >
                     {/* <ImageGroup> */}
                     {
-                        fs.swiper?.map((i) =>
-                            <SwiperSlide key={i}>
+                        fs.swiper?.map((i, e) =>
+                            <SwiperSlide key={e}>
                                 <ProjectImg src={i.img} />
                             </SwiperSlide>
                         )
@@ -115,14 +113,27 @@ const FootSkill = () => {
             <Container>
                 <Title>{fs.name}</Title>
                 <About>
-                    <AboutTitle>PIMS – это напиток на основе чая, который перевернет твое сознание, даст природную энергию и прокачает твои вкусовые рецепторы</AboutTitle>
-                    <AboutText>Приложение для доставки напитков PIMS - один из самых интересных проектов, которые создавала наша команда. Стояла задача написать кросс-платформенное решение для клиентов PIMS, которое поможет избежать очередей на кассах и снизить расходы на доставку продукции.</AboutText>
-                    <AboutText>Мы создали с нуля мобильное приложение под Android и iOS, связанное со своей панелью администратора. Через админ-панель сотрудники ресторана редактируют позиции меню, следят за статусами заказа и контролируют доставку напитков. Для оформление доставки мы интегрировали сервисы Яндекса, а для приема оплат была проведена интеграция мобильного SDK банка.</AboutText>
-                    <AboutText>Программный комплекс разрабатывался нами в течение 7-ми месяцев. Сейчас вы можете скачать результаты нашей работы в плэй-маркетах вашего смартфона.</AboutText>
+                    <AboutTitle>{t('fs_title')}</AboutTitle>
+                    <AboutText>{t('fs_1')}</AboutText>
+                    <AboutText>{t('fs_2')}</AboutText>
+                    <AboutText>{t('fs_3')} <a href='https://krasnodar-fs.ru/' target="_blank">krasnodar-fs.ru</a></AboutText>
                 </About>
+                <LinkContainer>
+                    {
+                        (currentLanguageCode == 'ru') ?
+                            <a href='https://apps.apple.com/ru/app/foot-skill/id1633652809?l=ru' target="_blank">
+                                <LinkImage src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1653567044/daark/Projects/downloadAppStore_ymttuc.svg" />
+                            </a>
+                            :
+                            <a href='https://apps.apple.com/ru/app/foot-skill/id1633652809?l=en' target="_blank">
+                                <LinkImage src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1654602721/daark/Projects/Download_on_the_App_Store_US.svg" />
+                            </a>
+                    }
+
+                </LinkContainer>
                 <Techonolgy>
                     <TechonologyTitle>
-                        <h2 style={{ margin: "unset" }}>Технологии</h2>
+                        <h2 style={{ margin: "unset" }}>{t('technology')}</h2>
                     </TechonologyTitle>
                     {
                         fs.techology.map((e) =>
@@ -138,10 +149,10 @@ const FootSkill = () => {
                 </Techonolgy>
 
                 <CostContainer>
-                    <CostTitle>Стоимость разработки: </CostTitle>
-                    <Cost>от {fs.cost.toString().split('').reverse().map((e, i) =>
+                    <CostTitle>{t('cost')} </CostTitle>
+                    <Cost>{t('from')} {price.toString().split('').reverse().map((e, i) =>
                         e = (i % 3 == 0) && (i != 0) ? e.padEnd(2, ` `) : e
-                    ).reverse().join('')} &#8381;</Cost>
+                    ).reverse().join('')} {money}</Cost>
                 </CostContainer>
             </Container>
             <Footer />
@@ -163,7 +174,6 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
     @media screen and (max-width: 767px){
         width: 90%;
         /* height: 100vh; */
@@ -180,10 +190,8 @@ const OpacityRight = styled.div`
     background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     /* opacity: 50%; */
     z-index: 50;
-
     @media screen and (max-width: 767px){
-        width: 17%;
-        height: 301px;
+        width: 26%;
         /* height: 100vh; */
     }
 `
@@ -196,10 +204,8 @@ const OpacityLeft = styled.div`
     height: 770px;
     background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     z-index: 50;
-
     @media screen and (max-width: 767px){
-        width: 17%;
-        height: 301px;
+        width: 26%;
         /* height: 100vh; */
     }
 `
@@ -225,7 +231,6 @@ const AboutText = styled.h4`
     margin: 15px 0px;
     line-height: 30px;
     font-weight: normal;
-
     @media screen and (max-width: 767px){
             font-size: 28px;
             line-height: 36px;
@@ -282,7 +287,6 @@ const CostContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-
     @media screen and (max-width: 767px){
         align-items: flex-end;
         margin-bottom: 60px;
@@ -290,7 +294,6 @@ const CostContainer = styled.div`
 `
 
 const CostTitle = styled.h2`
-
     @media screen and (max-width: 767px){
         margin: unset;
     }
@@ -300,7 +303,6 @@ const Cost = styled.h2`
     width: fit-content;
     margin-left: 30px;
     text-align: right;
-
     @media screen and (max-width: 767px){
         width: 55%;
         margin: unset;
@@ -308,14 +310,10 @@ const Cost = styled.h2`
 `
 
 const ProjectImg = styled.img`
-    width: 1000px;
+    width: 323px;
     height: 700px;
     border-radius: 24px;
     box-shadow: 8px 10px 20px 4px rgba(0, 0, 0, 0.15);
-
-    @media screen and (max-width: 767px) {
-        width: 393px; 
-    }
 `
 
 const LinkContainer = styled.div`
@@ -329,7 +327,6 @@ const LinkImage = styled.img`
     margin-top: 20px;
     width: 150px;
     height: 50px;
-
     @media screen and (max-width: 767px){
         width: 210px;
         height: 70px;
