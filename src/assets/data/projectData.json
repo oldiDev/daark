@@ -170,64 +170,68 @@
       "costUSD": 50000
     },
     {
-        "name": "FootSkill",
-        "swiper": [
-          {
-            "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1658502425/daark/Projects/fs/IMG_1146_yekv4o.png"
-          },
-          {
-            "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1658502425/daark/Projects/fs/IMG_1145_zfzzct.png"
-          },
-          {
-            "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1658502425/daark/Projects/fs/IMG_1143_va7wgo.png"
-          },
-          {
-            "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1658502425/daark/Projects/fs/IMG_1142_jeode6.png"
-          },
-          {
-            "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1658502424/daark/Projects/fs/IMG_1144_twz0o1.png"
-          }
-        ],
-        "techology": [
-          {
-            "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566639/daark/Projects/technology/figma_p5dewl.svg",
-            "name": "Figma"
-          },
-          {
-            "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1658506419/daark/Projects/technology/Strapi_pkwo8z.svg",
-            "name": "Strapi"
-          },
-          {
-            "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566641/daark/Projects/technology/js_j8f0hc.svg",
-            "name": "JavaScript"
-          },
-          {
-            "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566641/daark/Projects/technology/react_botlo0.svg",
-            "name": "React"
-          },
-          {
-            "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566639/daark/Projects/technology/axios_kff2hf.svg",
-            "name": "Axios"
-          },
-          {
-            "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566643/daark/Projects/technology/swift_dsfbkk.svg",
-            "name": "Swift"
-          },
-          {
-            "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1658505925/daark/Projects/technology/SwiftUi_eu1nvj.svg",
-            "name": "SwiftUI"
-          },
-          {
-            "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1658506157/daark/Projects/technology/ruby_lz38oc.svg",
-            "name": "Ruby"
-          },
-          {
-            "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566641/daark/Projects/technology/java_mmq165.svg",
-            "name": "Java"
-          }
-        ],
-        "cost": 800000,
-        "costUSD": 15000
-      }
+      "name": "FootSkill",
+      "swiper": [
+        {
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1658502425/daark/Projects/fs/IMG_1146_yekv4o.png"
+        },
+        {
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1658502425/daark/Projects/fs/IMG_1145_zfzzct.png"
+        },
+        {
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1658502425/daark/Projects/fs/IMG_1143_va7wgo.png"
+        },
+        {
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1658502425/daark/Projects/fs/IMG_1142_jeode6.png"
+        },
+        {
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1658502424/daark/Projects/fs/IMG_1144_twz0o1.png"
+        }
+      ],
+      "techology": [
+        {
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566639/daark/Projects/technology/figma_p5dewl.svg",
+          "name": "Figma"
+        },
+        {
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1658506419/daark/Projects/technology/Strapi_pkwo8z.svg",
+          "name": "Strapi"
+        },
+        {
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1658829306/daark/Projects/technology/react-admin_wbfzjb.svg",
+          "name": "React Admin"
+        },
+        {
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566641/daark/Projects/technology/js_j8f0hc.svg",
+          "name": "JavaScript"
+        },
+        {
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566641/daark/Projects/technology/react_botlo0.svg",
+          "name": "React"
+        },
+        {
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566639/daark/Projects/technology/axios_kff2hf.svg",
+          "name": "Axios"
+        },
+        {
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566643/daark/Projects/technology/swift_dsfbkk.svg",
+          "name": "Swift"
+        },
+        {
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1658505925/daark/Projects/technology/SwiftUi_eu1nvj.svg",
+          "name": "SwiftUI"
+        },
+        {
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1658506157/daark/Projects/technology/ruby_lz38oc.svg",
+          "name": "Ruby"
+        },
+        {
+          "img": "https://res.cloudinary.com/dxjubrqnd/image/upload/v1653566641/daark/Projects/technology/java_mmq165.svg",
+          "name": "Java"
+        }
+      ],
+      "cost": 800000,
+      "costUSD": 15000
+    }
   ]
 }
