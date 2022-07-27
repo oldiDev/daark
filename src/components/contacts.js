@@ -58,8 +58,8 @@ const Contacts = () => {
 const ContactsContainer = styled.div`
     width: 70%;
     max-width: 1000px;
-    /* height: 100vh; */
-    margin: 100px auto;
+    min-height: calc(100vh - 80px);
+    margin: 80px auto;
     /* margin-bottom: unset; */
     display: flex;
     justify-content: center;
