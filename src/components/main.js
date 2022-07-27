@@ -74,9 +74,9 @@ const Main = () => {
                         </AppContainer>
                         <AppContainer>
                             <AppInfo>
-                                <AppImg src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1658761460/daark/iPhoneImage/AppIcon/fs_logo_x43bxn.svg" alt="FootSkill"></AppImg>
+                                <AppImg src="https://res.cloudinary.com/dxjubrqnd/image/upload/v1658906644/daark/iPhoneImage/AppIcon/Foot_Skill_bqde8n.svg" alt="FootSkill"></AppImg>
                                 <AppName>
-                                    <div className="SF_h3">FootSkill</div>
+                                    <div className="SF_h3">Foot Skill</div>
                                     <div className="SF_body dark-grey">{t('fs_description')}</div>
                                 </AppName>
                             </AppInfo>
@@ -105,7 +105,7 @@ const MainContainer = styled.div`
     width: 75%;
     max-width: 1000px;
     /* height: 90vh; */
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
     margin: 80px auto;
     display: flex;
     flex-direction: row;
